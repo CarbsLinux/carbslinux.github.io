@@ -1,6 +1,4 @@
 #!/bin/sh -e
-MARKDOWNOPTS="-html5 -squash"
-export MARKDOWNOPTS
 
 header() {
     cat <<EOF
