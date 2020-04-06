@@ -1,0 +1,152 @@
+#!/bin/sh -e
+MARKDOWNOPTS="-html5 -squash"
+export MARKDOWNOPTS
+
+header() {
+    cat <<EOF
+<!DOCTYPE HTML>
+<html lan="en">
+<head>
+<title>$TITLE | Carbs Linux</title>
+<link rel="stylesheet" href="/assets/style.css">
+<meta charset="utf-8">
+<meta name="Description" content="Carbs Linux - a simple busybox linux distribution">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<p class=header><strong>Carbs Linux - a simple busybox linux distribution</strong></p>
+<div class="header"><nav>
+<a href='/'>index</a>
+<a href='https://github.com/CarbsLinux'>github</a>
+<a href='//dl.carbslinux.org'>downloads</a>
+<a href='/blog'>blog</a>
+<a href='/wiki'>wiki</a>
+<a href='/wiki/install.html'>installation</a>
+</nav></div><div class="border"></div>
+EOF
+}
+
+footer() {
+    [ -z "$1" ] || printf '<a href="%s">View Page Source</a>' "$1"
+    cat <<EOF
+<div class=border></div>
+<p class=footer>Linux® is a registered trademark of Linus Torvalds</p>
+<p class=footer>Copyright © 2019-2020 Cem Keylan</p>
+</body>
+</html>
+EOF
+}
+
+gettitle() {
+    sed 1q "$1" | grep -q '^Title:' || {
+        basename "$1" .md
+        return 0
+    }
+    sed 1q "$1" | cut -d' ' -f2-
+}
+
+genpages() {
+    # Create directories in docs
+    find src -type d | while read -r dir ; do mkdir -p "docs${dir#src}" ; done
+    # Generate html and txt files
+    for page in $(cd src || return 1 ; find . -name '*.md') ; do
+        tohtml "src/$page" > "docs/${page%.md}.html"
+        cp "src/$page" "docs/${page%.md}.txt"
+        sed -i '/^Title:/d' "docs/${page%.md}.txt"
+    done
+    # Copy rest of the files
+    (cd src || return 1 ; find . -type f ! -name '*.md' -exec cp -u \{\} ../docs/\{\} \; )
+
+}
+
+
+tohtml() {
+    TITLE="$(gettitle "$1")" header
+    sed '/Title:/d' "$1" | markdown
+    footer "$(echo "$1" | sed 's/.md$/.txt/;s/src\/.//')"
+}
+
+wiki_index() {
+    sed -i '/^Content/,$d' src/wiki/index.md
+    printf 'Content\n-------\n\n' >> src/wiki/index.md
+    for page in $(find src/wiki -type f | grep -v 'src/wiki/index.md' | sort) ; do
+        printf '* [%s](%s)\n' "$(gettitle "$page")" "$(printf "$page" | sed 's#src/wiki/##;s/.md/.html/')" >> src/wiki/index.md
+    done
+}
+
+blog_index() {
+    cat <<EOF > src/blog/index.md
+Blog Index
+==========
+
+This is the Carbs Linux Blog Index. You can find every post
+here. [RSS Feed]
+
+[RSS Feed]: /rss.xml
+
+EOF
+    find src/blog -type f ! -name index.md | sort -r | while read -r post ; do
+        postdate="${post##*/}"; postdate="${postdate%%.*}"
+        printf '* %s - [%s](%s)\n' "$(date --date="$postdate" +%b\ %d\ %Y)" "$(gettitle "$post")" "$(printf "$post" | sed 's#src/blog/##;s/.md/.html/')" >> src/blog/index.md
+    done
+}
+
+site_index() {
+    cp index/index.md src/index.md
+    find index -name '*.news' | sort -r | while read -r news ; do
+        newsdate="${news##*/}" ; newsdate="${newsdate%.news}"
+        printf '\n### %s\n\n' "$(date --date="$newsdate" +%b\ %d\ %Y)" >> src/index.md
+        cat "$news" >> src/index.md
+    done
+}
+
+genrss() {
+    cat <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+>
+<channel>
+<title>Carbs Linux</title>
+<description>a simple busybox linux distribution</description>		
+<link>https://carbslinux.org</link>
+<atom:link href="https://carbslinux.org/${2:-rss}.xml" rel="self" type="application/rss+xml" />
+<lastBuildDate>$(date)</lastBuildDate>
+EOF
+    find "$1" -type f ! -name index.md | sort -r | while read -r post ; do
+        postdate="${post##*/}" ; postdate="${postdate%.*}"
+        cat <<EOF
+<item>
+<title>$(gettitle "$post")</title>
+<pubDate>$(date --date="$postdate" +%a,\ %d\ %b\ %Y)</pubDate>
+<dc:creator>Cem Keylan</dc:creator>
+<link>https://carbslinux.org/${3:-blog/$(printf "${post##*/}" | sed 's/.md/.html/')}</link>
+<description>$(grep -v '^Title:' "$post" | markdown -f cdata)</description>
+</item>
+EOF
+    done
+cat <<EOF
+</channel>
+</rss>
+EOF
+}
+
+main() {
+    # Create docs directory if it doesn't exist
+    mkdir -p docs
+
+    # Remove all html, txt, and rss files
+    find docs \( -name '*.html' -o -name '*.txt' -o -name '*.xml' \) -delete
+
+    # Generate the indexes for blog and the wiki
+    site_index; wiki_index; blog_index
+
+    # Generate rss feeds
+    genrss index news index.html > docs/news.xml ; genrss src/blog > docs/rss.xml
+
+    # Generate pages
+    genpages
+}
+
+main "$@"

@@ -1,0 +1,49 @@
+**IMPORTANT!** Carbs-init update to be released on 17th of February
+will require manual intervention. I am holding this update back so
+people can see it before they update their system (even though the
+update will show the same message as this). The rationale for the
+update is explained below the intervention.
+
+    # There is an explanation for each init
+    # You only need to follow the instructions
+    # for your own init-system
+
+    ## busybox-init
+    # If you did not edit your inittab simply 
+    # move inittab.new to inittab
+    -> mv /etc/inittab.new /etc/inittab
+
+    # If you did edit your inittab you can use
+    # a simple sed command to remove the necessary lines
+    -> sed -i '/getty/d;/runsvdir/d' /etc/inittab
+
+
+    ## runit
+    # same as busybox-init, if you did not edit
+    # /etc/runit/2 move 2.new to 2
+    -> mv /etc/runit/2.new /etc/runit/2
+
+    # else
+    -> vim /etc/runit/2
+    # open your 2 file and remove the for loop containing
+    # getty commands. If you are using runit, it is recommended
+    # to comment out /etc/init/runit.boot
+
+    ## sinit/minit
+    # If you did not edit your {sinit-,}launch-services.boot
+    # you can simply remove it.
+    -> rm -f /etc/init/launch-services.boot /etc/init/sinit-launch-services.boot
+
+    # This should leave you without any issues, and you can safely reboot.
+
+Carbs-init update is to make sure init systems do not clash, and do
+not have to use different files. This is a sensible update both for
+the user user and for the maintainer side. 
+
+To give an example, before this update busybox-init was managing getty
+through `inittab`, runit was managing through `/etc/runit/2`, and
+minit/sinit were launching from `/etc/init/launch-services.boot`. This
+is a configuration nightmare for everyone, and since I am maintaining
+and constantly testing those init providers, a huge nightmare for me. 
+This is a Quality of Life update.
+

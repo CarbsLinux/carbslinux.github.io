@@ -1,0 +1,7 @@
+#!/bin/sh
+
+TEMP="/tmp/carbswiki"
+
+rm -rf "$TEMP" ; git clone --depth 1 https://github.com/CarbsLinux/wiki.wiki "$TEMP"
+rsync -av --delete -C "$TEMP/" src/wiki/
+rm -rf "$TEMP"
