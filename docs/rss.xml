@@ -9,7 +9,7 @@
 <description>a simple busybox linux distribution</description>		
 <link>https://carbslinux.org</link>
 <atom:link href="https://carbslinux.org/rss.xml" rel="self" type="application/rss+xml" />
-<lastBuildDate>Apr Mon 2020 11:00</lastBuildDate>
+<lastBuildDate>Apr Mon 2020 12:00</lastBuildDate>
 <item>
 <title>Roadmap for Carbs</title>
 <pubDate>Mon, 06 Apr 2020</pubDate>
@@ -63,6 +63,11 @@ more &amp;lsquo;human-readable&amp;rsquo;.&lt;/p&gt;
 I will add a new post when I am ready to push it. I think it will be interesting,
 it will also make more sense about the changes I have added to the package
 manager. The now empty repository, can be found &lt;a href=&quot;https://github.com/CarbsLinux/outsources&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2&gt;New Tarball&lt;/h2&gt;
+
+&lt;p&gt;Finally, I have released a new tarball today, which can be obtained from the
+&lt;a href=&quot;https://dl.carbslinux.org/releases&quot;&gt;downloads page&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I am planning to add more of these update posts as I&amp;rsquo;m feeling better about
 the website structure overall.&lt;/p&gt;
