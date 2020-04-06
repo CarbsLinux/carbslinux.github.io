@@ -31,6 +31,11 @@ News
 
 [RSS Feed](/news.xml)
 
+### Apr 06 2020
+
+A new rootfs tarball has been released. See the
+[downloads](https://dl.carbslinux.org) page
+
 ### Apr 05 2020
 
 Carbs Linux repositories will be hosted only on Github. Commits will be

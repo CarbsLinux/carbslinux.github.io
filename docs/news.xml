@@ -11,6 +11,14 @@
 <atom:link href="https://carbslinux.org/news.xml" rel="self" type="application/rss+xml" />
 <lastBuildDate>Apr Mon 2020 11:00</lastBuildDate>
 <item>
+<title>20200406.news</title>
+<pubDate>Mon, 06 Apr 2020</pubDate>
+<dc:creator>Cem Keylan</dc:creator>
+<link>https://carbslinux.org/index.html</link>
+<description>&lt;p&gt;A new rootfs tarball has been released. See the
+&lt;a href=&quot;https://dl.carbslinux.org&quot;&gt;downloads&lt;/a&gt; page&lt;/p&gt;</description>
+</item>
+<item>
 <title>20200405.news</title>
 <pubDate>Sun, 05 Apr 2020</pubDate>
 <dc:creator>Cem Keylan</dc:creator>
