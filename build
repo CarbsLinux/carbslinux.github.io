@@ -112,7 +112,7 @@ genrss() {
 <description>a simple busybox linux distribution</description>		
 <link>https://carbslinux.org</link>
 <atom:link href="https://carbslinux.org/${2:-rss}.xml" rel="self" type="application/rss+xml" />
-<lastBuildDate>$(date)</lastBuildDate>
+<lastBuildDate>$(date -u +%b\ %a\ %Y\ %H):00</lastBuildDate>
 EOF
     find "$1" -type f ! -name index.md | sort -r | while read -r post ; do
         postdate="${post##*/}" ; postdate="${postdate%.*}"

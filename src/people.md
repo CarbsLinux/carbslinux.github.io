@@ -1,3 +1,3 @@
 People
 ======
-* Cem Keylan - Founder <cem@ckyln.com>
+* Cem Keylan - Founder [cem@ckyln.com](mailto:cem@ckyln.com)
