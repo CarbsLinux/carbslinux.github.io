@@ -11,6 +11,65 @@
 <atom:link href="https://carbslinux.org/rss.xml" rel="self" type="application/rss+xml" />
 <lastBuildDate>Apr Mon 2020 11:00</lastBuildDate>
 <item>
+<title>Roadmap for Carbs</title>
+<pubDate>Mon, 06 Apr 2020</pubDate>
+<dc:creator>Cem Keylan</dc:creator>
+<link>https://carbslinux.org/blog/20200406.html</link>
+<description>&lt;p&gt;It has been a busy week. There are lots of changes in
+direction, and more to come. I want to talk a little
+about all of them.&lt;/p&gt;
+
+&lt;h2&gt;Carbs Linux Server Going Down&lt;/h2&gt;
+
+&lt;p&gt;It became harder to maintain and pay for the server, and I will be
+shutting it down in May. I am currently in the phase of
+carrying over everything to &lt;a href=&quot;https://github.com/CarbsLinux&quot;&gt;Github&lt;/a&gt;. The repository and the
+website is served on Github now. I have also moved the &lt;a href=&quot;https://github.com/CarbsLinux/wiki/wiki&quot;&gt;Wiki&lt;/a&gt;
+to Github and anyone can edit it there. There are some outdated
+posts that I will be fixing around this week.&lt;/p&gt;
+
+&lt;p&gt;I am not quite sure where to store the downloads page now. But I
+will be switching that to a new source as well. (Maybe Source Forge?)&lt;/p&gt;
+
+&lt;p&gt;I feel a little sad for switching, but serving on Github is faster,
+cheaper, and hassle-free.&lt;/p&gt;
+
+&lt;h2&gt;Forking KISS&lt;/h2&gt;
+
+&lt;p&gt;I had a personal fork of KISS, which I enjoyed thoroughly. I didn&amp;rsquo;t
+intend to make it the default when I started it, but it has matured
+enough to be so. The package manager can now be found on &lt;a href=&quot;https://github.com/CarbsLinux/kiss&quot;&gt;this repository&lt;/a&gt;.
+See it for the added changes.&lt;/p&gt;
+
+&lt;p&gt;This will be a change for the better, as I can develop the package
+manager as it fits my views.&lt;/p&gt;
+
+&lt;h2&gt;Small Changes on the Website&lt;/h2&gt;
+
+&lt;p&gt;I have made some small changes on the website. The build is not dependent
+on Plan9 utilities anymore. It was fun messing around with &lt;code&gt;rc&lt;/code&gt; and &lt;code&gt;mk&lt;/code&gt;,
+but they are quite limited compared to POSIX shell.&lt;/p&gt;
+
+&lt;p&gt;RSS feeds are finally working as intended, both for the &lt;a href=&quot;https://carbslinux.org/news.xml&quot;&gt;news&lt;/a&gt; section, and
+the &lt;a href=&quot;https://carbslinux.org/rss.xml&quot;&gt;blog&lt;/a&gt; secion.&lt;/p&gt;
+
+&lt;p&gt;You can see every page&amp;rsquo;s &lt;code&gt;.txt&lt;/code&gt; output at the end of the page by clicking
+&amp;lsquo;View Page Source&amp;rsquo;. Meanwhile, I will be updating some pages to be a little
+more &amp;lsquo;human-readable&amp;rsquo;.&lt;/p&gt;
+
+&lt;h2&gt;Outsources Repository&lt;/h2&gt;
+
+&lt;p&gt;I have opened an &lt;code&gt;outsources&lt;/code&gt; repository, which I will be pushing this week.
+I will add a new post when I am ready to push it. I think it will be interesting,
+it will also make more sense about the changes I have added to the package
+manager. The now empty repository, can be found &lt;a href=&quot;https://github.com/CarbsLinux/outsources&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;I am planning to add more of these update posts as I&amp;rsquo;m feeling better about
+the website structure overall.&lt;/p&gt;
+
+&lt;p&gt;- Cem&lt;/p&gt;</description>
+</item>
+<item>
 <title>Switching to New Website</title>
 <pubDate>Tue, 28 Jan 2020</pubDate>
 <dc:creator>Cem Keylan</dc:creator>
