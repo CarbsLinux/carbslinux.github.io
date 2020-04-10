@@ -9,7 +9,36 @@
 <description>a simple busybox linux distribution</description>		
 <link>https://carbslinux.org</link>
 <atom:link href="https://carbslinux.org/rss.xml" rel="self" type="application/rss+xml" />
-<lastBuildDate>Apr Mon 2020 12:00</lastBuildDate>
+<lastBuildDate>Apr Fri 2020 10:00</lastBuildDate>
+<item>
+<title>Outsource Repository Concept</title>
+<pubDate>Fri, 10 Apr 2020</pubDate>
+<dc:creator>Cem Keylan</dc:creator>
+<link>https://carbslinux.org/blog/20200410.html</link>
+<description>&lt;h1&gt;Outsource Repository Concept&lt;/h1&gt;
+
+&lt;p&gt;In April 3rd, I have added submodule support for Carbs
+Linux&amp;rsquo;s fork of &lt;code&gt;kiss&lt;/code&gt;. Now, from that sentence, it really
+doesn&amp;rsquo;t sound exciting at all. But in reality, it opens a
+path to lots of creative output, and a better way to manage
+multi-user repositories (such as KISS Community).&lt;/p&gt;
+
+&lt;p&gt;When managing a repository of submodules, the repository
+maintainer&amp;rsquo;s only job is to deal with adding packages.
+A package maintainer doesn&amp;rsquo;t have to wait for the repository
+maintainer to update their packages, as they are only making
+the changes to their own repositories.&lt;/p&gt;
+
+&lt;p&gt;This way, an end-user can also track from their preferred
+maintainers, and do that with the tidyness of a single repository
+in their &lt;code&gt;KISS_PATH&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Carbs Linux now has an outsource repository for some packages.
+Firefox and its dependencies have been purged from the main repository,
+but can be found on it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/CarbsLinux/outsource&quot;&gt;https://github.com/CarbsLinux/outsource&lt;/a&gt;&lt;/p&gt;</description>
+</item>
 <item>
 <title>Roadmap for Carbs</title>
 <pubDate>Mon, 06 Apr 2020</pubDate>
