@@ -22,8 +22,8 @@ of them.
 Links
 -----
 
+* IRC    - `#carbslinux` on freenode
 * Reddit - [/r/carbslinux](http://reddit.com/r/carbslinux)
-* Matrix - [#carbs-linux:matrix.org](https://matrix.to/#/#carbs-linux:matrix.org)
 
 
 News
