@@ -31,6 +31,10 @@ News
 
 [RSS Feed](/news.xml)
 
+### Apr 10 2020
+
+IRC channel can now be accessed from #carbslinux at freenode!
+
 ### Apr 06 2020
 
 A new rootfs tarball has been released. See the

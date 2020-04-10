@@ -11,6 +11,13 @@
 <atom:link href="https://carbslinux.org/news.xml" rel="self" type="application/rss+xml" />
 <lastBuildDate>Apr Fri 2020 19:00</lastBuildDate>
 <item>
+<title>20200410.news</title>
+<pubDate>Fri, 10 Apr 2020</pubDate>
+<dc:creator>Cem Keylan</dc:creator>
+<link>https://carbslinux.org/index.html</link>
+<description>&lt;p&gt;IRC channel can now be accessed from #carbslinux at freenode!&lt;/p&gt;</description>
+</item>
+<item>
 <title>20200406.news</title>
 <pubDate>Mon, 06 Apr 2020</pubDate>
 <dc:creator>Cem Keylan</dc:creator>
