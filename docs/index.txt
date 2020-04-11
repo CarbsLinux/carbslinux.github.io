@@ -32,7 +32,7 @@ for init systems, and
 - `busybox-runit`
 - `runit`
 
-for service supervisors. The `carbs-init` package is the collection of
+for service supervisors. The [carbs-init] package is the collection of
 init scripts that ensure the interoperatability of these init and service
 systems, and make it easier for the user to switch to their preferred
 combinations of system supervision.
@@ -40,6 +40,8 @@ combinations of system supervision.
 Nothing holds you back, however, from ditching any of these and packaging
 some other system supervision technique along with your own init scripts.
 
+
+[carbs-init]: https://github.com/CarbsLinux/repository/tree/master/core/carbs-init
 
 Links
 -----
