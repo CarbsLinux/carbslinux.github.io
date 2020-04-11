@@ -22,16 +22,42 @@ distribution.</p>
 
 <h2>Package Manager</h2>
 
-<p>Carbs Linux is built upon the world&rsquo;s best Linux distribution
-<a href="https://getkiss.org">KISS Linux</a> and uses <a href="https://github.com/kisslinux/kiss">kiss</a>
-as its package manager, which has proven to be extremely flexible. I aim to move Carbs
-to an even more suckless path.</p>
+<p>Carbs Linux uses its own fork of the [kiss package manager] which is an extremely
+flexible package manager.</p>
 
-<h2>Sane defaults</h2>
+<h2>Small base</h2>
 
-<p>By default, Carbs Linux comes with busybox for coreutils, runit as the system
-supervisor, and sinit as the init, though nothing holds you from changing any
-of them.</p>
+<p>By default, Carbs Linux comes with busybox for coreutils, and basic utilities
+for building new software. The rootfs tarball is not bigger than 40MB.</p>
+
+<h2>Multiple Init Support</h2>
+
+<p>Carbs Linux has support for multiple init systems and service supervisors.
+In the main repository are</p>
+
+<ul>
+<li><code>sinit</code></li>
+<li><code>busybox-init</code> (SysVinit clone)</li>
+<li><code>runit-init</code></li>
+</ul>
+
+
+<p>for init systems, and</p>
+
+<ul>
+<li><code>sysmgr</code></li>
+<li><code>busybox-runit</code></li>
+<li><code>runit</code></li>
+</ul>
+
+
+<p>for service supervisors. The <code>carbs-init</code> package is the collection of
+init scripts that ensure the interoperatability of these init and service
+systems, and make it easier for the user to switch to their preferred
+combinations of system supervision.</p>
+
+<p>Nothing holds you back, however, from ditching any of these and packaging
+some other system supervision technique along with your own init scripts.</p>
 
 <h2>Links</h2>
 
@@ -47,7 +73,7 @@ of them.</p>
 
 <h3>Apr 10 2020</h3>
 
-<p>IRC channel can now be accessed from #carbslinux at freenode!</p>
+<p>IRC channel can now be accessed from <code>#carbslinux</code> at freenode!</p>
 
 <h3>Apr 06 2020</h3>
 
