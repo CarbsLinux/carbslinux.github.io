@@ -1,5 +1,5 @@
 Carbs Linux is an in-development Linux® distribution with a suckless mindset.
-The system will consist of only the necessary programs to create a Linux
+The base system will consist of only the necessary programs to create a Linux
 distribution.
 
 Package Manager
@@ -54,21 +54,18 @@ Links
 News
 ----
 
-[RSS Feed](/news.xml)
+[RSS Feed](/news.xml) | [See all news](/news.html)
 
-Apr 10 2020
------------
+### Apr 10 2020
 
 IRC channel can now be accessed from `#carbslinux` at freenode!
 
-Apr 06 2020
------------
+### Apr 06 2020
 
 A new rootfs tarball has been released. See the
 [downloads](https://dl.carbslinux.org) page
 
-Apr 05 2020
------------
+### Apr 05 2020
 
 Carbs Linux repositories will be hosted only on Github. Commits will be
 pushed there, and not the repository. You have until

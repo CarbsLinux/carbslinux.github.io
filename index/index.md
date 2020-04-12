@@ -1,5 +1,5 @@
 Carbs Linux is an in-development Linux® distribution with a suckless mindset.
-The system will consist of only the necessary programs to create a Linux
+The base system will consist of only the necessary programs to create a Linux
 distribution.
 
 Package Manager
@@ -54,4 +54,4 @@ Links
 News
 ----
 
-[RSS Feed](/news.xml)
+[RSS Feed](/news.xml) | [See all news](/news.html)
