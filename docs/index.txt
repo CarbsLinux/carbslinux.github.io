@@ -42,6 +42,7 @@ some other system supervision technique along with your own init scripts.
 
 
 [carbs-init]: https://github.com/CarbsLinux/repository/tree/master/core/carbs-init
+[kiss package manager]: https://github.com/CarbsLinux/kiss
 
 Links
 -----
