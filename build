@@ -5,7 +5,7 @@ header() {
 <!DOCTYPE HTML>
 <html lan="en">
 <head>
-<title>$TITLE | Carbs Linux</title>
+<title>$1 | Carbs Linux</title>
 <link rel="stylesheet" href="/assets/style.css">
 <meta charset="utf-8">
 <meta name="Description" content="Carbs Linux - a simple busybox linux distribution">
@@ -58,7 +58,7 @@ genpages() {
 
 
 tohtml() {
-    TITLE="$(gettitle "$1")" header
+    header "$(gettitle "$1")"
     sed '/Title:/d' "$1" | markdown
     footer "$(echo "$1" | sed 's/.md$/.txt/;s/src\/.//')"
 }
