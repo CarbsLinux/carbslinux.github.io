@@ -90,10 +90,15 @@ EOF
 
 site_index() {
     cp index/index.md src/index.md
+    find index -name '*.news' | sort -r | sed 3q | while read -r news ; do
+        newsdate="${news##*/}" ; newsdate="${newsdate%.news}"
+        printf '\n%s\n-----------\n\n' "$(date --date="$newsdate" +%b\ %d\ %Y)" >> src/index.md
+        cat "$news" >> src/index.md
+    done
     find index -name '*.news' | sort -r | while read -r news ; do
         newsdate="${news##*/}" ; newsdate="${newsdate%.news}"
-        printf '\n### %s\n\n' "$(date --date="$newsdate" +%b\ %d\ %Y)" >> src/index.md
-        cat "$news" >> src/index.md
+        printf '\n%s\n-----------\n\n' "$(date --date="$newsdate" +%b\ %d\ %Y)" >> src/news.md
+        cat "$news" >> src/news.md
     done
 }
 

@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<html lan="en">
+<head>
+<title>news | Carbs Linux</title>
+<link rel="stylesheet" href="/assets/style.css">
+<meta charset="utf-8">
+<meta name="Description" content="Carbs Linux - a simple busybox linux distribution">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<p class=header><strong>Carbs Linux - a simple busybox linux distribution</strong></p>
+<div class="header"><nav>
+<a href='/'>index</a>
+<a href='https://github.com/CarbsLinux'>github</a>
+<a href='//dl.carbslinux.org'>downloads</a>
+<a href='/blog'>blog</a>
+<a href='/wiki'>wiki</a>
+<a href='/wiki/install.html'>installation</a>
+</nav></div><div class="border"></div>
+<h2>Apr 10 2020</h2>
+
+<p>IRC channel can now be accessed from <code>#carbslinux</code> at freenode!</p>
+
+<h2>Apr 06 2020</h2>
+
+<p>A new rootfs tarball has been released. See the
+<a href="https://dl.carbslinux.org">downloads</a> page</p>
+
+<h2>Apr 05 2020</h2>
+
+<p>Carbs Linux repositories will be hosted only on Github. Commits will be
+pushed there, and not the repository. You have until
+May 4, 2020 Monday to switch your remotes to <a href="https://github.com/CarbsLinux/repository">https://github.com/CarbsLinux/repository</a>.
+The git repository will continue to be served until then (without additional
+commits).</p>
+
+<p>You can switch your remote by executing the following command on your
+repository directory.</p>
+
+<pre><code>git remote set-url origin https://github.com/CarbsLinux/repository
+</code></pre>
+
+<h2>Feb 18 2020</h2>
+
+<p>A new tarball is released. It can be found on <a href="https://dl.carbslinux.org">https://dl.carbslinux.org</a>.</p>
+
+<p><strong>edit:</strong> I have removed the tarball because of a bootstrapping issue.
+I will be re-adding it later today.</p>
+
+<p><strong>edit 2:</strong> I have added a tarball (20200219) to reflect my recent
+changes on Busybox.</p>
+
+<h2>Feb 14 2020</h2>
+
+<p><strong>IMPORTANT!</strong> Carbs-init update to be released on 17th of February
+will require manual intervention. I am holding this update back so
+people can see it before they update their system (even though the
+update will show the same message as this). The rationale for the
+update is explained below the intervention.</p>
+
+<pre><code># There is an explanation for each init
+# You only need to follow the instructions
+# for your own init-system
+
+## busybox-init
+# If you did not edit your inittab simply 
+# move inittab.new to inittab
+-&gt; mv /etc/inittab.new /etc/inittab
+
+# If you did edit your inittab you can use
+# a simple sed command to remove the necessary lines
+-&gt; sed -i '/getty/d;/runsvdir/d' /etc/inittab
+
+
+## runit
+# same as busybox-init, if you did not edit
+# /etc/runit/2 move 2.new to 2
+-&gt; mv /etc/runit/2.new /etc/runit/2
+
+# else
+-&gt; vim /etc/runit/2
+# open your 2 file and remove the for loop containing
+# getty commands. If you are using runit, it is recommended
+# to comment out /etc/init/runit.boot
+
+## sinit/minit
+# If you did not edit your {sinit-,}launch-services.boot
+# you can simply remove it.
+-&gt; rm -f /etc/init/launch-services.boot /etc/init/sinit-launch-services.boot
+
+# This should leave you without any issues, and you can safely reboot.
+</code></pre>
+
+<p>Carbs-init update is to make sure init systems do not clash, and do
+not have to use different files. This is a sensible update both for
+the user user and for the maintainer side.</p>
+
+<p>To give an example, before this update busybox-init was managing getty
+through <code>inittab</code>, runit was managing through <code>/etc/runit/2</code>, and
+minit/sinit were launching from <code>/etc/init/launch-services.boot</code>. This
+is a configuration nightmare for everyone, and since I am maintaining
+and constantly testing those init providers, a huge nightmare for me.
+This is a Quality of Life update.</p>
+
+<h2>Feb 13 2020</h2>
+
+<p>Runit is now released on the core repository! You can now replace
+busybox-init with runit-init. You can also replace the busybox runit
+utilities with the actual runit. This will reduce the dependency on
+busybox greatly.</p>
+
+<h2>Jan 28 2020</h2>
+
+<p>Web Server is now on a Carbs Linux server. It is not complete yet,
+but I will be adding a little more for the intended functionality.
+Downtimes can be expected.</p>
+
+<p>UPDATE: ssl is now working.</p>
+
+<p>UPDATE2: downloads are back again.</p>
+
+<h2>Jan 22 2020</h2>
+
+<p>Expect downtime on Jan 24 2020 22:00 UTC as I will be migrating
+this web server to my Carbs Linux server!</p>
+
+<h2>Jan 15 2020</h2>
+
+<p>sinit has been taken to <code>core</code>, and is now officially supported</p>
+
+<h2>Jan 13 2020</h2>
+
+<p><strong>Busybox update reqires manual intervention</strong></p>
+
+<p>The new busybox package conflicts with the pre-update busybox-init. That&rsquo;s why
+you should rebuild and install <code>busybox-init</code> before doing the update.</p>
+
+<pre><code># Do a kiss update first (but don't actually update it yet), or manually pull the git repository
+$ kiss u  # Cancel this operation after it asks for you to confirm the update
+
+# Install the busybox-init package
+$ kiss b busybox-init &amp;&amp; kiss i busybox-init
+
+# Continue your update as you normally would.
+$ kiss u
+</code></pre>
+
+<p>I have moved runit and logging utilities from the busybox-init package to the busybox
+package, which is the cause of these conflicts.</p>
+
+<h2>Jan 10 2020</h2>
+
+<p>carbs-rootfs-20200110.tar.xz was <a href="//dl.carbslinux.org/releases">released</a></p>
+
+<h2>Jan 09 2020</h2>
+
+<p>Happy new year, everyone! I am back after some long silence. I was unable to commit for a
+while, but I have pulled some new updates from the KISS repository, added some of my own.
+This week I will be changing/adding some things.</p>
+
+<p>Important things are,</p>
+
+<ul>
+<li>Carbs-init was updated to 0.3.</li>
+<li>I will be adding an implementation of suckless.org&rsquo;s <a href="//core.suckless.org/sinit">sinit</a> as <code>carbs-sinit</code></li>
+<li>Carbs Repository was added to <a href="//repology.org/repository/carbs">repology.org</a></li>
+<li>A new rootfs tarball will be coming up tomorrow.</li>
+</ul>
+
+
+<h2>Dec 18 2019</h2>
+
+<p>carbs-rootfs-20191218.tar.xz was <a href="//dl.carbslinux.org/releases">released</a></p>
+
+<h2>Dec 17 2019</h2>
+
+<p>Installation instruction are now complete. A review would be greatly appreciated!</p>
+
+<h2>Dec 15 2019</h2>
+
+<p>Carbs Linux Wiki is now available to be edited and updated by the users go
+to the <a href="//carbslinux.org/wiki">wiki</a> to obtain more information.</p>
+
+<p><strong>February 2020 EDIT:</strong> Changed link for wiki</p>
+
+<h2>Dec 12 2019</h2>
+
+<p>Busybox and Busybox-init has been seperated into two different packages.
+This is for adding standalone runit/runit-init to the repositories.</p>
+
+<h2>Dec 10 2019</h2>
+
+<p>First alpha release was made. See the <a href="//dl.carbslinux.org/releases">downloads page</a>.</p>
+
+<h2>Apr 10 2020</h2>
+
+<p>IRC channel can now be accessed from <code>#carbslinux</code> at freenode!</p>
+
+<h2>Apr 06 2020</h2>
+
+<p>A new rootfs tarball has been released. See the
+<a href="https://dl.carbslinux.org">downloads</a> page</p>
+
+<h2>Apr 05 2020</h2>
+
+<p>Carbs Linux repositories will be hosted only on Github. Commits will be
+pushed there, and not the repository. You have until
+May 4, 2020 Monday to switch your remotes to <a href="https://github.com/CarbsLinux/repository">https://github.com/CarbsLinux/repository</a>.
+The git repository will continue to be served until then (without additional
+commits).</p>
+
+<p>You can switch your remote by executing the following command on your
+repository directory.</p>
+
+<pre><code>git remote set-url origin https://github.com/CarbsLinux/repository
+</code></pre>
+
+<h2>Feb 18 2020</h2>
+
+<p>A new tarball is released. It can be found on <a href="https://dl.carbslinux.org">https://dl.carbslinux.org</a>.</p>
+
+<p><strong>edit:</strong> I have removed the tarball because of a bootstrapping issue.
+I will be re-adding it later today.</p>
+
+<p><strong>edit 2:</strong> I have added a tarball (20200219) to reflect my recent
+changes on Busybox.</p>
+
+<h2>Feb 14 2020</h2>
+
+<p><strong>IMPORTANT!</strong> Carbs-init update to be released on 17th of February
+will require manual intervention. I am holding this update back so
+people can see it before they update their system (even though the
+update will show the same message as this). The rationale for the
+update is explained below the intervention.</p>
+
+<pre><code># There is an explanation for each init
+# You only need to follow the instructions
+# for your own init-system
+
+## busybox-init
+# If you did not edit your inittab simply 
+# move inittab.new to inittab
+-&gt; mv /etc/inittab.new /etc/inittab
+
+# If you did edit your inittab you can use
+# a simple sed command to remove the necessary lines
+-&gt; sed -i '/getty/d;/runsvdir/d' /etc/inittab
+
+
+## runit
+# same as busybox-init, if you did not edit
+# /etc/runit/2 move 2.new to 2
+-&gt; mv /etc/runit/2.new /etc/runit/2
+
+# else
+-&gt; vim /etc/runit/2
+# open your 2 file and remove the for loop containing
+# getty commands. If you are using runit, it is recommended
+# to comment out /etc/init/runit.boot
+
+## sinit/minit
+# If you did not edit your {sinit-,}launch-services.boot
+# you can simply remove it.
+-&gt; rm -f /etc/init/launch-services.boot /etc/init/sinit-launch-services.boot
+
+# This should leave you without any issues, and you can safely reboot.
+</code></pre>
+
+<p>Carbs-init update is to make sure init systems do not clash, and do
+not have to use different files. This is a sensible update both for
+the user user and for the maintainer side.</p>
+
+<p>To give an example, before this update busybox-init was managing getty
+through <code>inittab</code>, runit was managing through <code>/etc/runit/2</code>, and
+minit/sinit were launching from <code>/etc/init/launch-services.boot</code>. This
+is a configuration nightmare for everyone, and since I am maintaining
+and constantly testing those init providers, a huge nightmare for me.
+This is a Quality of Life update.</p>
+
+<h2>Feb 13 2020</h2>
+
+<p>Runit is now released on the core repository! You can now replace
+busybox-init with runit-init. You can also replace the busybox runit
+utilities with the actual runit. This will reduce the dependency on
+busybox greatly.</p>
+
+<h2>Jan 28 2020</h2>
+
+<p>Web Server is now on a Carbs Linux server. It is not complete yet,
+but I will be adding a little more for the intended functionality.
+Downtimes can be expected.</p>
+
+<p>UPDATE: ssl is now working.</p>
+
+<p>UPDATE2: downloads are back again.</p>
+
+<h2>Jan 22 2020</h2>
+
+<p>Expect downtime on Jan 24 2020 22:00 UTC as I will be migrating
+this web server to my Carbs Linux server!</p>
+
+<h2>Jan 15 2020</h2>
+
+<p>sinit has been taken to <code>core</code>, and is now officially supported</p>
+
+<h2>Jan 13 2020</h2>
+
+<p><strong>Busybox update reqires manual intervention</strong></p>
+
+<p>The new busybox package conflicts with the pre-update busybox-init. That&rsquo;s why
+you should rebuild and install <code>busybox-init</code> before doing the update.</p>
+
+<pre><code># Do a kiss update first (but don't actually update it yet), or manually pull the git repository
+$ kiss u  # Cancel this operation after it asks for you to confirm the update
+
+# Install the busybox-init package
+$ kiss b busybox-init &amp;&amp; kiss i busybox-init
+
+# Continue your update as you normally would.
+$ kiss u
+</code></pre>
+
+<p>I have moved runit and logging utilities from the busybox-init package to the busybox
+package, which is the cause of these conflicts.</p>
+
+<h2>Jan 10 2020</h2>
+
+<p>carbs-rootfs-20200110.tar.xz was <a href="//dl.carbslinux.org/releases">released</a></p>
+
+<h2>Jan 09 2020</h2>
+
+<p>Happy new year, everyone! I am back after some long silence. I was unable to commit for a
+while, but I have pulled some new updates from the KISS repository, added some of my own.
+This week I will be changing/adding some things.</p>
+
+<p>Important things are,</p>
+
+<ul>
+<li>Carbs-init was updated to 0.3.</li>
+<li>I will be adding an implementation of suckless.org&rsquo;s <a href="//core.suckless.org/sinit">sinit</a> as <code>carbs-sinit</code></li>
+<li>Carbs Repository was added to <a href="//repology.org/repository/carbs">repology.org</a></li>
+<li>A new rootfs tarball will be coming up tomorrow.</li>
+</ul>
+
+
+<h2>Dec 18 2019</h2>
+
+<p>carbs-rootfs-20191218.tar.xz was <a href="//dl.carbslinux.org/releases">released</a></p>
+
+<h2>Dec 17 2019</h2>
+
+<p>Installation instruction are now complete. A review would be greatly appreciated!</p>
+
+<h2>Dec 15 2019</h2>
+
+<p>Carbs Linux Wiki is now available to be edited and updated by the users go
+to the <a href="//carbslinux.org/wiki">wiki</a> to obtain more information.</p>
+
+<p><strong>February 2020 EDIT:</strong> Changed link for wiki</p>
+
+<h2>Dec 12 2019</h2>
+
+<p>Busybox and Busybox-init has been seperated into two different packages.
+This is for adding standalone runit/runit-init to the repositories.</p>
+
+<h2>Dec 10 2019</h2>
+
+<p>First alpha release was made. See the <a href="//dl.carbslinux.org/releases">downloads page</a>.</p>
+<a href="/news.txt">View Page Source</a><div class=border></div>
+<p class=footer>Linux® is a registered trademark of Linus Torvalds</p>
+<p class=footer>Copyright © 2019-2020 Cem Keylan</p>
+</body>
+</html>
