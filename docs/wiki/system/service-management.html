@@ -16,36 +16,82 @@
 <a href='/wiki'>wiki</a>
 <a href='/wiki/install.html'>installation</a>
 </nav></div><div class="border"></div>
-<h1>Service Management</h1>
+<p>Carbs Linux uses <code>busybox-runit</code> by default, but the repository additionally has the
+original <code>runit</code> and <code>sysmgr</code>. You can install either with <code>kiss b runit; kiss i runit</code>
+or <code>kiss b sysmgr; kiss i sysmgr</code>.</p>
 
-<p>Carbs Linux uses busybox-runit as the default system supervisor.</p>
+<h1>runit</h1>
 
-<h2>Enabling Services</h2>
+<p><strong>Enabling a Service</strong></p>
 
-<p>Services start immediately when you enable them, and run by default on boot.</p>
-
-<pre><code>$ ln -s /etc/sv/acpid /var/service
+<pre><code>ln -sf /etc/sv/acpid /var/service
 </code></pre>
 
-<h2>Disabling a service</h2>
+<p><strong>Disabling a Service</strong></p>
 
-<pre><code>$ unlink /var/service/acpid
+<pre><code>unlink /var/service/acpid
 </code></pre>
 
-<h2>Starting a service</h2>
+<p><strong>Starting a Service</strong></p>
 
-<pre><code>$ sv start acpid
+<pre><code>sv start acpid
 </code></pre>
 
-<h2>Stopping a service</h2>
+<p><strong>Stopping a Service</strong></p>
 
-<pre><code>$ sv stop acpid
+<pre><code>sv stop acpid
 </code></pre>
 
-<h2>More</h2>
+<p>For more information refer to the <code>sv --help</code> output. Also check out the <code>sv(8)</code>
+manual page if you have installed the <code>runit</code> package.</p>
 
-<p>Runit is extremely flexible and simple. Refer to <code>sv</code>, <code>runsv</code>, <code>svc</code>, <code>runsvdir</code>
-help outputs for more information.</p>
+<h1>sysmgr</h1>
+
+<p><a href="https://github.com/cemkeylan/sysmgr">sysmgr</a> is POSIX-sh service supervisor written by me. Its usage resembles
+<code>runit</code>. The biggest difference is that <code>sysmgr</code> uses service files instead
+of directories with run scripts inside.</p>
+
+<h2>svctl</h2>
+
+<p><code>svctl</code> is the equivalant of <code>sv</code> for sysmgr. You can run the above commands for
+<code>runit</code> and use <code>svctl</code> instead of <code>sv</code>. Those would be as follows.</p>
+
+<p><strong>Enabling a Service</strong></p>
+
+<pre><code>ln -sf /etc/sysmgr/acpid /var/sysmgr
+</code></pre>
+
+<p><strong>Disabling a Service</strong></p>
+
+<pre><code>unlink /var/sysmgr/acpid
+</code></pre>
+
+<p><strong>Starting a Service</strong></p>
+
+<pre><code>svctl start acpid
+</code></pre>
+
+<p><strong>Stopping a Service</strong></p>
+
+<pre><code>svctl stop acpid
+</code></pre>
+
+<h2>Switching from runit</h2>
+
+<p>Switching from <code>runit</code> is fairly easy. You can run the following commands to get
+started with <code>sysmgr</code>.</p>
+
+<pre><code># Create the directories if you haven't yet
+mkdir -p /var/sysmgr /etc/sysmgr
+
+# Copy all of the run scripts to /etc/sysmgr
+set -- /etc/sv/*
+for service; do cp "$service/run" "/etc/sysmgr/${service##*/}" ; done
+
+# Link all enabled services
+set -- /var/service/*
+for service; do ln -sf /etc/sysmgr/${service##*/} /var/sysmgr ; done
+</code></pre>
 <a href="/wiki/system/service-management.txt">View Page Source</a><div class=border></div>
 <p class=footer>Linux® is a registered trademark of Linus Torvalds</p>
 <p class=footer>Copyright © 2019-2020 Cem Keylan</p>

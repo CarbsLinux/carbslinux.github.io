@@ -1,39 +1,81 @@
 
-Service Management
-==================
+Carbs Linux uses `busybox-runit` by default, but the repository additionally has the
+original `runit` and `sysmgr`. You can install either with `kiss b runit; kiss i runit`
+or `kiss b sysmgr; kiss i sysmgr`.
 
-Carbs Linux uses busybox-runit as the default system supervisor.
+runit
+=====
 
+**Enabling a Service**
 
-Enabling Services
------------------
+    ln -sf /etc/sv/acpid /var/service
 
-Services start immediately when you enable them, and run by default on boot.
+**Disabling a Service**
 
+    unlink /var/service/acpid
 
-    $ ln -s /etc/sv/acpid /var/service
+**Starting a Service**
 
+    sv start acpid
 
-Disabling a service
--------------------
+**Stopping a Service**
 
-    $ unlink /var/service/acpid
+    sv stop acpid
 
-
-Starting a service
-------------------
-
-    $ sv start acpid
-
-
-Stopping a service
-------------------
-
-    $ sv stop acpid
+For more information refer to the `sv --help` output. Also check out the `sv(8)`
+manual page if you have installed the `runit` package.
 
 
-More
-----
+sysmgr
+======
 
-Runit is extremely flexible and simple. Refer to `sv`, `runsv`, `svc`, `runsvdir`
-help outputs for more information.
+[sysmgr] is POSIX-sh service supervisor written by me. Its usage resembles
+`runit`. The biggest difference is that `sysmgr` uses service files instead
+of directories with run scripts inside.
+
+
+svctl
+-----
+
+`svctl` is the equivalant of `sv` for sysmgr. You can run the above commands for
+`runit` and use `svctl` instead of `sv`. Those would be as follows.
+
+
+**Enabling a Service**
+
+    ln -sf /etc/sysmgr/acpid /var/sysmgr
+
+**Disabling a Service**
+
+    unlink /var/sysmgr/acpid
+
+**Starting a Service**
+
+    svctl start acpid
+
+**Stopping a Service**
+
+    svctl stop acpid
+
+
+Switching from runit
+--------------------
+
+Switching from `runit` is fairly easy. You can run the following commands to get
+started with `sysmgr`.
+
+
+    # Create the directories if you haven't yet
+    mkdir -p /var/sysmgr /etc/sysmgr
+    
+    # Copy all of the run scripts to /etc/sysmgr
+    set -- /etc/sv/*
+    for service; do cp "$service/run" "/etc/sysmgr/${service##*/}" ; done
+    
+    # Link all enabled services
+    set -- /var/service/*
+    for service; do ln -sf /etc/sysmgr/${service##*/} /var/sysmgr ; done
+
+
+
+[sysmgr]: https://github.com/cemkeylan/sysmgr
