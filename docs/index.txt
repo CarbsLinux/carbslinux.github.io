@@ -56,6 +56,11 @@ News
 
 [RSS Feed](/news.xml) | [See all news](/news.html)
 
+### Apr 27 2020
+
+A new rootfs tarball has been released! You can
+see it on <https://dl.carbslinux.org/releases>!
+
 ### Apr 10 2020
 
 IRC channel can now be accessed from `#carbslinux` at freenode!
@@ -64,17 +69,3 @@ IRC channel can now be accessed from `#carbslinux` at freenode!
 
 A new rootfs tarball has been released. See the
 [downloads](https://dl.carbslinux.org) page
-
-### Apr 05 2020
-
-Carbs Linux repositories will be hosted only on Github. Commits will be
-pushed there, and not the repository. You have until
-May 4, 2020 Monday to switch your remotes to <https://github.com/CarbsLinux/repository>.
-The git repository will continue to be served until then (without additional
-commits).
-
-You can switch your remote by executing the following command on your
-repository directory.
-
-    git remote set-url origin https://github.com/CarbsLinux/repository
-
