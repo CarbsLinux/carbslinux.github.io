@@ -94,7 +94,7 @@ site_index() {
     # find index -name '*.news' | sort -r | sed 3q | while read -r news ; do
     # shellcheck disable=2046
     set -- $(find index -name '*.news' | sort -r)
-    for news in "$1" "$2" "$3" ; do
+    for news in "$1" "$2" "$3" "$4" "$5" ; do
         newsdate="${news##*/}" ; newsdate="${newsdate%.news}"
         printf '\n### %s\n\n' "$(date --date="$newsdate" +%b\ %d\ %Y)" >> src/index.md
         cat "$news" >> src/index.md
