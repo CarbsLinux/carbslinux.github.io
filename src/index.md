@@ -61,6 +61,8 @@ News
 A new rootfs tarball has been released! You can
 see it on <https://dl.carbslinux.org/releases>!
 
+**EDIT:** A new bug fix release has been made.
+
 ### Apr 10 2020
 
 IRC channel can now be accessed from `#carbslinux` at freenode!
