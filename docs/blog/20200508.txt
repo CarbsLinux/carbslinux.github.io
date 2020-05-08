@@ -72,9 +72,9 @@ compatibility on my fork of the [package manager]. I have tested,
 without any more issues, on OpenBSD and FreeBSD. The biggest
 issues remaining are choosing a vendor for BSD, packaging the
 BSD source, and providing a minimal base (like busybox for BSD).
-If you aren't familiar with BSD, BSD has a single source code
-for all of the utilities. Contributions (even chipping in ideas)
-are very welcome.
+If you aren't familiar with BSD, it has a single source code
+for all of the utilities (kernel, command line programs, etc.).
+Contributions (even chipping in ideas) are very welcome.
 
 Adding binary package distribution support natively to the package
 manager. Biggest issue in small/old computers are compile times.

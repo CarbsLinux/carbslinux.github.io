@@ -9,7 +9,7 @@
 <description>a simple busybox linux distribution</description>		
 <link>https://carbslinux.org</link>
 <atom:link href="https://carbslinux.org/rss.xml" rel="self" type="application/rss+xml" />
-<lastBuildDate>May Fri 2020 00:00</lastBuildDate>
+<lastBuildDate>May Fri 2020 01:00</lastBuildDate>
 <item>
 <title>The Relation of Carbs and KISS</title>
 <pubDate>Fri, 08 May 2020</pubDate>
@@ -79,9 +79,9 @@ compatibility on my fork of the &lt;a href=&quot;https://github.com/carbslinux/k
 without any more issues, on OpenBSD and FreeBSD. The biggest
 issues remaining are choosing a vendor for BSD, packaging the
 BSD source, and providing a minimal base (like busybox for BSD).
-If you aren&amp;rsquo;t familiar with BSD, BSD has a single source code
-for all of the utilities. Contributions (even chipping in ideas)
-are very welcome.&lt;/p&gt;
+If you aren&amp;rsquo;t familiar with BSD, it has a single source code
+for all of the utilities (kernel, command line programs, etc.).
+Contributions (even chipping in ideas) are very welcome.&lt;/p&gt;
 
 &lt;p&gt;Adding binary package distribution support natively to the package
 manager. Biggest issue in small/old computers are compile times.
