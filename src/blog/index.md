@@ -6,6 +6,7 @@ here. [RSS Feed]
 
 [RSS Feed]: /rss.xml
 
+* May 08 2020 - [The Relation of Carbs and KISS](20200508.html)
 * Apr 10 2020 - [Outsource Repository Concept](20200410.html)
 * Apr 06 2020 - [Roadmap for Carbs](20200406.html)
 * Jan 28 2020 - [Switching to New Website](20200128.html)
