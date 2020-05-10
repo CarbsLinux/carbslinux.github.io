@@ -56,6 +56,14 @@ News
 
 [RSS Feed](/news.xml) | [See all news](/news.html)
 
+### May 10 2020
+
+A GCC 10.1.0 change causes a kernel panic for kernels built
+with GCC 10.1. This issue can be resolved by applying this
+[patch] to your kernel sources.
+
+[patch]: https://git.kernel.org/pub/scm/linux/kernel/git/tip/tip.git/patch/?id=f670269a42bfdd2c83a1118cc3d1b475547eac22
+
 ### Apr 27 2020
 
 A new rootfs tarball has been released! You can
@@ -84,15 +92,4 @@ You can switch your remote by executing the following command on your
 repository directory.
 
     git remote set-url origin https://github.com/CarbsLinux/repository
-
-
-### Feb 18 2020
-
-A new tarball is released. It can be found on <https://dl.carbslinux.org>.
-
-**edit:** I have removed the tarball because of a bootstrapping issue. 
-I will be re-adding it later today.
-
-**edit 2:** I have added a tarball (20200219) to reflect my recent
-changes on Busybox.
 

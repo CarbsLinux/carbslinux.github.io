@@ -1,0 +1,5 @@
+A GCC 10.1.0 change causes a kernel panic for kernels built
+with GCC 10.1. This issue can be resolved by applying this
+[patch] to your kernel sources.
+
+[patch]: https://git.kernel.org/pub/scm/linux/kernel/git/tip/tip.git/patch/?id=f670269a42bfdd2c83a1118cc3d1b475547eac22
