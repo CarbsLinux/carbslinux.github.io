@@ -190,14 +190,12 @@ can be found on the repository
     $ kiss build 9base
     $ kiss install 9base
 
+
 ### Install the Kernel
 
-**IMPORTANT NOTE**
-
-If you have GCC 10.x on your system, you need to apply this [patch] to
-your kernel sources. Otherwise your kernel will panic during the boot
-stage.
-
+**IMPORTANT:** If you have GCC 10.x on your system, you need to apply
+this [patch] to your kernel sources. Otherwise your kernel will panic
+during the boot stage.
 
 Next step is installing the kernel, which might sound as a challenge
 you should download and extract the kernel tarball first.
