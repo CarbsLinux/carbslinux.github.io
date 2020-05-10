@@ -192,6 +192,12 @@ can be found on the repository
 
 ### Install the Kernel
 
+**IMPORTANT NOTE**
+
+If you have GCC 10.x on your system, you need to apply this [patch] to
+your kernel sources. Otherwise your kernel will panic during the boot
+stage.
+
 
 Next step is installing the kernel, which might sound as a challenge
 you should download and extract the kernel tarball first.
@@ -203,6 +209,8 @@ you should download and extract the kernel tarball first.
     $ mv linux-5.5.tar.xz /usr/src
     $ tar xf linux-5.5.tar.xz
     $ cd linux-5.5
+
+[patch]: https://dl.carbslinux.org/distfiles/linux-gcc-10-bootfix.patch
 
 **Configure the Kernel**
 
