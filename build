@@ -39,7 +39,7 @@ gettitle() {
         basename "$1" .md
         return 0
     }
-    sed 1q "$1" | cut -d' ' -f2-
+    sed 's/^[Tt]itle: //;1q' "$1"
 }
 
 genpages() {

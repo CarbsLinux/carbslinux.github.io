@@ -1,4 +1,12 @@
 
+May 19 2020
+-----------
+
+A rootfs tarball targeting the i686 architecture has
+been released. It can be found on the [downloads page]
+
+[downloads page]: https://dl.carbslinux.org/releases/i686
+
 May 10 2020
 -----------
 
