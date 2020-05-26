@@ -1,5 +1,11 @@
 #!/bin/sh -e
 
+sed_i() {
+    for file; do :; done
+    sed "$@" > _
+    cat _> "$file"; rm -f _
+}
+
 header() {
     cat <<EOF
 <!DOCTYPE HTML>
@@ -49,7 +55,7 @@ genpages() {
     for page in $(cd src || return 1 ; find . -name '*.md') ; do
         tohtml "src/$page" > "docs/${page%.md}.html"
         cp "src/$page" "docs/${page%.md}.txt"
-        sed -i '/^Title:/d' "docs/${page%.md}.txt"
+        sed_i '/^Title:/d' "docs/${page%.md}.txt"
     done
     # Copy rest of the files
     (cd src || return 1 ; find . -type f ! -name '*.md' -exec cp -u \{\} ../docs/\{\} \; )
@@ -59,12 +65,12 @@ genpages() {
 
 tohtml() {
     header "$(gettitle "$1")"
-    sed '/Title:/d' "$1" | markdown
+    sed '/^[Tt]itle:/d' "$1" | markdown
     footer "$(echo "$1" | sed 's/.md$/.txt/;s/src\/.//')"
 }
 
 wiki_index() {
-    sed -i '/^Content/,$d' src/wiki/index.md
+    sed_i '/^Content/,$d' src/wiki/index.md
     printf 'Content\n-------\n\n' >> src/wiki/index.md
     for page in $(find src/wiki -type f | grep -v 'src/wiki/index.md' | sort) ; do
         printf '* [%s](%s)\n' "$(gettitle "$page")" "$(printf "$page" | sed 's#src/wiki/##;s/.md/.html/')" >> src/wiki/index.md
