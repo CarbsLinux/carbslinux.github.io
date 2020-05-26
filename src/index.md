@@ -48,8 +48,11 @@ Links
 -----
 
 * IRC    - `#carbslinux` on freenode
-* Reddit - [/r/carbslinux](http://reddit.com/r/carbslinux)
+* Reddit - [/r/carbslinux]
+* [Mailing Lists]
 
+[/r/carbslinux]: http://reddit.com/r/carbslinux
+[Mailing Lists]: /mailing-lists.html
 
 News
 ----
