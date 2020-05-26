@@ -35,11 +35,11 @@ EOF
 }
 
 gettitle() {
-    sed 1q "$1" | grep -q '^Title:' || {
-        basename "$1" .md
-        return 0
-    }
-    sed 's/^[Tt]itle: //;1q' "$1"
+    case "$(sed 1q "$1")" in
+         Title:*) sed 's/^[Tt]itle: //;1q' "$1"  ;;
+               *) file=${1##*/} file=${file%.md}
+                  printf '%s\n' "$file"
+    esac
 }
 
 genpages() {
