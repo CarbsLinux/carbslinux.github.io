@@ -1,4 +1,12 @@
 
+May 26 2020
+-----------
+
+An initial version for binary package management is released.
+It can be found on the [GitHub page].
+
+[GitHub page]: https://github.com/CarbsLinux/kiss-bin
+
 May 19 2020
 -----------
 

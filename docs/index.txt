@@ -59,6 +59,13 @@ News
 
 [RSS Feed](/news.xml) | [See all news](/news.html)
 
+### May 26 2020
+
+An initial version for binary package management is released.
+It can be found on the [GitHub page].
+
+[GitHub page]: https://github.com/CarbsLinux/kiss-bin
+
 ### May 19 2020
 
 A rootfs tarball targeting the i686 architecture has
@@ -84,8 +91,3 @@ see it on <https://dl.carbslinux.org/releases>!
 ### Apr 10 2020
 
 IRC channel can now be accessed from `#carbslinux` at freenode!
-
-### Apr 06 2020
-
-A new rootfs tarball has been released. See the
-[downloads](https://dl.carbslinux.org) page
