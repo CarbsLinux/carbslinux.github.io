@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lan="en">
+<head>
+<title>kiss 2.0.0 and overall changes | Carbs Linux</title>
+<link rel="stylesheet" href="/assets/style.css">
+<meta charset="utf-8">
+<meta name="Description" content="Carbs Linux - a simple busybox linux distribution">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<p class=header><strong>Carbs Linux - a simple busybox linux distribution</strong></p>
+<div class="header"><nav>
+<a href='/'>index</a>
+<a href='https://github.com/CarbsLinux'>github</a>
+<a href='//dl.carbslinux.org'>downloads</a>
+<a href='/blog'>blog</a>
+<a href='/wiki'>wiki</a>
+<a href='/wiki/install.html'>installation</a>
+</nav></div><div class="border"></div>
+<p>Carbs Linux kiss version 2.0.0 has been released which introduces
+rsync repositories.</p>
+
+<p>Git is no longer a mandatory dependency for the package manager,
+every git source on the core repository has been replaced with
+https sources (sbase, sinit), and rootfs tarballs will no longer
+ship with git. Repositories in the upcoming tarball will be rsync
+repositories.</p>
+
+<p>Git is now on the <code>extra</code> repository and is still (optionally)
+used in the package manager.</p>
+
+<p>The idea behind this change is size reductions and increased
+speed with rsync. As I said on the previous post, git repositories
+get larger and larger over the time span. Currently my personal
+copy of the git repository is around 77MB and I have forked KISS
+Linux (as a shallow copy) around December. Obviously, I have commits
+that I ommitted. I tend to create commits I dislike, which I change
+with &lsquo;git reset &ndash;soft HEAD^&rsquo;, which doesn&rsquo;t actually remove the
+commits, etc. A user will have a repository much smaller than mine.</p>
+
+<p>This is a precaution with the added bonuses of speed and dropping a
+mandatory dependency.</p>
+
+<h2>Binary Repositories</h2>
+
+<p>A few days ago, I have also published <a href="https://github.com/CarbsLinux/kiss-bin">kiss-bin</a>, a first version
+for managing binary repositories. Currently, there are some caveats
+that I&rsquo;ll be fixing along the way. I decided not to include this
+in the package manager natively as managing the source based and
+binary based packages together adds levels of complexity that we
+do not want. Instead, this is an extension for kiss which sources
+the package manager as a library. I hope to see it being adopted
+by others interested on the matter as well.</p>
+
+<p>That&rsquo;s about it.</p>
+
+<p>Cheers,
+Cem</p>
+<a href="/blog/20200528.txt">View Page Source</a><div class=border></div>
+<p class=footer>Linux® is a registered trademark of Linus Torvalds</p>
+<p class=footer>Copyright © 2019-2020 Cem Keylan</p>
+</body>
+</html>

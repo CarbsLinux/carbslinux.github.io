@@ -9,7 +9,52 @@
 <description>a simple busybox linux distribution</description>		
 <link>https://carbslinux.org</link>
 <atom:link href="https://carbslinux.org/rss.xml" rel="self" type="application/rss+xml" />
-<lastBuildDate>May Tue 2020 17:00</lastBuildDate>
+<lastBuildDate>May Thu 2020 15:00</lastBuildDate>
+<item>
+<title>kiss 2.0.0 and overall changes</title>
+<pubDate>Thu, 28 May 2020</pubDate>
+<dc:creator>Cem Keylan</dc:creator>
+<link>https://carbslinux.org/blog/20200528.html</link>
+<description>&lt;p&gt;Carbs Linux kiss version 2.0.0 has been released which introduces
+rsync repositories.&lt;/p&gt;
+
+&lt;p&gt;Git is no longer a mandatory dependency for the package manager,
+every git source on the core repository has been replaced with
+https sources (sbase, sinit), and rootfs tarballs will no longer
+ship with git. Repositories in the upcoming tarball will be rsync
+repositories.&lt;/p&gt;
+
+&lt;p&gt;Git is now on the &lt;code&gt;extra&lt;/code&gt; repository and is still (optionally)
+used in the package manager.&lt;/p&gt;
+
+&lt;p&gt;The idea behind this change is size reductions and increased
+speed with rsync. As I said on the previous post, git repositories
+get larger and larger over the time span. Currently my personal
+copy of the git repository is around 77MB and I have forked KISS
+Linux (as a shallow copy) around December. Obviously, I have commits
+that I ommitted. I tend to create commits I dislike, which I change
+with &amp;lsquo;git reset &amp;ndash;soft HEAD^&amp;rsquo;, which doesn&amp;rsquo;t actually remove the
+commits, etc. A user will have a repository much smaller than mine.&lt;/p&gt;
+
+&lt;p&gt;This is a precaution with the added bonuses of speed and dropping a
+mandatory dependency.&lt;/p&gt;
+
+&lt;h2&gt;Binary Repositories&lt;/h2&gt;
+
+&lt;p&gt;A few days ago, I have also published &lt;a href=&quot;https://github.com/CarbsLinux/kiss-bin&quot;&gt;kiss-bin&lt;/a&gt;, a first version
+for managing binary repositories. Currently, there are some caveats
+that I&amp;rsquo;ll be fixing along the way. I decided not to include this
+in the package manager natively as managing the source based and
+binary based packages together adds levels of complexity that we
+do not want. Instead, this is an extension for kiss which sources
+the package manager as a library. I hope to see it being adopted
+by others interested on the matter as well.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s about it.&lt;/p&gt;
+
+&lt;p&gt;Cheers,
+Cem&lt;/p&gt;</description>
+</item>
 <item>
 <title>The Relation of Carbs and KISS</title>
 <pubDate>Fri, 08 May 2020</pubDate>
