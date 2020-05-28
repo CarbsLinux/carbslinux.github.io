@@ -39,6 +39,8 @@ commits, etc. A user will have a repository much smaller than mine.&lt;/p&gt;
 &lt;p&gt;This is a precaution with the added bonuses of speed and dropping a
 mandatory dependency.&lt;/p&gt;
 
+&lt;p&gt;You can see the rest of the changelog &lt;a href=&quot;https://github.com/CarbsLinux/kiss/blob/master/CHANGELOG.md&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
 &lt;h2&gt;Binary Repositories&lt;/h2&gt;
 
 &lt;p&gt;A few days ago, I have also published &lt;a href=&quot;https://github.com/CarbsLinux/kiss-bin&quot;&gt;kiss-bin&lt;/a&gt;, a first version

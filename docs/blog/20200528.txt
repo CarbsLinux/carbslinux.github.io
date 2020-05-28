@@ -23,6 +23,10 @@ commits, etc. A user will have a repository much smaller than mine.
 This is a precaution with the added bonuses of speed and dropping a
 mandatory dependency.
 
+You can see the rest of the changelog [here].
+
+[here]: https://github.com/CarbsLinux/kiss/blob/master/CHANGELOG.md
+
 
 Binary Repositories
 -------------------
