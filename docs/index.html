@@ -17,7 +17,7 @@
 <a href='/wiki/install.html'>installation</a>
 </nav></div><div class="border"></div>
 <p>Carbs Linux is an in-development Linux® distribution with a suckless mindset.
-The base system will consist of only the necessary programs to create a Linux
+The base system consists of only the necessary programs to create a Linux
 distribution.</p>
 
 <h2>Package Manager</h2>
@@ -27,8 +27,9 @@ extremely flexible package manager.</p>
 
 <h2>Small base</h2>
 
-<p>By default, Carbs Linux comes with busybox for coreutils, and basic utilities
-for building new software. The rootfs tarball is not bigger than 40MB.</p>
+<p>By default, Carbs Linux comes with busybox for coreutils, bearssl for its crypto
+library, musl libc, and other basic utilities that are required for building
+new software. The majority of the base packages are statically linked.</p>
 
 <h2>Multiple Init Support</h2>
 
@@ -52,9 +53,9 @@ the main repository are</p>
 
 
 <p>for service supervisors. The <a href="https://github.com/CarbsLinux/repository/tree/master/core/carbs-init">carbs-init</a> package is the collection of init
-scripts that ensure the interoperatability of these init and service systems,
-and make it easier for the user to switch to their preferred combinations of
-system supervision.</p>
+scripts that ensure the interoperability of these init and service systems, and
+make it easier for the user to switch to their preferred combinations of system
+supervision.</p>
 
 <p>Nothing holds you back, however, from ditching any of these and packaging some
 other system supervision technique along with your own init scripts.</p>
