@@ -1,4 +1,10 @@
 
+Jun 17 2020
+-----------
+
+A new rootfs tarball including the changes to the core is released and can be
+found on the downloads page.
+
 May 26 2020
 -----------
 

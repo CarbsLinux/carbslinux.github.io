@@ -9,7 +9,15 @@
 <description>a simple busybox linux distribution</description>		
 <link>https://carbslinux.org</link>
 <atom:link href="https://carbslinux.org/news.xml" rel="self" type="application/rss+xml" />
-<lastBuildDate>Jun Wed 2020 13:00</lastBuildDate>
+<lastBuildDate>Jun Wed 2020 14:00</lastBuildDate>
+<item>
+<title>20200617.news</title>
+<pubDate>Wed, 17 Jun 2020</pubDate>
+<dc:creator>Cem Keylan</dc:creator>
+<link>https://carbslinux.org/index.html</link>
+<description>&lt;p&gt;A new rootfs tarball including the changes to the core is released and can be
+found on the downloads page.&lt;/p&gt;</description>
+</item>
 <item>
 <title>20200526.news</title>
 <pubDate>Tue, 26 May 2020</pubDate>

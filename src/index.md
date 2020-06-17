@@ -60,6 +60,11 @@ News
 
 [RSS Feed](/news.xml) | [See all news](/news.html)
 
+### Jun 17 2020
+
+A new rootfs tarball including the changes to the core is released and can be
+found on the downloads page.
+
 ### May 26 2020
 
 An initial version for binary package management is released.
@@ -88,7 +93,3 @@ A new rootfs tarball has been released! You can
 see it on <https://dl.carbslinux.org/releases>!
 
 **EDIT:** A new bug fix release has been made.
-
-### Apr 10 2020
-
-IRC channel can now be accessed from `#carbslinux` at freenode!
