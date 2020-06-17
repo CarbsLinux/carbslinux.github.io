@@ -9,13 +9,104 @@
 <description>a simple busybox linux distribution</description>		
 <link>https://carbslinux.org</link>
 <atom:link href="https://carbslinux.org/rss.xml" rel="self" type="application/rss+xml" />
-<lastBuildDate>May Thu 2020 15:00</lastBuildDate>
+<lastBuildDate>Jun Wed 2020 10:00</lastBuildDate>
+<item>
+<title>June Newspost</title>
+<pubDate>Wed, 17 Jun 2020</pubDate>
+<dc:creator>Cem Keylan</dc:creator>
+<link>https://carbslinux.org/blog/20200617.html</link>
+<description>&lt;h1&gt;June Newspost&lt;/h1&gt;
+
+&lt;p&gt;This will be an active month for Carbs as major changes to the base and the
+package manager will be coming up.&lt;/p&gt;
+
+&lt;p&gt;TABLE OF CONTENTS
+1. Statically linking the base
+2. Major changes on the core repository
+3. Making the wiki available offline
+4. ISO image for Carbs&lt;/p&gt;
+
+&lt;h2&gt;Statically linking the base&lt;/h2&gt;
+
+&lt;p&gt;For the past couple of weeks I have been trying to simplify the base and
+statically link the core (mostly binaries rather than libraries). I usually see
+some people extremely opposed to static linking as I also see the opposite on
+people.&lt;/p&gt;
+
+&lt;p&gt;I believe that binaries on the core should always be linked statically. This
+ensures that an SONAME bump to &lt;code&gt;libObscure.so&lt;/code&gt; will not break the core
+functionality of your system, forcing you to use external resources to recover
+from such an issue. As long as you can compile, use core utilities, edit text,
+and access the web, you can solve any given issue on your system.&lt;/p&gt;
+
+&lt;p&gt;However, I don&amp;rsquo;t think that removing shared libraries is sensible either. Not
+every piece of software out there is good quality enough to be statically
+linked.&lt;/p&gt;
+
+&lt;h2&gt;Major changes on the core repository&lt;/h2&gt;
+
+&lt;p&gt;There have been drastic changes to the core repository and the base rootfs this
+month (with more on the way). Right now changes are as follows.&lt;/p&gt;
+
+&lt;h3&gt;Removed from Core&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;libressl&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;grub&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bison&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dhcpcd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ubase&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Added to Core&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;bearssl&lt;/code&gt;, as a &lt;code&gt;libressl&lt;/code&gt; replacement&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;byacc&lt;/code&gt;, as a &lt;code&gt;bison&lt;/code&gt; replacement&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Statically linked&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;kiss&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;neatvi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mandoc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;byacc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;m4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;e2fsprogs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pkgconf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sbase&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;libnl&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wpa_supplicant&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bearssl&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Making the wiki available offline&lt;/h2&gt;
+
+&lt;p&gt;Soon, all documentation regarding Carbs Linux will be avaialable to be installed
+from the core repository in a &lt;code&gt;carbs-docs&lt;/code&gt; package along with its own document
+crawler. Currently, the documentation regarding the installation process is a
+little outdated which will also receive some important updates.&lt;/p&gt;
+
+&lt;h2&gt;ISO image for Carbs&lt;/h2&gt;
+
+&lt;p&gt;I am thinking of releasing an ISO image in order to provide a standardized
+environment for installation along with installation helper tools in the spirit
+of &lt;code&gt;arch-install-scripts&lt;/code&gt;. Let&amp;rsquo;s see how that&amp;rsquo;s going to play out.&lt;/p&gt;</description>
+</item>
 <item>
 <title>kiss 2.0.0 and overall changes</title>
 <pubDate>Thu, 28 May 2020</pubDate>
 <dc:creator>Cem Keylan</dc:creator>
 <link>https://carbslinux.org/blog/20200528.html</link>
-<description>&lt;p&gt;Carbs Linux kiss version 2.0.0 has been released which introduces
+<description>&lt;h1&gt;kiss 2.0.0 and overall changes&lt;/h1&gt;
+
+&lt;p&gt;Carbs Linux kiss version 2.0.0 has been released which introduces
 rsync repositories.&lt;/p&gt;
 
 &lt;p&gt;Git is no longer a mandatory dependency for the package manager,
@@ -62,7 +153,9 @@ Cem&lt;/p&gt;</description>
 <pubDate>Fri, 08 May 2020</pubDate>
 <dc:creator>Cem Keylan</dc:creator>
 <link>https://carbslinux.org/blog/20200508.html</link>
-<description>&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; May 08 2020&lt;/p&gt;
+<description>&lt;h1&gt;The Relation of Carbs and KISS&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; May 08 2020&lt;/p&gt;
 
 &lt;p&gt;Since I have forked KISS, I have received many questions
 that can be summarized as &amp;ldquo;Why?&amp;rdquo;. I have realized that I
@@ -214,7 +307,9 @@ but can be found on it.&lt;/p&gt;
 <pubDate>Mon, 06 Apr 2020</pubDate>
 <dc:creator>Cem Keylan</dc:creator>
 <link>https://carbslinux.org/blog/20200406.html</link>
-<description>&lt;p&gt;It has been a busy week. There are lots of changes in
+<description>&lt;h1&gt;Roadmap for Carbs&lt;/h1&gt;
+
+&lt;p&gt;It has been a busy week. There are lots of changes in
 direction, and more to come. I want to talk a little
 about all of them.&lt;/p&gt;
 
@@ -278,7 +373,7 @@ the website structure overall.&lt;/p&gt;
 <pubDate>Tue, 28 Jan 2020</pubDate>
 <dc:creator>Cem Keylan</dc:creator>
 <link>https://carbslinux.org/blog/20200128.html</link>
-<description>&lt;h2&gt;Switching to New Website&lt;/h2&gt;
+<description>&lt;h1&gt;Switching to New Website&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; Jan 28 2020&lt;/p&gt;
 

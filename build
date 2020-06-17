@@ -1,11 +1,5 @@
 #!/bin/sh -e
 
-sed_i() {
-    for file; do :; done
-    sed "$@" > _
-    cat _> "$file"; rm -f _
-}
-
 header() {
     cat <<EOF
 <!DOCTYPE HTML>
@@ -43,8 +37,18 @@ EOF
 gettitle() {
     case "$(sed 1q "$1")" in
          Title:*) sed 's/^[Tt]itle: //;1q' "$1"  ;;
-               *) file=${1##*/} file=${file%.md}
-                  printf '%s\n' "$file"
+         *)
+             title=$(
+             grep -n '=*=' -- "$1" |
+
+                 while IFS=: read -r num _; do
+                     sed "$(( num - 1 ))q;d" "$1"
+                     return 0
+                 done
+             )
+
+             file=${1##*/} file=${file%.md}
+             printf '%s\n' "${title:-$file}"
     esac
 }
 
@@ -52,10 +56,9 @@ genpages() {
     # Create directories in docs
     find src -type d | while read -r dir ; do mkdir -p "docs${dir#src}" ; done
     # Generate html and txt files
-    for page in $(cd src || return 1 ; find . -name '*.md') ; do
-        tohtml "src/$page" > "docs/${page%.md}.html"
-        cp "src/$page" "docs/${page%.md}.txt"
-        sed_i '/^Title:/d' "docs/${page%.md}.txt"
+    for page in $(cd src || return 1 ; find . \( -name '*.md' -o -name '*.txt' \) ) ; do
+        tohtml "src/$page" > "docs/${page%.*}.html"
+        sed '/^Title:/d' "src/$page" > "docs/${page%.*}.txt"
     done
     # Copy rest of the files
     (cd src || return 1 ; find . -type f ! -name '*.md' -exec cp -u \{\} ../docs/\{\} \; )
@@ -65,13 +68,16 @@ genpages() {
 
 tohtml() {
     header "$(gettitle "$1")"
-    sed '/^[Tt]itle:/d' "$1" | markdown
-    footer "$(echo "$1" | sed 's/.md$/.txt/;s/src\/.//')"
+    case "${1##*.}" in
+        md)  sed '/^[Tt]itle:/d' "$1" | markdown   ;;
+        txt) printf '<pre>'; cat "$1"; printf '</pre>' ;;
+    esac
+    srcfile=${1#src/.} srcfile=${srcfile%.*}.txt
+    footer "$srcfile"
 }
 
 wiki_index() {
-    sed_i '/^Content/,$d' src/wiki/index.md
-    printf 'Content\n-------\n\n' >> src/wiki/index.md
+    cat templates/wiki-index > src/wiki/index.md
     for page in $(find src/wiki -type f | grep -v 'src/wiki/index.md' | sort) ; do
         printf '* [%s](%s)\n' "$(gettitle "$page")" "$(printf "$page" | sed 's#src/wiki/##;s/.md/.html/')" >> src/wiki/index.md
     done
@@ -80,10 +86,9 @@ wiki_index() {
 blog_index() {
     cat <<EOF > src/blog/index.md
 Blog Index
-==========
+================================================================================
 
-This is the Carbs Linux Blog Index. You can find every post
-here. [RSS Feed]
+This is the Carbs Linux Blog Index. You can find every post here. [RSS Feed]
 
 [RSS Feed]: /rss.xml
 

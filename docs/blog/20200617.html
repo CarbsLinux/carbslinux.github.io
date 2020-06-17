@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lan="en">
+<head>
+<title>June Newspost | Carbs Linux</title>
+<link rel="stylesheet" href="/assets/style.css">
+<meta charset="utf-8">
+<meta name="Description" content="Carbs Linux - a simple busybox linux distribution">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<p class=header><strong>Carbs Linux - a simple busybox linux distribution</strong></p>
+<div class="header"><nav>
+<a href='/'>index</a>
+<a href='https://github.com/CarbsLinux'>github</a>
+<a href='//dl.carbslinux.org'>downloads</a>
+<a href='/blog'>blog</a>
+<a href='/wiki'>wiki</a>
+<a href='/wiki/install.html'>installation</a>
+</nav></div><div class="border"></div>
+<h1>June Newspost</h1>
+
+<p>This will be an active month for Carbs as major changes to the base and the
+package manager will be coming up.</p>
+
+<p>TABLE OF CONTENTS
+1. Statically linking the base
+2. Major changes on the core repository
+3. Making the wiki available offline
+4. ISO image for Carbs</p>
+
+<h2>Statically linking the base</h2>
+
+<p>For the past couple of weeks I have been trying to simplify the base and
+statically link the core (mostly binaries rather than libraries). I usually see
+some people extremely opposed to static linking as I also see the opposite on
+people.</p>
+
+<p>I believe that binaries on the core should always be linked statically. This
+ensures that an SONAME bump to <code>libObscure.so</code> will not break the core
+functionality of your system, forcing you to use external resources to recover
+from such an issue. As long as you can compile, use core utilities, edit text,
+and access the web, you can solve any given issue on your system.</p>
+
+<p>However, I don&rsquo;t think that removing shared libraries is sensible either. Not
+every piece of software out there is good quality enough to be statically
+linked.</p>
+
+<h2>Major changes on the core repository</h2>
+
+<p>There have been drastic changes to the core repository and the base rootfs this
+month (with more on the way). Right now changes are as follows.</p>
+
+<h3>Removed from Core</h3>
+
+<ul>
+<li><code>git</code></li>
+<li><code>libressl</code></li>
+<li><code>grub</code></li>
+<li><code>bison</code></li>
+<li><code>dhcpcd</code></li>
+<li><code>ubase</code></li>
+</ul>
+
+
+<h3>Added to Core</h3>
+
+<ul>
+<li><code>bearssl</code>, as a <code>libressl</code> replacement</li>
+<li><code>byacc</code>, as a <code>bison</code> replacement</li>
+</ul>
+
+
+<h3>Statically linked</h3>
+
+<ul>
+<li><code>kiss</code></li>
+<li><code>neatvi</code></li>
+<li><code>mandoc</code></li>
+<li><code>byacc</code></li>
+<li><code>m4</code></li>
+<li><code>e2fsprogs</code></li>
+<li><code>make</code></li>
+<li><code>pkgconf</code></li>
+<li><code>sbase</code></li>
+<li><code>libnl</code></li>
+<li><code>wpa_supplicant</code></li>
+<li><code>bearssl</code></li>
+</ul>
+
+
+<h2>Making the wiki available offline</h2>
+
+<p>Soon, all documentation regarding Carbs Linux will be avaialable to be installed
+from the core repository in a <code>carbs-docs</code> package along with its own document
+crawler. Currently, the documentation regarding the installation process is a
+little outdated which will also receive some important updates.</p>
+
+<h2>ISO image for Carbs</h2>
+
+<p>I am thinking of releasing an ISO image in order to provide a standardized
+environment for installation along with installation helper tools in the spirit
+of <code>arch-install-scripts</code>. Let&rsquo;s see how that&rsquo;s going to play out.</p>
+<a href="/blog/20200617.txt">View Page Source</a><div class=border></div>
+<p class=footer>Linux® is a registered trademark of Linus Torvalds</p>
+<p class=footer>Copyright © 2019-2020 Cem Keylan</p>
+</body>
+</html>

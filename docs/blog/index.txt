@@ -1,11 +1,11 @@
 Blog Index
-==========
+================================================================================
 
-This is the Carbs Linux Blog Index. You can find every post
-here. [RSS Feed]
+This is the Carbs Linux Blog Index. You can find every post here. [RSS Feed]
 
 [RSS Feed]: /rss.xml
 
+* Jun 17 2020 - [June Newspost](20200617.html)
 * May 28 2020 - [kiss 2.0.0 and overall changes](20200528.html)
 * May 08 2020 - [The Relation of Carbs and KISS](20200508.html)
 * Apr 10 2020 - [Outsource Repository Concept](20200410.html)
