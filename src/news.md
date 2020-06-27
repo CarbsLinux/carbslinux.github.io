@@ -1,12 +1,12 @@
 
 Jun 17 2020
------------
+--------------------------------------------------------------------------------
 
 A new rootfs tarball including the changes to the core is released and can be
 found on the downloads page.
 
 May 26 2020
------------
+--------------------------------------------------------------------------------
 
 An initial version for binary package management is released.
 It can be found on the [GitHub page].
@@ -14,7 +14,7 @@ It can be found on the [GitHub page].
 [GitHub page]: https://github.com/CarbsLinux/kiss-bin
 
 May 19 2020
------------
+--------------------------------------------------------------------------------
 
 A rootfs tarball targeting the i686 architecture has
 been released. It can be found on the [downloads page]
@@ -22,7 +22,7 @@ been released. It can be found on the [downloads page]
 [downloads page]: https://dl.carbslinux.org/releases/i686
 
 May 10 2020
------------
+--------------------------------------------------------------------------------
 
 A GCC 10.1.0 change causes a kernel panic for kernels built
 with GCC 10.1. This issue can be resolved by applying this
@@ -31,7 +31,7 @@ with GCC 10.1. This issue can be resolved by applying this
 [patch]: https://git.kernel.org/pub/scm/linux/kernel/git/tip/tip.git/patch/?id=f670269a42bfdd2c83a1118cc3d1b475547eac22
 
 Apr 27 2020
------------
+--------------------------------------------------------------------------------
 
 A new rootfs tarball has been released! You can
 see it on <https://dl.carbslinux.org/releases>!
@@ -39,18 +39,18 @@ see it on <https://dl.carbslinux.org/releases>!
 **EDIT:** A new bug fix release has been made.
 
 Apr 10 2020
------------
+--------------------------------------------------------------------------------
 
 IRC channel can now be accessed from `#carbslinux` at freenode!
 
 Apr 06 2020
------------
+--------------------------------------------------------------------------------
 
 A new rootfs tarball has been released. See the
 [downloads](https://dl.carbslinux.org) page
 
 Apr 05 2020
------------
+--------------------------------------------------------------------------------
 
 Carbs Linux repositories will be hosted only on Github. Commits will be
 pushed there, and not the repository. You have until
@@ -65,7 +65,7 @@ repository directory.
 
 
 Feb 18 2020
------------
+--------------------------------------------------------------------------------
 
 A new tarball is released. It can be found on <https://dl.carbslinux.org>.
 
@@ -77,7 +77,7 @@ changes on Busybox.
 
 
 Feb 14 2020
------------
+--------------------------------------------------------------------------------
 
 **IMPORTANT!** Carbs-init update to be released on 17th of February
 will require manual intervention. I am holding this update back so
@@ -130,7 +130,7 @@ This is a Quality of Life update.
 
 
 Feb 13 2020
------------
+--------------------------------------------------------------------------------
 
 Runit is now released on the core repository! You can now replace
 busybox-init with runit-init. You can also replace the busybox runit
@@ -138,7 +138,7 @@ utilities with the actual runit. This will reduce the dependency on
 busybox greatly.
 
 Jan 28 2020
------------
+--------------------------------------------------------------------------------
 
 Web Server is now on a Carbs Linux server. It is not complete yet,
 but I will be adding a little more for the intended functionality.
@@ -150,20 +150,20 @@ UPDATE2: downloads are back again.
 
 
 Jan 22 2020
------------
+--------------------------------------------------------------------------------
 
 Expect downtime on Jan 24 2020 22:00 UTC as I will be migrating
 this web server to my Carbs Linux server!
 
 
 Jan 15 2020
------------
+--------------------------------------------------------------------------------
 
 sinit has been taken to `core`, and is now officially supported
 
 
 Jan 13 2020
------------
+--------------------------------------------------------------------------------
 
 **Busybox update reqires manual intervention**
 
@@ -183,13 +183,13 @@ I have moved runit and logging utilities from the busybox-init package to the bu
 package, which is the cause of these conflicts.
 
 Jan 10 2020
------------
+--------------------------------------------------------------------------------
 
 carbs-rootfs-20200110.tar.xz was [released](//dl.carbslinux.org/releases)
 
 
 Jan 09 2020
------------
+--------------------------------------------------------------------------------
 
 Happy new year, everyone! I am back after some long silence. I was unable to commit for a
 while, but I have pulled some new updates from the KISS repository, added some of my own.
@@ -204,19 +204,19 @@ Important things are,
 
 
 Dec 18 2019
------------
+--------------------------------------------------------------------------------
 
 carbs-rootfs-20191218.tar.xz was [released](//dl.carbslinux.org/releases)
 
 
 Dec 17 2019
------------
+--------------------------------------------------------------------------------
 
 Installation instruction are now complete. A review would be greatly appreciated!
 
 
 Dec 15 2019
------------
+--------------------------------------------------------------------------------
 
 Carbs Linux Wiki is now available to be edited and updated by the users go
 to the [wiki](//carbslinux.org/wiki) to obtain more information.
@@ -225,14 +225,14 @@ to the [wiki](//carbslinux.org/wiki) to obtain more information.
 
 
 Dec 12 2019
------------
+--------------------------------------------------------------------------------
 
 Busybox and Busybox-init has been seperated into two different packages.
 This is for adding standalone runit/runit-init to the repositories.
 
 
 Dec 10 2019
------------
+--------------------------------------------------------------------------------
 
 First alpha release was made. See the [downloads page](//dl.carbslinux.org/releases).
 
