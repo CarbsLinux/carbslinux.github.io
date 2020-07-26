@@ -4,12 +4,12 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 >
-<channel>
-<title>Carbs Linux</title>
-<description>a simple busybox linux distribution</description>		
-<link>https://carbslinux.org</link>
-<atom:link href="https://carbslinux.org/rss.xml" rel="self" type="application/rss+xml" />
-<lastBuildDate>Jun Sat 2020 20:00</lastBuildDate>
+  <channel>
+    <title>Carbs Linux</title>
+    <description>a simple linux distribution</description>
+    <link>https://carbslinux.org</link>
+    <atom:link href="https://carbslinux.org/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun Jul 26 2020 22:00</lastBuildDate>
 <item>
 <title>June Newspost</title>
 <pubDate>Wed, 17 Jun 2020</pubDate>
@@ -388,5 +388,5 @@ and POSIX sh. I am not yet exactly familiar with rc,
 but I will replace the shell scripts when I feel like
 I can.&lt;/p&gt;</description>
 </item>
-</channel>
+  </channel>
 </rss>

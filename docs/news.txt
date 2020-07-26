@@ -1,3 +1,10 @@
+Jul 27 2020
+--------------------------------------------------------------------------------
+
+Carbs Linux's fork of the `kiss` package manager has been renamed to
+`Carbs Packaging Tools` due to huge amount of changes. Your latest `kiss`
+update will handle the bootstrapping. You will need to rename your `KISS-*`
+variables to `CPT-*`
 
 Jun 17 2020
 --------------------------------------------------------------------------------

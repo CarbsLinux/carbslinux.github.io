@@ -5,8 +5,8 @@ distribution.
 Package Manager
 --------------------------------------------------------------------------------
 
-Carbs Linux uses its own fork of the [kiss package manager] which is an
-extremely flexible package manager.
+Carbs Linux uses its own package manager [Carbs Packaging Tools], a POSIX shell
+package manager forked from KISS with the tool-based approach of xbps.
 
 
 Small base
@@ -43,7 +43,7 @@ other system supervision technique along with your own init scripts.
 
 
 [carbs-init]: https://github.com/CarbsLinux/repository/tree/master/core/carbs-init
-[kiss package manager]: https://github.com/CarbsLinux/kiss
+[Carbs Packaging Tools]: https://github.com/CarbsLinux/cpt
 
 Links
 --------------------------------------------------------------------------------

@@ -1,137 +1,96 @@
 #!/bin/sh -e
 
-header() {
-    cat <<EOF
-<!DOCTYPE HTML>
-<html lan="en">
-<head>
-<title>$1 | Carbs Linux</title>
-<link rel="stylesheet" href="/assets/style.css">
-<meta charset="utf-8">
-<meta name="Description" content="Carbs Linux - a simple busybox linux distribution">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
-<p class=header><strong>Carbs Linux - a simple busybox linux distribution</strong></p>
-<div class="header"><nav>
-<a href='/'>index</a>
-<a href='https://github.com/CarbsLinux'>github</a>
-<a href='//dl.carbslinux.org'>downloads</a>
-<a href='/blog'>blog</a>
-<a href='/wiki'>wiki</a>
-<a href='/wiki/install.html'>installation</a>
-</nav></div><div class="border"></div>
-EOF
-}
+ROOT=$PWD
 
-footer() {
-    [ -z "$1" ] || printf '<a href="%s">View Page Source</a>' "$1"
-    cat <<EOF
-<div class=border></div>
-<p class=footer>Linux® is a registered trademark of Linus Torvalds</p>
-<p class=footer>Copyright © 2019-2020 Cem Keylan</p>
-</body>
-</html>
-EOF
+txt2html() {
+    printf '<pre>\n'
+
+    # Convert [0-9] to links
+    sed -E 's|(.*[a-z].*)\[([0-9].*)\]|\1<a href=#\2>[\2]</a>|g' "$1" |
+
+    # Add span id to sections
+    sed -E 's|^\[([0-9].*)\]|<span id=\1><a href=#\1>[\1]</a></span>|' |
+
+    # Make links clickable
+    sed -E "s|(http[s]?://[^[:space:]\)]*)|<a href=\1>\1</a>|g"
+
+    printf '</pre>\n'
 }
 
 gettitle() {
-    case "$(sed 1q "$1")" in
-         Title:*) sed 's/^[Tt]itle: //;1q' "$1"  ;;
-         *)
-             title=$(
-             grep -n '=*=' -- "$1" |
-
-                 while IFS=: read -r num _; do
-                     sed "$(( num - 1 ))q;d" "$1"
-                     return 0
-                 done
-             )
-
-             file=${1##*/} file=${file%.md}
-             printf '%s\n' "${title:-$file}"
-    esac
+    unset title
+    case "$(sed -n 2p "$1")" in =*=|-*-) title="$(sed -n 1p "$1")"; esac
+    file=${1##*/} file=${file%.*}
+    printf '%s\n' "${title:-$file}${2:+ | Carbs Linux}"
 }
 
-genpages() {
-    # Create directories in docs
-    find src -type d | while read -r dir ; do mkdir -p "docs${dir#src}" ; done
-    # Generate html and txt files
-    for page in $(cd src || return 1 ; find . \( -name '*.md' -o -name '*.txt' \) ) ; do
-        tohtml "src/$page" > "docs/${page%.*}.html"
-        sed '/^Title:/d' "src/$page" > "docs/${page%.*}.txt"
+genpages() (
+    cd src || return 1
+    find . ! -name .git | while read -r file; do
+
+    # If this is a directory, create the directory on the destination and
+    # return.
+    [ -d "$file" ] && {
+        mkdir -p "../docs/${file#./}"
+        continue
+    }
+
+        # We are treating markdown/plaintext files differently.
+        case "$file" in
+            *.md|*.txt)
+                tohtml "$file" > "../docs/${file%.*}.html"
+                cp     "$file"   "../docs/${file%.*}.txt"
+            ;;
+
+            # If this is not a markdown/txt file copy as-is.
+            *)  cp "$file" "../docs/$file"
+        esac
     done
-    # Copy rest of the files
-    (cd src || return 1 ; find . -type f ! -name '*.md' -exec cp -u \{\} ../docs/\{\} \; )
-
-}
+)
 
 
 tohtml() {
-    header "$(gettitle "$1")"
+    srcfile=${1#.} srcfile=${srcfile%.*}.txt
     case "${1##*.}" in
-        md)  sed '/^[Tt]itle:/d' "$1" | markdown   ;;
-        txt) printf '<pre>'; cat "$1"; printf '</pre>' ;;
-    esac
-    srcfile=${1#src/.} srcfile=${srcfile%.*}.txt
-    footer "$srcfile"
-}
+        md)  markdown "$1" ;;
+        txt) txt2html "$1" ;;
+    esac |
 
-wiki_index() {
-    cat templates/wiki-index > src/wiki/index.md
-    for page in $(find src/wiki -type f | grep -v 'src/wiki/index.md' | sort) ; do
-        printf '* [%s](%s)\n' "$(gettitle "$page")" "$(printf "$page" | sed 's#src/wiki/##;s/.md/.html/')" >> src/wiki/index.md
-    done
+    sed '/{{ CONTENT }}/r /dev/stdin' "$ROOT/templates/template.html" |
+
+    sed "s#{{ TITLE }}#$(gettitle "$1" html)#" |
+
+    sed '/{{ CONTENT }}/d' |
+
+    sed "s|{{ SRC }}|$srcfile|"
 }
 
 blog_index() {
-    cat <<EOF > src/blog/index.md
-Blog Index
-================================================================================
-
-This is the Carbs Linux Blog Index. You can find every post here. [RSS Feed]
-
-[RSS Feed]: /rss.xml
-
-EOF
+    cat templates/blog-index > src/blog/index.md
     find src/blog -type f ! -name index.md | sort -r | while read -r post ; do
         postdate="${post##*/}"; postdate="${postdate%%.*}"
-        printf '* %s - [%s](%s)\n' "$(date --date="$postdate" +%b\ %d\ %Y)" "$(gettitle "$post")" "$(printf "$post" | sed 's#src/blog/##;s/.md/.html/')" >> src/blog/index.md
-    done
+        printf '* %s - [%s](%s)\n' \
+               "$(date --date="$postdate" +%b\ %d\ %Y)" \
+               "$(gettitle "$post")" \
+               "$(printf "$post" | sed 's#src/blog/##;s/.md/.html/')"
+    done >> src/blog/index.md
 }
 
 site_index() {
     cp index/index.md src/index.md
     :> src/news.md
-    # find index -name '*.news' | sort -r | sed 3q | while read -r news ; do
-    # shellcheck disable=2046
-    set -- $(find index -name '*.news' | sort -r)
-    for news in "$1" "$2" "$3" "$4" "$5" ; do
-        newsdate="${news##*/}" ; newsdate="${newsdate%.news}"
-        printf '\n### %s\n\n' "$(date --date="$newsdate" +%b\ %d\ %Y)" >> src/index.md
-        cat "$news" >> src/index.md
-    done
-    for news; do
-        newsdate="${news##*/}" ; newsdate="${newsdate%.news}"
-        printf '\n%s\n-----------\n\n' "$(date --date="$newsdate" +%b\ %d\ %Y)" >> src/news.md
+    i=0
+    find index -name '*.news' | sort -r | while read -r news; do
+        [ "$(( i += 1 ))" -lt 6 ] && {
+            printf '\n'
+            cat "$news"
+        } >> src/index.md
+        [ "$i" -eq 1 ] || printf '\n' >> src/news.md
         cat "$news" >> src/news.md
     done
 }
 
 genrss() {
-    cat <<EOF
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-    xmlns:atom="http://www.w3.org/2005/Atom"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
->
-<channel>
-<title>Carbs Linux</title>
-<description>a simple busybox linux distribution</description>		
-<link>https://carbslinux.org</link>
-<atom:link href="https://carbslinux.org/${2:-rss}.xml" rel="self" type="application/rss+xml" />
-<lastBuildDate>$(date -u +%b\ %a\ %Y\ %H):00</lastBuildDate>
-EOF
     find "$1" -type f ! -name index.md | sort -r | while read -r post ; do
         postdate="${post##*/}" ; postdate="${postdate%.*}"
         cat <<EOF
@@ -140,28 +99,30 @@ EOF
 <pubDate>$(date --date="$postdate" +%a,\ %d\ %b\ %Y)</pubDate>
 <dc:creator>Cem Keylan</dc:creator>
 <link>https://carbslinux.org/${3:-blog/$(printf "${post##*/}" | sed 's/.md/.html/')}</link>
-<description>$(grep -v '^Title:' "$post" | markdown -f cdata)</description>
+<description>$(grep -v '^Title: ' "$post" | markdown -f cdata)</description>
 </item>
 EOF
-    done
-cat <<EOF
-</channel>
-</rss>
-EOF
+    done |
+
+    sed '/{{ CONTENT }}/r /dev/stdin' "$ROOT/templates/rss.xml" |
+
+    sed '/{{ CONTENT }}/d' |
+
+    sed "s|{{ SRC }}|${2:-rss}.xml|" |
+
+    sed "s|{{ DATE }}|$(date -u "+%a %b %d %Y %H:00")|"
 }
 
 main() {
-    # Create docs directory if it doesn't exist
-    mkdir -p docs
-
-    # Remove all html, txt, and rss files
-    find docs \( -name '*.html' -o -name '*.txt' -o -name '*.xml' \) -delete
+    # Recreate docs directory
+    rm -rf docs; mkdir -p docs
 
     # Generate the indexes for blog and the wiki
-    site_index; wiki_index; blog_index
+    site_index; blog_index
 
     # Generate rss feeds
-    genrss index news index.html > docs/news.xml ; genrss src/blog > docs/rss.xml
+    genrss index news index.html > src/news.xml
+    genrss src/blog > src/rss.xml
 
     # Generate pages
     genpages

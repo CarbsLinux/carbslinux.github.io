@@ -4,12 +4,24 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 >
-<channel>
-<title>Carbs Linux</title>
-<description>a simple busybox linux distribution</description>		
-<link>https://carbslinux.org</link>
-<atom:link href="https://carbslinux.org/news.xml" rel="self" type="application/rss+xml" />
-<lastBuildDate>Jun Sat 2020 20:00</lastBuildDate>
+  <channel>
+    <title>Carbs Linux</title>
+    <description>a simple linux distribution</description>
+    <link>https://carbslinux.org</link>
+    <atom:link href="https://carbslinux.org/news.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun Jul 26 2020 22:00</lastBuildDate>
+<item>
+<title>Jul 27 2020</title>
+<pubDate>Mon, 27 Jul 2020</pubDate>
+<dc:creator>Cem Keylan</dc:creator>
+<link>https://carbslinux.org/index.html</link>
+<description>&lt;h2&gt;Jul 27 2020&lt;/h2&gt;
+
+&lt;p&gt;Carbs Linux&amp;rsquo;s fork of the &lt;code&gt;kiss&lt;/code&gt; package manager has been renamed to
+&lt;code&gt;Carbs Packaging Tools&lt;/code&gt; due to huge amount of changes. Your latest &lt;code&gt;kiss&lt;/code&gt;
+update will handle the bootstrapping. You will need to rename your &lt;code&gt;KISS-*&lt;/code&gt;
+variables to &lt;code&gt;CPT-*&lt;/code&gt;&lt;/p&gt;</description>
+</item>
 <item>
 <title>Jun 17 2020</title>
 <pubDate>Wed, 17 Jun 2020</pubDate>
@@ -322,5 +334,5 @@ This is for adding standalone runit/runit-init to the repositories.&lt;/p&gt;</d
 
 &lt;p&gt;First alpha release was made. See the &lt;a href=&quot;//dl.carbslinux.org/releases&quot;&gt;downloads page&lt;/a&gt;.&lt;/p&gt;</description>
 </item>
-</channel>
+  </channel>
 </rss>
