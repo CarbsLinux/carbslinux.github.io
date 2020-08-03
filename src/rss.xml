@@ -9,7 +9,7 @@
     <description>a simple linux distribution</description>
     <link>https://carbslinux.org</link>
     <atom:link href="https://carbslinux.org/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon Aug 03 2020 20:00</lastBuildDate>
+    <lastBuildDate>Mon Aug 03 2020 22:00</lastBuildDate>
 <item>
 <title>August 2020 News Post</title>
 <pubDate>Mon, 03 Aug 2020</pubDate>
@@ -80,8 +80,10 @@ I am slowly reverting to the self-hosted model. Back then, the git repositories
 were mirrored to GitHub, and the management was overall much more flexible. The
 server used to run Carbs Linux as well (that was fun and horrifying at the same
 time). Now, I will be relaunching the git server which will be the upstream
-source before the August 5. You can switch your remote, but GitHub will stay as
-a remote nonetheless.&lt;/p&gt;</description>
+source before August 5. You can switch your remote, but GitHub will stay as a
+remote nonetheless.&lt;/p&gt;
+
+&lt;p&gt;EDIT: The git-server is up!&lt;/p&gt;</description>
 </item>
 <item>
 <title>June Newspost</title>

@@ -69,7 +69,10 @@ I am slowly reverting to the self-hosted model. Back then, the git repositories
 were mirrored to GitHub, and the management was overall much more flexible. The
 server used to run Carbs Linux as well (that was fun and horrifying at the same
 time). Now, I will be relaunching the git server which will be the upstream
-source before the August 5. You can switch your remote, but GitHub will stay as
-a remote nonetheless.
+source before August 5. You can switch your remote, but GitHub will stay as a
+remote nonetheless.
+
+EDIT: The git-server is up!
+
 
 [1]: http://werc.cat-v.org
