@@ -1,0 +1,75 @@
+August 2020 News Post
+================================================================================
+
+We are having some stalls during this summer, as I am currently working on
+university-related stuff. Nonetheless, there are some important changes that I
+want to share in this month's post.
+
+
+INDEX
+--------------------------------------------------------------------------------
+
+- Carbs Packaging Tools                                                    [1.0]
+- Docs                                                                     [2.0]
+- Re-opening the Carbs Linux server                                        [3.0]
+
+
+[1.0] Carbs Packaging Tools
+--------------------------------------------------------------------------------
+
+This month I have reworked `kiss` into a new package manager, now renamed as
+`cpt`. Updating `kiss` will now bootstrap the new package manager, so you don't
+have to manually edit your system. If you don't like the idea of this, you can
+look up the `post-install` script on `core/kiss` and apply the changes manually.
+
+You will also need to rename your KISS_* variables to CPT_*. So, KISS_PATH
+becomes CPT_PATH.
+
+The rework changes the previous commands on the package manager into standalone
+tools, and move the package manager functions to a library. This makes it easier
+for a user to import functions and variables from the package manager, and
+extend the package manager with their own intended way. Previously this required
+ugly hacks and workarounds to use the package manager functions. I will be
+making use of these changes to re-implement binary package management functions
+as well.
+
+If you want to use the library on your script you can simply do this:
+
+  +--------------------------------------------------------------------------+
+  |                                                                          |
+  | #!/bin/sh                                                                |
+  | . cpt-lib                                                                |
+  | (...)                                                                    |
+  |                                                                          |
+  +--------------------------------------------------------------------------+
+
+There are obviously some clean-up and simplifications needed in this new
+tool-based package management method.
+
+
+[2.0] Docs
+--------------------------------------------------------------------------------
+
+I have added documentation for the distribution, and finally updated the guide
+for installation. It is now _almost_ complete. These docs can be installed to
+your system for online viewing. I will also add a documentation crawler similar
+to how werc[1] works (but as an offline viewer). You can find `carbs-docs` from
+the repository. Currently, the documentation lacks but I will be adding new
+stuff. These will solely be distribution specific documentation and will not be
+a wiki-like source. If anyone would like to contribute to a wiki-like
+documentation source, I would happily re-open the distribution wiki. You can
+find the source on https://github.com/CarbsLinux/docs
+
+
+[3.0] Re-opening the Carbs Linux server
+--------------------------------------------------------------------------------
+
+Back in May, I had shutdown the Carbs Linux server due to financial issues, but
+I am slowly reverting to the self-hosted model. Back then, the git repositories
+were mirrored to GitHub, and the management was overall much more flexible. The
+server used to run Carbs Linux as well (that was fun and horrifying at the same
+time). Now, I will be relaunching the git server which will be the upstream
+source before the August 5. You can switch your remote, but GitHub will stay as
+a remote nonetheless.
+
+[1]: http://werc.cat-v.org

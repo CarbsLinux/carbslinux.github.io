@@ -72,7 +72,7 @@ blog_index() {
         printf '* %s - [%s](%s)\n' \
                "$(date --date="$postdate" +%b\ %d\ %Y)" \
                "$(gettitle "$post")" \
-               "$(printf "$post" | sed 's#src/blog/##;s/.md/.html/')"
+               "${postdate}.html"
     done >> src/blog/index.md
 }
 
@@ -89,6 +89,16 @@ site_index() {
         cat "$news" >> src/news.md
     done
 }
+
+docs_index() (
+    cp templates/docs-index src/docs.md
+    find src/docs ! -name .git ! -name README | sort | while read -r file; do
+        case "$file" in src/docs) continue; esac
+        [ -d "$file" ] && printf '### %s\n' "${file#src/docs/}" && continue
+        filedest=${file#src} filedest=${filedest%.*}.html
+        printf '[%s](%s)\n' "$(gettitle "$file")" "$filedest"
+    done >> src/docs.md
+)
 
 genrss() {
     find "$1" -type f ! -name index.md | sort -r | while read -r post ; do
@@ -118,7 +128,7 @@ main() {
     rm -rf docs; mkdir -p docs
 
     # Generate the indexes for blog and the wiki
-    site_index; blog_index
+    site_index; blog_index; docs_index
 
     # Generate rss feeds
     genrss index news index.html > src/news.xml

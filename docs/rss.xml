@@ -9,7 +9,80 @@
     <description>a simple linux distribution</description>
     <link>https://carbslinux.org</link>
     <atom:link href="https://carbslinux.org/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun Jul 26 2020 22:00</lastBuildDate>
+    <lastBuildDate>Mon Aug 03 2020 20:00</lastBuildDate>
+<item>
+<title>August 2020 News Post</title>
+<pubDate>Mon, 03 Aug 2020</pubDate>
+<dc:creator>Cem Keylan</dc:creator>
+<link>https://carbslinux.org/blog/20200803.txt</link>
+<description>&lt;h1&gt;August 2020 News Post&lt;/h1&gt;
+
+&lt;p&gt;We are having some stalls during this summer, as I am currently working on
+university-related stuff. Nonetheless, there are some important changes that I
+want to share in this month&amp;rsquo;s post.&lt;/p&gt;
+
+&lt;h2&gt;INDEX&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Carbs Packaging Tools                                                    [1.0]&lt;/li&gt;
+&lt;li&gt;Docs                                                                     [2.0]&lt;/li&gt;
+&lt;li&gt;Re-opening the Carbs Linux server                                        [3.0]&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;[1.0] Carbs Packaging Tools&lt;/h2&gt;
+
+&lt;p&gt;This month I have reworked &lt;code&gt;kiss&lt;/code&gt; into a new package manager, now renamed as
+&lt;code&gt;cpt&lt;/code&gt;. Updating &lt;code&gt;kiss&lt;/code&gt; will now bootstrap the new package manager, so you don&amp;rsquo;t
+have to manually edit your system. If you don&amp;rsquo;t like the idea of this, you can
+look up the &lt;code&gt;post-install&lt;/code&gt; script on &lt;code&gt;core/kiss&lt;/code&gt; and apply the changes manually.&lt;/p&gt;
+
+&lt;p&gt;You will also need to rename your KISS&lt;em&gt;* variables to CPT&lt;/em&gt;*. So, KISS_PATH
+becomes CPT_PATH.&lt;/p&gt;
+
+&lt;p&gt;The rework changes the previous commands on the package manager into standalone
+tools, and move the package manager functions to a library. This makes it easier
+for a user to import functions and variables from the package manager, and
+extend the package manager with their own intended way. Previously this required
+ugly hacks and workarounds to use the package manager functions. I will be
+making use of these changes to re-implement binary package management functions
+as well.&lt;/p&gt;
+
+&lt;p&gt;If you want to use the library on your script you can simply do this:&lt;/p&gt;
+
+&lt;p&gt;  +&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+
+  |                                                                          |
+  | #!/bin/sh                                                                |
+  | . cpt-lib                                                                |
+  | (&amp;hellip;)                                                                    |
+  |                                                                          |
+  +&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+&lt;/p&gt;
+
+&lt;p&gt;There are obviously some clean-up and simplifications needed in this new
+tool-based package management method.&lt;/p&gt;
+
+&lt;h2&gt;[2.0] Docs&lt;/h2&gt;
+
+&lt;p&gt;I have added documentation for the distribution, and finally updated the guide
+for installation. It is now &lt;em&gt;almost&lt;/em&gt; complete. These docs can be installed to
+your system for online viewing. I will also add a documentation crawler similar
+to how werc&lt;a href=&quot;http://werc.cat-v.org&quot;&gt;1&lt;/a&gt; works (but as an offline viewer). You can find &lt;code&gt;carbs-docs&lt;/code&gt; from
+the repository. Currently, the documentation lacks but I will be adding new
+stuff. These will solely be distribution specific documentation and will not be
+a wiki-like source. If anyone would like to contribute to a wiki-like
+documentation source, I would happily re-open the distribution wiki. You can
+find the source on https://github.com/CarbsLinux/docs&lt;/p&gt;
+
+&lt;h2&gt;[3.0] Re-opening the Carbs Linux server&lt;/h2&gt;
+
+&lt;p&gt;Back in May, I had shutdown the Carbs Linux server due to financial issues, but
+I am slowly reverting to the self-hosted model. Back then, the git repositories
+were mirrored to GitHub, and the management was overall much more flexible. The
+server used to run Carbs Linux as well (that was fun and horrifying at the same
+time). Now, I will be relaunching the git server which will be the upstream
+source before the August 5. You can switch your remote, but GitHub will stay as
+a remote nonetheless.&lt;/p&gt;</description>
+</item>
 <item>
 <title>June Newspost</title>
 <pubDate>Wed, 17 Jun 2020</pubDate>
