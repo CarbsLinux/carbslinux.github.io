@@ -1,4 +1,4 @@
-/* Cem Keylan (C) 2019                            */
+/* Cem Keylan (C) 2019-2020 */
 
 :root {
     --color0:      #0A1E2B;
@@ -27,7 +27,8 @@
 
 html {
 	background-color: var(--bg);
-	font-family: sans-serif;
+	font-family: monospace;
+	font-size: 16px;
 	color: var(--fg);
 	padding-bottom: 100px;
 	-webkit-text-size-adjust: 100%;
@@ -60,7 +61,7 @@ html {
 	border-bottom: solid 2px;
 	color: var(--fg);
 }
-a { 
+a {
 	text-decoration: none;
 	font-weight: bold;
 	color: var(--link);
@@ -83,6 +84,7 @@ body {
 	margin-right: auto;
 	margin-top: 20px;
 	overflow: none;
+        overflow-y: scroll;
 	padding-right: 10px;
 	padding-left: 10px;
 	color: var(--fg);
@@ -109,7 +111,7 @@ h3 {
 }
 
 pre { margin-left: 2em; }
-blockquote { 
+blockquote {
 	border-left: 1px solid var(--color6);
 	font-style: italic;
 }
