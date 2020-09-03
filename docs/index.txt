@@ -60,6 +60,13 @@ News
 
 [RSS Feed](/news.xml) | [See all news](/news.html)
 
+Sep 03 2020
+--------------------------------------------------------------------------------
+
+The default TLS provider has been reverted to 'libressl'. System update will
+replace bearssl dependencies with libressl. You may choose to keep or remove
+bearssl after the update
+
 Jul 27 2020
 --------------------------------------------------------------------------------
 
@@ -89,12 +96,3 @@ A rootfs tarball targeting the i686 architecture has
 been released. It can be found on the [downloads page]
 
 [downloads page]: https://dl.carbslinux.org/releases/i686
-
-May 10 2020
---------------------------------------------------------------------------------
-
-A GCC 10.1.0 change causes a kernel panic for kernels built
-with GCC 10.1. This issue can be resolved by applying this
-[patch] to your kernel sources.
-
-[patch]: https://git.kernel.org/pub/scm/linux/kernel/git/tip/tip.git/patch/?id=f670269a42bfdd2c83a1118cc3d1b475547eac22

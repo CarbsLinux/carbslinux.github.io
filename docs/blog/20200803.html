@@ -18,86 +18,84 @@
         <a href='/docs/install.html'>installation</a>
       </nav>
     </div><div class="border"></div>
-<pre>
-August 2020 News Post
-================================================================================
+<h1>August 2020 News Post</h1>
 
-We are having some stalls during this summer, as I am currently working on
+<p>We are having some stalls during this summer, as I am currently working on
 university-related stuff. Nonetheless, there are some important changes that I
-want to share in this month's post.
+want to share in this month&rsquo;s post.</p>
+
+<h2>INDEX</h2>
+
+<ul>
+<li><a href="#carbs-packaging-tools">Carbs Packaging Tools</a></li>
+<li><a href="#docs">Docs</a></li>
+<li><a href="#re-opening-the-carbs-linux-server">Re-opening the Carbs Linux server</a></li>
+</ul>
 
 
-INDEX
---------------------------------------------------------------------------------
+<h2>Carbs Packaging Tools</h2>
 
-- Carbs Packaging Tools                                                    <a href=#1.0>[1.0]</a>
-- Docs                                                                     <a href=#2.0>[2.0]</a>
-- Re-opening the Carbs Linux server                                        <a href=#3.0>[3.0]</a>
+<p>This month I have reworked <code>kiss</code> into a new package manager, now renamed as
+<code>cpt</code>. Updating <code>kiss</code> will now bootstrap the new package manager, so you don&rsquo;t
+have to manually edit your system. If you don&rsquo;t like the idea of this, you can
+look up the <code>post-install</code> script on <code>core/kiss</code> and apply the changes manually.</p>
 
+<p>You will also need to rename your KISS<em>* variables to CPT</em>*. So, KISS_PATH
+becomes CPT_PATH.</p>
 
-<span id=1.0><a href=#1.0>[1.0]</a></span> Carbs Packaging Tools
---------------------------------------------------------------------------------
-
-This month I have reworked `kiss` into a new package manager, now renamed as
-`cpt`. Updating `kiss` will now bootstrap the new package manager, so you don't
-have to manually edit your system. If you don't like the idea of this, you can
-look up the `post-install` script on `core/kiss` and apply the changes manually.
-
-You will also need to rename your KISS_* variables to CPT_*. So, KISS_PATH
-becomes CPT_PATH.
-
-The rework changes the previous commands on the package manager into standalone
+<p>The rework changes the previous commands on the package manager into standalone
 tools, and move the package manager functions to a library. This makes it easier
 for a user to import functions and variables from the package manager, and
 extend the package manager with their own intended way. Previously this required
 ugly hacks and workarounds to use the package manager functions. I will be
 making use of these changes to re-implement binary package management functions
-as well.
+as well.</p>
 
-If you want to use the library on your script you can simply do this:
+<p>If you want to use the library on your script you can simply do this:</p>
 
-  +--------------------------------------------------------------------------+
-  |                                                                          |
-  | #!/bin/sh                                                                |
-  | . cpt-lib                                                                |
-  | (...)                                                                    |
-  |                                                                          |
-  +--------------------------------------------------------------------------+
+<pre><code>+--------------------------------------------------------------------------+
+|                                                                          |
+| #!/bin/sh                                                                |
+| . cpt-lib                                                                |
+| (...)                                                                    |
+|                                                                          |
++--------------------------------------------------------------------------+
+</code></pre>
 
-There are obviously some clean-up and simplifications needed in this new
-tool-based package management method.
+<p>There are obviously some clean-up and simplifications needed in this new
+tool-based package management method.</p>
 
+<h2>Docs</h2>
 
-<span id=2.0><a href=#2.0>[2.0]</a></span> Docs
---------------------------------------------------------------------------------
-
-I have added documentation for the distribution, and finally updated the guide
-for installation. It is now _almost_ complete. These docs can be installed to
+<p>I have added documentation for the distribution, and finally updated the guide
+for installation. It is now <em>almost</em> complete. These docs can be installed to
 your system for online viewing. I will also add a documentation crawler similar
-to how werc<a href=#1>[1]</a> works (but as an offline viewer). You can find `carbs-docs` from
+to how werc<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> works (but as an offline viewer). You can find <code>carbs-docs</code> from
 the repository. Currently, the documentation lacks but I will be adding new
 stuff. These will solely be distribution specific documentation and will not be
 a wiki-like source. If anyone would like to contribute to a wiki-like
 documentation source, I would happily re-open the distribution wiki. You can
-find the source on <a href=https://github.com/CarbsLinux/docs>https://github.com/CarbsLinux/docs</a>
+find the source on https://github.com/CarbsLinux/docs</p>
 
+<h2>Re-opening the Carbs Linux server</h2>
 
-<span id=3.0><a href=#3.0>[3.0]</a></span> Re-opening the Carbs Linux server
---------------------------------------------------------------------------------
-
-Back in May, I had shutdown the Carbs Linux server due to financial issues, but
+<p>Back in May, I had shutdown the Carbs Linux server due to financial issues, but
 I am slowly reverting to the self-hosted model. Back then, the git repositories
 were mirrored to GitHub, and the management was overall much more flexible. The
 server used to run Carbs Linux as well (that was fun and horrifying at the same
 time). Now, I will be relaunching the git server which will be the upstream
 source before August 5. You can switch your remote, but GitHub will stay as a
-remote nonetheless.
+remote nonetheless.</p>
 
-EDIT: The git-server is up!
+<p>EDIT: The git-server is up!</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+http://werc.cat-v.org<a href="#fnref:1" rev="footnote">&#8617;</a></li>
+</ol>
+</div>
 
-
-<span id=1><a href=#1>[1]</a></span>: <a href=http://werc.cat-v.org>http://werc.cat-v.org</a>
-</pre>
     <a href="/blog/20200803.txt">View Page Source</a>
     <div class="border"></div>
     <p class=footer>Linux® is a registered trademark of Linus Torvalds</p>

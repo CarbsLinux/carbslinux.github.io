@@ -1,3 +1,10 @@
+Sep 03 2020
+--------------------------------------------------------------------------------
+
+The default TLS provider has been reverted to 'libressl'. System update will
+replace bearssl dependencies with libressl. You may choose to keep or remove
+bearssl after the update
+
 Jul 27 2020
 --------------------------------------------------------------------------------
 

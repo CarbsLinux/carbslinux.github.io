@@ -52,7 +52,7 @@ genpages() (
 tohtml() {
     srcfile=${1#.} srcfile=${srcfile%.*}.txt
     case "${1##*.}" in
-        md)  markdown "$1" ;;
+        md)  markdown -f footnote -f fencedcode "$1" ;;
         txt) txt2html "$1" ;;
     esac |
 
