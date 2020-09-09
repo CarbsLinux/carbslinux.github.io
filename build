@@ -126,7 +126,10 @@ main() {
     genrss src/blog > src/rss.xml
 
     # Generate htmldocs
-    make -s -C texidocs DESTDIR="$PWD/src/docs" htmldocs
+    command -v makeinfo && {
+        git submodule update --init --remote -f
+        make -s -C texidocs DESTDIR="$PWD/src/docs" htmldocs
+    }
 
     # Generate pages
     genpages
