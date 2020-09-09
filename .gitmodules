@@ -1,0 +1,3 @@
+[submodule "texidocs"]
+	path = texidocs
+	url = git://git.carbslinux.org/docs
