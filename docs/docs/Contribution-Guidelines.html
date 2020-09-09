@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2020 Cem Keylan
+
+Licensed under Gnu Free Documentation License. -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Contribution Guidelines (Carbs Linux User Manual)</title>
+
+<meta name="description" content="Contribution Guidelines (Carbs Linux User Manual)">
+<meta name="keywords" content="Contribution Guidelines (Carbs Linux User Manual)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="index.html" rel="up" title="Top">
+<link href="Init-System.html" rel="next" title="Init System">
+<link href="Setting-up-an-rsync-repository-for-distribution.html" rel="prev" title="Setting up an rsync repository for distribution">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<span id="Contribution-Guidelines"></span><div class="header">
+<p>
+Next: <a href="Init-System.html" accesskey="n" rel="next">Init System</a>, Previous: <a href="Package-Manager.html" accesskey="p" rel="prev">Package Manager</a>, Up: <a href="index.html" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+<hr>
+<span id="Contribution-Guidelines-1"></span><h2 class="chapter">3 Contribution Guidelines</h2>
+
+<p>Thanks for taking your time to contribute! To maintain stylistic behaviour
+throughout the repositories, one must adhere to these guidelines. Exceptions and
+changes may occur with good reasoning.
+</p>
+<span id="General-Conventions-_002d_002d-GN"></span><h3 class="section">3.1 General Conventions &ndash; GN</h3>
+
+<p>These apply to each and every file on the repositories.
+</p>
+<ul>
+<li> Try to keep the file readable. [<span id="GN0010"></span>GN0010]
+<ul>
+<li> Characters on a line shouldn&rsquo;t exceed 100 characters excluding indentation. [<span id="GN0011"></span>GN0011]
+</li><li> Make sure you don&rsquo;t have code commented out during commit. Uncomment them
+or remove them completely. [<span id="GN0012"></span>GN0012]
+</li><li> Do not add comments following the code, add them to the top of the code. It
+makes it harder to read, and lines longer. [<span id="GN0013"></span>GN0013]
+Here is an example:
+<div class="example">
+<pre class="example"># Good way of commenting.
+your code goes here
+
+your code goes here  # Avoid this way of commenting.
+</pre></div>
+</li></ul>
+</li></ul>
+
+<span id="Shell-conventions-_002d_002d-SH"></span><h3 class="section">3.2 Shell conventions &ndash; SH</h3>
+
+<p>Shell is central to Carbs Linux projects. Most of the tools and packages are
+written in POSIX sh.
+</p>
+<ul>
+<li> Use 4 spaces for indentation, instead of tabs. [<span id="SH0010"></span>SH0010]
+</li><li> Make sure you don&rsquo;t use bash-specific code. [<span id="SH0020"></span>SH0020]
+</li><li> Make sure you lint your code with <code>shellcheck</code> and if you are new to
+POSIX sh, use <code>checkbashisms</code>. [<span id="SH0030"></span>SH0030]
+</li><li> Don&rsquo;t spawn new processes if you don&rsquo;t absolutely need to, especially during
+string manipulation. [<span id="SH0040"></span>SH0040]
+<ul>
+<li> Never use a program for text manupilation that isn&rsquo;t defined in the POSIX
+standard. This includes <code>gawk</code> and <code>perl</code>. [<span id="SH0041"></span>SH0041]
+</li><li> Instead of <code>$(basename $file)</code>, use <code>${file##*}</code>. [<span id="SH0042"></span>SH0042]
+</li><li> Instead of <code>$(dirname $file)</code>, use <code>${file%/*}</code>. [<span id="SH0043"></span>SH0043]
+</li></ul>
+<div class="example">
+<pre class="example"># This is the same thing as <code>basename /path/to/test.asc .asc</code>
+
+$ file=/path/to/test.asc file=${file##*/} file=${file%.asc}
+$ echo $file
+test
+</pre></div>
+</li><li> Instead of backticks, use <tt>$(..)</tt>. [<span id="SH0050"></span>SH0050]
+</li></ul>
+<hr>
+<div class="header">
+<p>
+Next: <a href="Init-System.html" accesskey="n" rel="next">Init System</a>, Previous: <a href="Package-Manager.html" accesskey="p" rel="prev">Package Manager</a>, Up: <a href="index.html" accesskey="u" rel="up">Top</a> &nbsp; </p>
+</div>
+
+
+
+</body>
+</html>

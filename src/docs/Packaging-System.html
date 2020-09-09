@@ -114,11 +114,17 @@ downloaded with <code>curl</code>.
 be used to do a shallow clone of the repository. If the commit is suffixed by a
 history pointer, git will checkout the relevant revision. So,
 </p>
-<div class="example">
-<pre class="example">git+git://example.com/pub/repo#v1.2.3      will checkout the tag named 'v1.2.3'
-git+git://example.com/pub/repo#development will checkout the branch named 'development'
-git+git://example.com/pub/repo#1a314s87    will checkout the commit named '1a314s87'
-</pre></div>
+<dl compact="compact">
+<dt>&lsquo;<code>git+git://example.com/pub/repo#v1.2.3</code>&rsquo;</dt>
+<dd><p>will checkout the tag named &rsquo;v1.2.3&rsquo;
+</p></dd>
+<dt>&lsquo;<code>git+git://example.com/pub/repo#development</code>&rsquo;</dt>
+<dd><p>will checkout the branch named &rsquo;development&rsquo;
+</p></dd>
+<dt>&lsquo;<code>git+git://example.com/pub/repo#1a314s87</code>&rsquo;</dt>
+<dd><p>will checkout the commit named &rsquo;1a314s87&rsquo;
+</p></dd>
+</dl>
 
 <p>Other files are assumed to be residing in the package directory. They should be
 added with their paths relative to the package directory.
