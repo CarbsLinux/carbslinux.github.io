@@ -125,6 +125,9 @@ main() {
     genrss index news index.html > src/news.xml
     genrss src/blog > src/rss.xml
 
+    # Generate htmldocs
+    make -s -C texidocs DESTDIR="$PWD/src/docs" htmldocs
+
     # Generate pages
     genpages
 }

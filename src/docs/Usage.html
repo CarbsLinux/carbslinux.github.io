@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2020 Cem Keylan
+
+Licensed under Gnu Free Documentation License. -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Usage (Carbs Linux User Manual)</title>
+
+<meta name="description" content="Usage (Carbs Linux User Manual)">
+<meta name="keywords" content="Usage (Carbs Linux User Manual)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Package-Manager.html" rel="up" title="Package Manager">
+<link href="cpt_002dalternatives.html" rel="next" title="cpt-alternatives">
+<link href="Package-Manager.html" rel="prev" title="Package Manager">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<span id="Usage"></span><div class="header">
+<p>
+Next: <a href="Packaging-System.html" accesskey="n" rel="next">Packaging System</a>, Up: <a href="Package-Manager.html" accesskey="u" rel="up">Package Manager</a> &nbsp; </p>
+</div>
+<hr>
+<span id="Usage-1"></span><h3 class="section">2.1 Usage</h3>
+<p><code>cpt</code> is formed of many tools combined in a single environment, similar
+to <code>git</code>. When you run <code>cpt</code> without any arguments, it will show
+all available tools and their explanations. Here is an example call with extra
+scripts on my system:
+</p>
+<div class="example">
+<pre class="example">-&gt; Carbs Packaging Tool
+-&gt; add               Commit the current directory as a new package
+-&gt; alternatives      List and swap to alternatives
+-&gt; build             Build a package
+-&gt; bump              Commit the current directory as a version bump
+-&gt; cargo-urlgen      Create static cargo sources for Rust packages
+-&gt; cargolock-urlgen  Convert the given Cargo.lock file to sources
+-&gt; cat               Concatanate package files in the installed package database
+-&gt; changelog         Print the git log of the specific package
+-&gt; chbuild           Create/destroy temporary chroots
+-&gt; checkmissing      Verify package manifests
+-&gt; checksum          Generate checksums
+-&gt; chroot            Enter a chroot
+-&gt; commit            Commit a package without the prefix of 'package:'
+-&gt; depends           Display a package's dependencies
+-&gt; download          Download sources for the given package
+-&gt; exec              Execute a command inside the alternatives system
+-&gt; export            Turn an installed package into a CPT tarball
+-&gt; fetch             Fetch repositories
+-&gt; fork              Fork a package to the current directory
+-&gt; getchoice         Prints the full path to a file in the alternatives system.
+-&gt; install           Install a package
+-&gt; link              Link a forked package's files to the other repository
+-&gt; list              List installed packages
+-&gt; maintainer        Find the maintainer of a package
+-&gt; manifest          Display all files owned by a package
+-&gt; manifest-tree     Display all files owned by a package with a tree view
+-&gt; new               Create a boilerplate CPT package
+-&gt; orphans           List orphaned packages
+-&gt; owns              Check which package owns a file
+-&gt; rel               Bump the release number of a package
+-&gt; remove            Remove a package
+-&gt; repodepends       Display a package's dependencies in the repository
+-&gt; reporevdepends    Display packages on the repository which depend on package
+-&gt; reset             Remove all packages except for the base
+-&gt; revdepends        Display packages which depend on package
+-&gt; search            Search for a package
+-&gt; size              Show the size on disk for a package
+-&gt; source            Extract sources of a given package to the current directory
+-&gt; update            Check for updates
+</pre></div>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="cpt_002dalternatives.html" accesskey="1"><code>cpt-alternatives</code></a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="cpt_002dbuild.html" accesskey="2"><code>cpt-build</code></a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Packaging-System.html" accesskey="n" rel="next">Packaging System</a>, Up: <a href="Package-Manager.html" accesskey="u" rel="up">Package Manager</a> &nbsp; </p>
+</div>
+
+
+
+</body>
+</html>

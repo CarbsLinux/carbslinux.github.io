@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2020 Cem Keylan
+
+Licensed under Gnu Free Documentation License. -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Kernel (Carbs Linux User Manual)</title>
+
+<meta name="description" content="Kernel (Carbs Linux User Manual)">
+<meta name="keywords" content="Kernel (Carbs Linux User Manual)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Installation.html" rel="up" title="Installation">
+<link href="Making-your-system-bootable.html" rel="next" title="Making your system bootable">
+<link href="System-Configuration.html" rel="prev" title="System Configuration">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<span id="Kernel"></span><div class="header">
+<p>
+Next: <a href="Making-your-system-bootable.html" accesskey="n" rel="next">Making your system bootable</a>, Previous: <a href="System-Configuration.html" accesskey="p" rel="prev">System Configuration</a>, Up: <a href="Installation.html" accesskey="u" rel="up">Installation</a> &nbsp; </p>
+</div>
+<hr>
+<span id="Kernel-1"></span><h3 class="section">1.4 Kernel</h3>
+
+<p>Kernel isn&rsquo;t managed under the main repositories, even though you could package
+one for your personal use. Here is an <a href="https://github.com/cemkeylan/kiss-repository/tree/master/personal/linux">example kernel package</a>,
+which you will need to reconfigure for your specific setup if you want to make
+use of it.
+</p>
+<span id="Obtaining-the-kernel-sources"></span><h4 class="subsection">1.4.1 Obtaining the kernel sources</h4>
+
+<p>You can visit the https://kernel.org website to choose a kernel that you want
+to install. Though only the latest stable and longterm (LTS) versions are
+supported.
+</p>
+<div class="example">
+<pre class="example">Download the kernel and extract it
+$ wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.7.6.tar.xz
+$ tar xf linux-5.7.6.tar.xz
+
+Change directory into the kernel sources
+$ cd linux-5.7.6
+</pre></div>
+
+<span id="Installing-dependencies"></span><h4 class="subsection">1.4.2 Installing dependencies</h4>
+
+<p>In order to compile the kernel you will need to install some dependencies. You
+will need <code>libelf</code> to compile the kernel. If you want to configure using the menu
+interface you will also need <code>ncurses</code>.
+</p>
+<div class="example">
+<pre class="example">The package manager asks to install if you are building more than one package,
+so no need to run 'cpt i ...'
+$ cpt b libelf ncurses
+</pre></div>
+
+<p>In the vanilla kernel sources, you need perl to compile the kernel, but it can
+be easily patched out. You will need to apply the following patch. Patch was
+written by <a href="https://github.com/E5ten">E5ten</a>. You will need to obtain and
+apply the patch in the kernel source directory.
+</p>
+<div class="example">
+<pre class="example">$ wget https://dl.carbslinux.org/distfiles/kernel-no-perl.patch
+$ patch -p1 &lt; kernel-no-perl.patch
+</pre></div>
+
+<span id="Compiling-the-kernel"></span><h4 class="subsection">1.4.3 Compiling the kernel</h4>
+
+<p>Next step is configuring and building the kernel. You can check Gentoo&rsquo;s <a href="https://wiki.gentoo.org/wiki/Kernel/Configuration">kernel configuration guide</a>
+to learn more about the matter. Overall, Gentoo Wiki is a good place to learn
+about configuration according to your hardware. The following will assume a
+monolithic kernel.
+</p>
+<div class="example">
+<pre class="example">$ make menuconfig
+$ make
+$ install -Dm755 $(make -s image_name) /boot/vmlinuz-linux
+</pre></div>
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Making-your-system-bootable.html" accesskey="n" rel="next">Making your system bootable</a>, Previous: <a href="System-Configuration.html" accesskey="p" rel="prev">System Configuration</a>, Up: <a href="Installation.html" accesskey="u" rel="up">Installation</a> &nbsp; </p>
+</div>
+
+
+
+</body>
+</html>

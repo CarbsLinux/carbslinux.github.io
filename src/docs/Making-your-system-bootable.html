@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2020 Cem Keylan
+
+Licensed under Gnu Free Documentation License. -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Making your system bootable (Carbs Linux User Manual)</title>
+
+<meta name="description" content="Making your system bootable (Carbs Linux User Manual)">
+<meta name="keywords" content="Making your system bootable (Carbs Linux User Manual)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Installation.html" rel="up" title="Installation">
+<link href="Post_002dinstallation.html" rel="next" title="Post-installation">
+<link href="Kernel.html" rel="prev" title="Kernel">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<span id="Making-your-system-bootable"></span><div class="header">
+<p>
+Next: <a href="Post_002dinstallation.html" accesskey="n" rel="next">Post-installation</a>, Previous: <a href="Kernel.html" accesskey="p" rel="prev">Kernel</a>, Up: <a href="Installation.html" accesskey="u" rel="up">Installation</a> &nbsp; </p>
+</div>
+<hr>
+<span id="Making-your-system-bootable-1"></span><h3 class="section">1.5 Making your system bootable</h3>
+
+<p>In order to be able to boot your fresh system, wou will need an init-daemon,
+init-scripts and a bootloader. The init daemon is already provided by busybox,
+but you can optionally change it.
+</p>
+<span id="Installing-a-bootloader"></span><h4 class="subsection">1.5.1 Installing a bootloader</h4>
+
+<p>In the main repository, there is efibootmgr and grub to serve as bootloaders.
+efibootmgr can be used as a standalone bootloader, or can be used to install
+grub in a UEFI environment. efibootmgr is needed unless you are using a device
+without UEFI support (or you really want to use BIOS for a reason).
+</p>
+<p>GRUB BIOS installation
+</p>
+<div class="example">
+<pre class="example">$ cpt b grub &amp;&amp; cpt i grub
+$ grub-install --target=i386-pc /dev/sdX
+$ grub-mkconfig -o /boot/grub/grub.cfg
+</pre></div>
+
+<p>GRUB UEFI installation
+</p>
+<div class="example">
+<pre class="example">$ cpt b efibootmgr &amp;&amp; cpt i efibootmgr
+$ cpt b grub &amp;&amp; cpt i grub
+
+$ grub-install --target=x86_64-efi \
+               --efi-directory=esp \
+               --bootloader-id=CarbsLinux
+
+$ grub-mkconfig -o /boot/grub/grub.cfg
+</pre></div>
+
+<span id="Installing-init-scripts"></span><h4 class="subsection">1.5.2 Installing init scripts</h4>
+
+<p>Only thing left to do is installing the init-scripts, and now you are almost
+ready to boot your system!
+</p>
+<div class="example">
+<pre class="example">$ cpt b carbs-init &amp;&amp; cpt i carbs-init
+</pre></div>
+
+<span id="Generating-fstab"></span><h4 class="subsection">1.5.3 Generating fstab</h4>
+
+<p>You can now manually edit your fstab entry, or you can use the genfstab tool.
+If you want to use the tool, exit the chroot and run the following:
+</p>
+<div class="example">
+<pre class="example">$ wget https://github.com/cemkeylan/genfstab/raw/master/genfstab
+$ chmod +x genfstab
+$ ./genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</pre></div>
+
+
+
+
+</body>
+</html>
