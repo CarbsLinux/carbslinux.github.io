@@ -13,4 +13,3 @@ your system for viewing offline:
 
 Documentation Index
 --------------------------------------------------------------------------------
-[Installation Instructions](/docs/install.html)
