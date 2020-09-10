@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2020 Cem Keylan
+
+Licensed under Gnu Free Documentation License. -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Hooks (Carbs Linux User Manual)</title>
+
+<meta name="description" content="Hooks (Carbs Linux User Manual)">
+<meta name="keywords" content="Hooks (Carbs Linux User Manual)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Package-Manager.html" rel="up" title="Package Manager">
+<link href="Editing-the-build-file-during-pre_002dbuild.html" rel="next" title="Editing the build file during pre-build">
+<link href="Environment-Variables.html" rel="prev" title="Environment Variables">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<span id="Hooks"></span><div class="header">
+<p>
+Next: <a href="Packaging-System.html" accesskey="n" rel="next">Packaging System</a>, Previous: <a href="Environment-Variables.html" accesskey="p" rel="prev">Environment Variables</a>, Up: <a href="Package-Manager.html" accesskey="u" rel="up">Package Manager</a> &nbsp; </p>
+</div>
+<hr>
+<span id="Hooks-1"></span><h3 class="section">2.3 Hooks</h3>
+
+<p>Hooks can be used in order to change the runtime behaviour of the package manager.
+There are a variety of package hooks, mostly self explanatory:
+</p>
+<ul>
+<li> pre-build
+</li><li> post-build
+</li><li> build-fail
+</li><li> pre-test
+</li><li> test-fail
+</li><li> pre-install
+</li><li> post-install
+</li><li> pre-remove
+</li><li> post-remove
+</li><li> pre-fetch
+</li><li> post-fetch
+</li><li> post-package
+</li></ul>
+
+<p>In order to use hooks, you will need to set the <code>CPT_HOOK</code> variable pointing
+to your hook file. Your hook file <strong>MUST</strong> be a POSIX shell script as its
+contents are sourced by the package manager.
+</p>
+<p>The hook is given 3 variables when it is executed. Those are:
+</p><dl compact="compact">
+<dt><code>$TYPE</code></dt>
+<dd><p>The type of the hook, (pre-build, post-build, etc.)
+</p></dd>
+<dt><code>$PKG</code></dt>
+<dd><p>The package that <code>cpt</code> is currently working on. Can be null.
+</p></dd>
+<dt><code>$DEST</code></dt>
+<dd><p>The destination of the operation. Can be null.
+</p></dd>
+</dl>
+
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="Editing-the-build-file-during-pre_002dbuild.html" accesskey="1">Editing the <samp>build</samp> file during pre-build</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+
+
+
+</body>
+</html>
