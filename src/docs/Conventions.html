@@ -15,7 +15,7 @@ Licensed under Gnu Free Documentation License. -->
 <meta name="Generator" content="makeinfo">
 <link href="index.html" rel="start" title="Top">
 <link href="Contribution-Guidelines.html" rel="up" title="Contribution Guidelines">
-<link href="Init-System.html" rel="next" title="Init System">
+<link href="General-Conventions.html" rel="next" title="General Conventions">
 <link href="Contribution-Guidelines.html" rel="prev" title="Contribution Guidelines">
 <style type="text/css">
 <!--
@@ -42,59 +42,20 @@ ul.no-bullet {list-style: none}
 <body lang="en">
 <span id="Conventions"></span><div class="header">
 <p>
-Up: <a href="Contribution-Guidelines.html" accesskey="u" rel="up">Contribution Guidelines</a> &nbsp; </p>
+Next: <a href="Sending-Git-mails.html" accesskey="n" rel="next">Sending Git mails</a>, Up: <a href="Contribution-Guidelines.html" accesskey="u" rel="up">Contribution Guidelines</a> &nbsp; </p>
 </div>
 <hr>
 <span id="Conventions-1"></span><h3 class="section">3.1 Conventions</h3>
-<span id="General-Conventions-_002d_002d-00"></span><h4 class="subsection">3.1.1 General Conventions &ndash; 00</h4>
 
-<p>These apply to each and every file on the repositories.
-</p>
-<ul>
-<li> Try to keep the file readable. <strong>[<span id="g_t0010"></span>0010]</strong>
-<ul>
-<li> Characters on a line shouldn&rsquo;t exceed 100 characters excluding indentation. <strong>[<span id="g_t0011"></span>0011]</strong>
-</li><li> Make sure you don&rsquo;t have code commented out during commit. Uncomment them
-or remove them completely. <strong>[<span id="g_t0012"></span>0012]</strong>
-</li><li> Do not add comments following the code, add them to the top of the code. It
-makes it harder to read, and lines longer. <strong>[<span id="g_t0013"></span>0013]</strong>
-Here is an example:
-<div class="example">
-<pre class="example"># Good way of commenting.
-your code goes here
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="General-Conventions.html" accesskey="1">General Conventions &ndash; 00</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Shell-Conventions.html" accesskey="2">Shell Conventions &ndash; 10</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Repository-Conventions.html" accesskey="3">Repository Conventions &ndash; 20</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
 
-your code goes here  # Avoid this way of commenting.
-</pre></div>
-</li></ul>
-</li></ul>
-
-<span id="Shell-Conventions-_002d_002d-10"></span><h4 class="subsection">3.1.2 Shell Conventions &ndash; 10</h4>
-
-<p>Shell is central to Carbs Linux projects. Most of the tools and packages are
-written in POSIX sh.
-</p>
-<ul>
-<li> Use 4 spaces for indentation, instead of tabs. <strong>[<span id="g_t1010"></span>1010]</strong>
-</li><li> Make sure you don&rsquo;t use bash-specific code. <strong>[<span id="g_t1020"></span>1020]</strong>
-</li><li> Make sure you lint your code with <code>shellcheck</code> and if you are new to
-POSIX sh, use <code>checkbashisms</code>. <strong>[<span id="g_t1030"></span>1030]</strong>
-</li><li> Don&rsquo;t spawn new processes if you don&rsquo;t absolutely need to, especially during
-string manipulation. <strong>[<span id="g_t1040"></span>1040]</strong>
-<ul>
-<li> Never use a program for text manupilation that isn&rsquo;t defined in the POSIX
-standard. This includes <code>gawk</code> and <code>perl</code>. <strong>[<span id="g_t1041"></span>1041]</strong>
-</li><li> Instead of <code>$(basename $file)</code>, use <code>${file##*}</code>. <strong>[<span id="g_t1042"></span>1042]</strong>
-</li><li> Instead of <code>$(dirname $file)</code>, use <code>${file%/*}</code>. <strong>[<span id="g_t1043"></span>1043]</strong>
-</li></ul>
-<div class="example">
-<pre class="example"># This is the same thing as <code>basename /path/to/test.asc .asc</code>
-
-$ file=/path/to/test.asc file=${file##*/} file=${file%.asc}
-$ echo $file
-test
-</pre></div>
-</li><li> Instead of backticks, use <tt>$(..)</tt>. <strong>[<span id="g_t1050"></span>1050]</strong>
-</li></ul>
 
 
 

@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2020 Cem Keylan
+
+Licensed under Gnu Free Documentation License. -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Repository Conventions (Carbs Linux User Manual)</title>
+
+<meta name="description" content="Repository Conventions (Carbs Linux User Manual)">
+<meta name="keywords" content="Repository Conventions (Carbs Linux User Manual)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Conventions.html" rel="up" title="Conventions">
+<link href="Sending-Git-mails.html" rel="next" title="Sending Git mails">
+<link href="Shell-Conventions.html" rel="prev" title="Shell Conventions">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<span id="Repository-Conventions"></span><div class="header">
+<p>
+Previous: <a href="Shell-Conventions.html" accesskey="p" rel="prev">Shell Conventions</a>, Up: <a href="Conventions.html" accesskey="u" rel="up">Conventions</a> &nbsp; </p>
+</div>
+<hr>
+<span id="Repository-Conventions-_002d_002d-20"></span><h4 class="subsection">3.1.3 Repository Conventions &ndash; 20</h4>
+
+<p>Repository conventions are important in order to ensure every package resemble
+themselves. Here are the things to keep in mind:
+</p>
+<dl compact="compact">
+<dt><strong>[<span id="g_t2010"></span>2010]</strong></dt>
+<dd><p>Prefer tarballs over git packages unless there is a sensible reason.
+Here are some:
+</p>
+<ul>
+<li> Every patch is a new release. (See <a href="https://github.com/vim/vim">vim</a>)
+</li><li> There are no releases. (See <a href="https://git.suckless.org/sbase">https://git.suckless.org/sbase</a>)
+</li><li> Following a development branch.
+</li><li> There has been a long time since the latest release, but upstream is far ahead.
+</li></ul>
+
+</dd>
+<dt><strong>[<span id="g_t2020"></span>2020]</strong></dt>
+<dd><p>Prefer sources without a dependency to <code>automake</code>. There are usually
+distribution tarballs that are <code>autoconf</code>&rsquo;ed. Don&rsquo;t submit tarballs
+with an automake dependency unless you are <strong>sure</strong> there is no
+alternative.
+</p></dd>
+<dt><strong>[<span id="g_t2030"></span>2030]</strong></dt>
+<dd><p>Avoid these packages:
+</p><dl compact="compact">
+<dt><code>dbus</code></dt>
+<dd><p>Usually can be disabled by <samp>--disable-dbus</samp>
+</p></dd>
+<dt><code>gettext</code></dt>
+<dd><p>Usually can be disabled by <samp>--disable-nls</samp>
+</p></dd>
+</dl>
+</dd>
+<dt><strong>[<span id="g_t2040"></span>2040]</strong></dt>
+<dd><ul>
+<li> Always install a package to the <samp>/usr</samp> prefix.
+</li><li> All binaries should go to <samp>/usr/bin</samp>, not <samp>/usr/sbin</samp> or any other
+directory.
+</li><li> All libraries should go to <samp>/usr/lib</samp>.
+</li></ul>
+</dd>
+<dt><strong>[<span id="g_t2050"></span>2050]</strong></dt>
+<dd><p>All build files on the repository should be a POSIX shell script, and must start
+with <code>#!/bin/sh -e</code>.
+</p></dd>
+</dl>
+
+<p>The next section is about package templates that should be used in order to
+ensure stylistic consistency. Note that the option configurations shouldn&rsquo;t be
+taken literally, they are meant as examples.
+</p>
+<p><strong>[<span id="g_t2210"></span>2210] Make</strong>
+</p>
+<div class="example">
+<pre class="example">#!/bin/sh -e
+
+make
+make DESTDIR=&quot;$1&quot; PREFIX=/usr install
+</pre></div>
+
+<p><strong>[<span id="g_t2211"></span>2211] Configure/Make</strong>
+</p>
+<div class="example">
+<pre class="example">#!/bin/sh -e
+
+./configure \
+    --prefix=/usr \
+    --disable-option \
+    --enable-option
+
+make
+make DESTDIR=&quot;$1&quot; install
+</pre></div>
+
+
+<p><strong>[<span id="g_t2212"></span>2212] Autoconf/Automake</strong>
+</p>
+<p>See <a href="#g_t2020">2020</a>
+</p>
+<div class="example">
+<pre class="example">#!/bin/sh -e
+
+autoreconf -fi
+
+./configure \
+    --prefix=/usr \
+    --disable-option \
+    --enable-option
+
+make
+make DESTDIR=&quot;$1&quot; install
+</pre></div>
+
+<p><strong>[<span id="g_t2220"></span>2220] Meson</strong>
+</p>
+<div class="example">
+<pre class="example">#!/bin/sh -e
+
+export DESTDIR=$1
+
+meson \
+    --prefix=/usr \
+    -Doption=false \
+    -Doption2=true \
+    . output
+
+ninja -C output
+ninja -C output install
+</pre></div>
+
+<p><strong>[<span id="g_t2230"></span>2230] Cmake</strong>
+</p>
+<div class="example">
+<pre class="example">#!/bin/sh -e
+
+export DESTDIR=$1
+
+cmake -B build \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DOPTION=ON
+
+cmake --build   build
+cmake --install build
+</pre></div>
+
+<p><strong>[<span id="g_t2240"></span>2240] Go</strong>
+</p>
+<div class="example">
+<pre class="example">#!/bin/sh -e
+
+export GOPATH=$PWD/gopath
+trap &quot;go clean -modcache&quot; EXIT INT
+go mod vendor
+
+go build
+install -Dm755 program &quot;$1/usr/bin/program&quot;
+</pre></div>
+
+<p><strong>[<span id="g_t2241"></span>2241] Python</strong>
+</p>
+<div class="example">
+<pre class="example">#!/bin/sh -e
+
+python setup.py build
+python setup.py install --prefix=/usr --root=&quot;$1&quot;
+</pre></div>
+
+<hr>
+<div class="header">
+<p>
+Previous: <a href="Shell-Conventions.html" accesskey="p" rel="prev">Shell Conventions</a>, Up: <a href="Conventions.html" accesskey="u" rel="up">Conventions</a> &nbsp; </p>
+</div>
+
+
+
+</body>
+</html>

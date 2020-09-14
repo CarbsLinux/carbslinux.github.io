@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2020 Cem Keylan
+
+Licensed under Gnu Free Documentation License. -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Shell Conventions (Carbs Linux User Manual)</title>
+
+<meta name="description" content="Shell Conventions (Carbs Linux User Manual)">
+<meta name="keywords" content="Shell Conventions (Carbs Linux User Manual)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Conventions.html" rel="up" title="Conventions">
+<link href="Repository-Conventions.html" rel="next" title="Repository Conventions">
+<link href="General-Conventions.html" rel="prev" title="General Conventions">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<span id="Shell-Conventions"></span><div class="header">
+<p>
+Next: <a href="Repository-Conventions.html" accesskey="n" rel="next">Repository Conventions</a>, Previous: <a href="General-Conventions.html" accesskey="p" rel="prev">General Conventions</a>, Up: <a href="Conventions.html" accesskey="u" rel="up">Conventions</a> &nbsp; </p>
+</div>
+<hr>
+<span id="Shell-Conventions-_002d_002d-10"></span><h4 class="subsection">3.1.2 Shell Conventions &ndash; 10</h4>
+
+<p>Shell is central to Carbs Linux projects. Most of the tools and packages are
+written in POSIX sh.
+</p>
+<dl compact="compact">
+<dt><strong>[<span id="g_t1010"></span>1010]</strong></dt>
+<dd><p>Use 4 spaces for indentation, don&rsquo;t use tabs.
+</p></dd>
+<dt><strong>[<span id="g_t1020"></span>1020]</strong></dt>
+<dd><p>Make sure you don&rsquo;t use bash-specific code.
+</p></dd>
+<dt><strong>[<span id="g_t1030"></span>1030]</strong></dt>
+<dd><p>Make sure you lint your code with <code>shellcheck</code> and if you are new to
+POSIX sh, use <code>checkbashisms</code>.
+</p></dd>
+<dt><strong>[<span id="g_t1040"></span>1040]</strong></dt>
+<dd><p>Don&rsquo;t spawn new processes if you don&rsquo;t absolutely need to, especially during
+string manipulation.
+</p><dl compact="compact">
+<dt><strong>[<span id="g_t1041"></span>1041]</strong></dt>
+<dd><p>Never use a program for text manupilation that isn&rsquo;t defined in the POSIX
+standard. This includes <code>gawk</code> and <code>perl</code>.
+</p></dd>
+<dt><strong>[<span id="g_t1042"></span>1042]</strong></dt>
+<dd><p>Instead of <code>$(basename $file)</code>, use <code>${file##*}</code>.
+</p></dd>
+<dt><strong>[<span id="g_t1043"></span>1043]</strong></dt>
+<dd><p>Instead of <code>$(dirname $file)</code>, use <code>${file%/*}</code>.
+</p></dd>
+</dl>
+<div class="example">
+<pre class="example"># This is the same thing as <code>basename /path/to/test.asc .asc</code>
+
+$ file=/path/to/test.asc file=${file##*/} file=${file%.asc}
+$ echo $file
+test
+</pre></div>
+</dd>
+<dt><strong>[<span id="g_t1050"></span>1050]</strong></dt>
+<dd><p>Instead of backticks, use <tt>$(..)</tt>.
+</p></dd>
+</dl>
+
+
+
+
+</body>
+</html>
