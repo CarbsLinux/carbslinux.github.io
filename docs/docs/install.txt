@@ -94,8 +94,9 @@ you will need to install 'git' itself.
 
    The following guide will assume that you put the repositories into
 '~/repos/' directory, but you can put the repositories into any
-directory you want.  So go ahead and create that directory.  'mkdir -p
-$HOME/repos'.
+directory you want.  So go ahead and create that directory:
+
+     $ mkdir -p $HOME/repos
 
 1.2.1.1 Obtaining from rsync
 ............................
