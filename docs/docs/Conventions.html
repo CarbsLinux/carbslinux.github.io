@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2020 Cem Keylan
+
+Licensed under Gnu Free Documentation License. -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Conventions (Carbs Linux User Manual)</title>
+
+<meta name="description" content="Conventions (Carbs Linux User Manual)">
+<meta name="keywords" content="Conventions (Carbs Linux User Manual)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Contribution-Guidelines.html" rel="up" title="Contribution Guidelines">
+<link href="Init-System.html" rel="next" title="Init System">
+<link href="Contribution-Guidelines.html" rel="prev" title="Contribution Guidelines">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<span id="Conventions"></span><div class="header">
+<p>
+Up: <a href="Contribution-Guidelines.html" accesskey="u" rel="up">Contribution Guidelines</a> &nbsp; </p>
+</div>
+<hr>
+<span id="General-Conventions-_002d_002d-00"></span><h3 class="section">3.1 General Conventions &ndash; 00</h3>
+
+<p>These apply to each and every file on the repositories.
+</p>
+<ul>
+<li> Try to keep the file readable. <strong>[<span id="g_t0010"></span>0010]</strong>
+<ul>
+<li> Characters on a line shouldn&rsquo;t exceed 100 characters excluding indentation. <strong>[<span id="g_t0011"></span>0011]</strong>
+</li><li> Make sure you don&rsquo;t have code commented out during commit. Uncomment them
+or remove them completely. <strong>[<span id="g_t0012"></span>0012]</strong>
+</li><li> Do not add comments following the code, add them to the top of the code. It
+makes it harder to read, and lines longer. <strong>[<span id="g_t0013"></span>0013]</strong>
+Here is an example:
+<div class="example">
+<pre class="example"># Good way of commenting.
+your code goes here
+
+your code goes here  # Avoid this way of commenting.
+</pre></div>
+</li></ul>
+</li></ul>
+
+<span id="Shell-Conventions-_002d_002d-10"></span><h3 class="section">3.2 Shell Conventions &ndash; 10</h3>
+
+<p>Shell is central to Carbs Linux projects. Most of the tools and packages are
+written in POSIX sh.
+</p>
+<ul>
+<li> Use 4 spaces for indentation, instead of tabs. <strong>[<span id="g_t1010"></span>1010]</strong>
+</li><li> Make sure you don&rsquo;t use bash-specific code. <strong>[<span id="g_t1020"></span>1020]</strong>
+</li><li> Make sure you lint your code with <code>shellcheck</code> and if you are new to
+POSIX sh, use <code>checkbashisms</code>. <strong>[<span id="g_t1030"></span>1030]</strong>
+</li><li> Don&rsquo;t spawn new processes if you don&rsquo;t absolutely need to, especially during
+string manipulation. <strong>[<span id="g_t1040"></span>1040]</strong>
+<ul>
+<li> Never use a program for text manupilation that isn&rsquo;t defined in the POSIX
+standard. This includes <code>gawk</code> and <code>perl</code>. <strong>[<span id="g_t1041"></span>1041]</strong>
+</li><li> Instead of <code>$(basename $file)</code>, use <code>${file##*}</code>. <strong>[<span id="g_t1042"></span>1042]</strong>
+</li><li> Instead of <code>$(dirname $file)</code>, use <code>${file%/*}</code>. <strong>[<span id="g_t1043"></span>1043]</strong>
+</li></ul>
+<div class="example">
+<pre class="example"># This is the same thing as <code>basename /path/to/test.asc .asc</code>
+
+$ file=/path/to/test.asc file=${file##*/} file=${file%.asc}
+$ echo $file
+test
+</pre></div>
+</li><li> Instead of backticks, use <tt>$(..)</tt>. <strong>[<span id="g_t1050"></span>1050]</strong>
+</li></ul>
+
+
+
+</body>
+</html>
