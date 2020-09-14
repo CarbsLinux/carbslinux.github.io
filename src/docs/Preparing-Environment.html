@@ -65,10 +65,12 @@ will continue on that point.
 
 <p>First, we need to download the rootfs tarball. You can do the following in order
 to obtain the rootfs. If you are using an i686 machine, replace the <code>x86_64</code>
-with <code>i686</code>.
+with <code>i686</code>. We are setting this in a URL variable so that we don&rsquo;t have to
+write it every time.
 </p>
 <div class="example">
-<pre class="example">$ wget https://dl.carbslinux.org/releases/x86_64/carbs-rootfs.tar.xz
+<pre class="example">$ URL=https://dl.carbslinux.org/releases/x86_64
+$ wget $URL/carbs-rootfs.tar.xz
 </pre></div>
 
 <p>We can then check the integrity of the tarball and do a signature verification.
@@ -81,7 +83,7 @@ latest release is saved on <samp>carbs-rootfs.tar.xz.sha256</samp>. You can acqu
 verify the tarball.
 </p>
 <div class="example">
-<pre class="example">$ wget https://dl.carbslinux.org/releases/x86_64/carbs-rootfs.tar.xz.sha256
+<pre class="example">$ wget $URL/carbs-rootfs.tar.xz.sha256
 $ sha256sum -c carbs-rootfs.tar.xz.sha256
 </pre></div>
 
@@ -91,7 +93,7 @@ $ sha256sum -c carbs-rootfs.tar.xz.sha256
 GPG for this.
 </p>
 <div class="example">
-<pre class="example">$ wget https://dl.carbslinux.org/releases/carbs-rootfs.tar.xz.sig
+<pre class="example">$ wget $URL/carbs-rootfs.tar.xz.sig
 $ gpg --recv-keys FF484BDFEFCEF8FF
 $ gpg --verify carbs-rootfs.tar.xz.sig
 </pre></div>
