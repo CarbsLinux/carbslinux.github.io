@@ -15,7 +15,7 @@ Licensed under Gnu Free Documentation License. -->
 <meta name="Generator" content="makeinfo">
 <link href="index.html" rel="start" title="Top">
 <link href="Init-System.html" rel="up" title="Init System">
-<link href="Configuring-Init.html" rel="prev" title="Configuring Init">
+<link href="Init-Hooks.html" rel="prev" title="Init Hooks">
 <style type="text/css">
 <!--
 a.summary-letter {text-decoration: none}
@@ -41,10 +41,10 @@ ul.no-bullet {list-style: none}
 <body lang="en">
 <span id="Changing-Init-Program"></span><div class="header">
 <p>
-Previous: <a href="Configuring-Init.html" accesskey="p" rel="prev">Configuring Init</a>, Up: <a href="Init-System.html" accesskey="u" rel="up">Init System</a> &nbsp; </p>
+Previous: <a href="Init-Hooks.html" accesskey="p" rel="prev">Init Hooks</a>, Up: <a href="Init-System.html" accesskey="u" rel="up">Init System</a> &nbsp; </p>
 </div>
 <hr>
-<span id="Changing-Init-Program-1"></span><h3 class="section">4.2 Changing Init Program</h3>
+<span id="Changing-Init-Program-1"></span><h3 class="section">4.3 Changing Init Program</h3>
 
 <p>By default, Carbs Linux comes preinstalled with <code>busybox-init</code>, but this
 can easily be replaced without any issues. Currently, available init systems are:
@@ -65,7 +65,7 @@ $ cpt a runit /usr/bin/poweroff
 $ cpt a runit /usr/bin/reboot
 </pre></div>
 
-<span id="Rebooting-after-changing-Init"></span><h4 class="subsection">4.2.1 Rebooting after changing Init</h4>
+<span id="Rebooting-after-changing-Init"></span><h4 class="subsection">4.3.1 Rebooting after changing Init</h4>
 
 <p>After switching init systems, your running init system may not accept the
 new poweroff commands. You will need to reboot/poweroff using the running init&rsquo;s

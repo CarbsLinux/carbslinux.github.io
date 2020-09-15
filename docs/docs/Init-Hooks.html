@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2020 Cem Keylan
+
+Licensed under Gnu Free Documentation License. -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Init Hooks (Carbs Linux User Manual)</title>
+
+<meta name="description" content="Init Hooks (Carbs Linux User Manual)">
+<meta name="keywords" content="Init Hooks (Carbs Linux User Manual)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="Init-System.html" rel="up" title="Init System">
+<link href="Changing-Init-Program.html" rel="next" title="Changing Init Program">
+<link href="Configuring-Init.html" rel="prev" title="Configuring Init">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<span id="Init-Hooks"></span><div class="header">
+<p>
+Next: <a href="Changing-Init-Program.html" accesskey="n" rel="next">Changing Init Program</a>, Previous: <a href="Configuring-Init.html" accesskey="p" rel="prev">Configuring Init</a>, Up: <a href="Init-System.html" accesskey="u" rel="up">Init System</a> &nbsp; </p>
+</div>
+<hr>
+<span id="Init-Hooks-1"></span><h3 class="section">4.2 Init Hooks</h3>
+
+<p>Init hooks are for custom personal commands that the user may want to add to
+alter their boot. These can be used to load kernel modules, modify interfaces,
+and lot more. Those hooks are added to the <samp>/etc/init</samp> directory with the
+hook name as the suffix. For example, a boot script will be placed as
+<samp>/etc/init/my-hook.boot</samp>. Currently, there are 4 hooks that the user can use.
+</p>
+<dl compact="compact">
+<dt><samp>early-boot</samp></dt>
+<dd><p>Run after pseudo-filesystems are mounted.
+</p></dd>
+<dt><samp>boot</samp></dt>
+<dd><p>Run before the boot stage is completed.
+</p></dd>
+<dt><samp>pre.shutdown</samp></dt>
+<dd><p>Run first when shutting down.
+</p></dd>
+<dt><samp>post.shutdown</samp></dt>
+<dd><p>Run just before the system is halted.
+</p></dd>
+</dl>
+
+
+
+
+</body>
+</html>
