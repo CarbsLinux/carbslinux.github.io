@@ -128,7 +128,7 @@ main() {
     # Generate htmldocs
     command -v makeinfo && {
         git submodule update --init --remote -f
-        make -s -C texidocs DESTDIR="$PWD/src/docs" htmldocs
+        make -s -C texidocs HTMLDIR="$PWD/src/docs" htmldocs
     }
 
     # Generate pages
