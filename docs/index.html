@@ -30,7 +30,7 @@ package manager forked from KISS with the tool-based approach of xbps.</p>
 
 <h2>Small base</h2>
 
-<p>By default, Carbs Linux comes with busybox for coreutils, libressl for its
+<p>By default, Carbs Linux comes with busybox for coreutils, bearssl for its
 crypto library, musl libc, and other basic utilities that are required for
 building new software. The majority of the base packages are statically linked.</p>
 
@@ -76,11 +76,17 @@ other system supervision technique along with your own init scripts.</p>
 
 <p><a href="/news.xml">RSS Feed</a> | <a href="/news.html">See all news</a></p>
 
+<h2>Sep 16 2020</h2>
+
+<p>The libressl &ldquo;revert&rdquo; was reverted. System update will replace libressl
+dependencies with bearssl. You may choose to keep or remove bearssl after the
+update.</p>
+
 <h2>Sep 03 2020</h2>
 
 <p>The default TLS provider has been reverted to &lsquo;libressl&rsquo;. System update will
 replace bearssl dependencies with libressl. You may choose to keep or remove
-bearssl after the update</p>
+bearssl after the update.</p>
 
 <h2>Jul 27 2020</h2>
 
@@ -98,11 +104,6 @@ found on the downloads page.</p>
 
 <p>An initial version for binary package management is released.
 It can be found on the <a href="https://github.com/CarbsLinux/kiss-bin">GitHub page</a>.</p>
-
-<h2>May 19 2020</h2>
-
-<p>A rootfs tarball targeting the i686 architecture has
-been released. It can be found on the <a href="https://dl.carbslinux.org/releases/i686">downloads page</a></p>
     <a href="/index.txt">View Page Source</a>
     <div class="border"></div>
     <p class=footer>Linux® is a registered trademark of Linus Torvalds</p>

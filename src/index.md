@@ -12,7 +12,7 @@ package manager forked from KISS with the tool-based approach of xbps.
 Small base
 --------------------------------------------------------------------------------
 
-By default, Carbs Linux comes with busybox for coreutils, libressl for its
+By default, Carbs Linux comes with busybox for coreutils, bearssl for its
 crypto library, musl libc, and other basic utilities that are required for
 building new software. The majority of the base packages are statically linked.
 
@@ -60,12 +60,19 @@ News
 
 [RSS Feed](/news.xml) | [See all news](/news.html)
 
+Sep 16 2020
+--------------------------------------------------------------------------------
+
+The libressl "revert" was reverted. System update will replace libressl
+dependencies with bearssl. You may choose to keep or remove bearssl after the
+update.
+
 Sep 03 2020
 --------------------------------------------------------------------------------
 
 The default TLS provider has been reverted to 'libressl'. System update will
 replace bearssl dependencies with libressl. You may choose to keep or remove
-bearssl after the update
+bearssl after the update.
 
 Jul 27 2020
 --------------------------------------------------------------------------------
@@ -88,11 +95,3 @@ An initial version for binary package management is released.
 It can be found on the [GitHub page].
 
 [GitHub page]: https://github.com/CarbsLinux/kiss-bin
-
-May 19 2020
---------------------------------------------------------------------------------
-
-A rootfs tarball targeting the i686 architecture has
-been released. It can be found on the [downloads page]
-
-[downloads page]: https://dl.carbslinux.org/releases/i686

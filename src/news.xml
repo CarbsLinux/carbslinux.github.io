@@ -9,7 +9,18 @@
     <description>a simple linux distribution</description>
     <link>https://carbslinux.org</link>
     <atom:link href="https://carbslinux.org/news.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue Sep 15 2020 18:00</lastBuildDate>
+    <lastBuildDate>Tue Sep 15 2020 23:00</lastBuildDate>
+<item>
+<title>Sep 16 2020</title>
+<pubDate>Wed, 16 Sep 2020</pubDate>
+<dc:creator>Cem Keylan</dc:creator>
+<link>https://carbslinux.org/index.html</link>
+<description>&lt;h2&gt;Sep 16 2020&lt;/h2&gt;
+
+&lt;p&gt;The libressl &amp;ldquo;revert&amp;rdquo; was reverted. System update will replace libressl
+dependencies with bearssl. You may choose to keep or remove bearssl after the
+update.&lt;/p&gt;</description>
+</item>
 <item>
 <title>Sep 03 2020</title>
 <pubDate>Thu, 03 Sep 2020</pubDate>
@@ -19,7 +30,7 @@
 
 &lt;p&gt;The default TLS provider has been reverted to &amp;lsquo;libressl&amp;rsquo;. System update will
 replace bearssl dependencies with libressl. You may choose to keep or remove
-bearssl after the update&lt;/p&gt;</description>
+bearssl after the update.&lt;/p&gt;</description>
 </item>
 <item>
 <title>Jul 27 2020</title>

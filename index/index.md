@@ -12,7 +12,7 @@ package manager forked from KISS with the tool-based approach of xbps.
 Small base
 --------------------------------------------------------------------------------
 
-By default, Carbs Linux comes with busybox for coreutils, libressl for its
+By default, Carbs Linux comes with busybox for coreutils, bearssl for its
 crypto library, musl libc, and other basic utilities that are required for
 building new software. The majority of the base packages are statically linked.
 
