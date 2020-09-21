@@ -11,18 +11,18 @@ Documentation License." -->
 <!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Conventions (Carbs Linux User Manual)</title>
+<title>cpt-update (Carbs Linux User Manual)</title>
 
-<meta name="description" content="Conventions (Carbs Linux User Manual)">
-<meta name="keywords" content="Conventions (Carbs Linux User Manual)">
+<meta name="description" content="cpt-update (Carbs Linux User Manual)">
+<meta name="keywords" content="cpt-update (Carbs Linux User Manual)">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="makeinfo">
 <link href="index.html" rel="start" title="Top">
 <link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="Contribution-Guidelines.html" rel="up" title="Contribution Guidelines">
-<link href="General-Conventions.html" rel="next" title="General Conventions">
-<link href="Contribution-Guidelines.html" rel="prev" title="Contribution Guidelines">
+<link href="Usage.html" rel="up" title="Usage">
+<link href="Environment-Variables.html" rel="next" title="Environment Variables">
+<link href="cpt_002dsearch.html" rel="prev" title="cpt-search">
 <style type="text/css">
 <!--
 a.summary-letter {text-decoration: none}
@@ -46,21 +46,33 @@ ul.no-bullet {list-style: none}
 </head>
 
 <body lang="en">
-<span id="Conventions"></span><div class="header">
+<span id="cpt_002dupdate"></span><div class="header">
 <p>
-Next: <a href="Sending-Git-mails.html" accesskey="n" rel="next">Sending Git mails</a>, Up: <a href="Contribution-Guidelines.html" accesskey="u" rel="up">Contribution Guidelines</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+Previous: <a href="cpt_002dsearch.html" accesskey="p" rel="prev"><code>cpt-search</code></a>, Up: <a href="Usage.html" accesskey="u" rel="up">Usage</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
 </div>
 <hr>
-<span id="Conventions-1"></span><h3 class="section">4.1 Conventions</h3>
+<span id="cpt_002dupdate-1"></span><h4 class="subsection">2.1.10 <code>cpt-update</code></h4>
 
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="General-Conventions.html" accesskey="1">General Conventions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Shell-Conventions.html" accesskey="2">Shell Conventions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Repository-Conventions.html" accesskey="3">Repository Conventions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-</table>
+<p><code>cpt-update</code> will update the packages on your system.
+</p>
+
+
+<span id="Options-4"></span><h4 class="unnumberedsubsubsec">Options</h4>
+
+<dl compact="compact">
+<dt><samp>-d --download</samp></dt>
+<dd><p>Only download updatable packages.
+</p></dd>
+<dt><samp>-n --no-fetch</samp></dt>
+<dd><p>Do not fetch remote repositories.
+</p></dd>
+<dt><samp>-y --no-prompt</samp></dt>
+<dd><p>Do not prompt for confirmation.
+</p></dd>
+<dt><samp>--root</samp></dt>
+<dd><p>Use an alternate root directory. See <a href="Environment-Variables.html#cptroot"><code>CPT_ROOT</code></a>.
+</p></dd>
+</dl>
 
 
 

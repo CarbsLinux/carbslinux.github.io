@@ -21,7 +21,7 @@ Documentation License." -->
 <link href="index.html" rel="start" title="Top">
 <link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
 <link href="Init-System.html" rel="up" title="Init System">
-<link href="GNU-Free-Documentation-License.html" rel="next" title="GNU Free Documentation License">
+<link href="Contribution-Guidelines.html" rel="next" title="Contribution Guidelines">
 <link href="Init-Hooks.html" rel="prev" title="Init Hooks">
 <style type="text/css">
 <!--
@@ -51,7 +51,7 @@ ul.no-bullet {list-style: none}
 Previous: <a href="Init-Hooks.html" accesskey="p" rel="prev">Init Hooks</a>, Up: <a href="Init-System.html" accesskey="u" rel="up">Init System</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
 </div>
 <hr>
-<span id="Changing-Init-Program-1"></span><h3 class="section">4.3 Changing Init Program</h3>
+<span id="Changing-Init-Program-1"></span><h3 class="section">3.3 Changing Init Program</h3>
 
 <p>By default, Carbs Linux comes preinstalled with <code>busybox-init</code>, but this
 can easily be replaced without any issues. Currently, available init systems are:
@@ -74,7 +74,7 @@ $ cpt a runit /usr/bin/reboot
 
 
 
-<span id="Rebooting-after-changing-Init"></span><h4 class="subsection">4.3.1 Rebooting after changing Init</h4>
+<span id="Rebooting-after-changing-Init"></span><h4 class="subsection">3.3.1 Rebooting after changing Init</h4>
 
 <p>After switching init systems, your running init system may not accept the
 new poweroff commands. You will need to reboot/poweroff using the running init&rsquo;s
@@ -92,6 +92,9 @@ currently running on your system and not the one you are switching to.
 <dd><p><code>$ kill -s INT 1</code>
 </p></dd>
 </dl>
+
+
+
 
 
 
