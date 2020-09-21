@@ -2,7 +2,12 @@
 <html>
 <!-- Copyright (C) 2020 Cem Keylan
 
-Licensed under Gnu Free Documentation License. -->
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, with no Front-Cover Texts and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU Free
+Documentation License." -->
 <!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -14,6 +19,7 @@ Licensed under Gnu Free Documentation License. -->
 <meta name="distribution" content="global">
 <meta name="Generator" content="makeinfo">
 <link href="index.html" rel="start" title="Top">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
 <link href="Installation.html" rel="up" title="Installation">
 <link href="Chroot.html" rel="next" title="Chroot">
 <link href="Installation.html" rel="prev" title="Installation">
@@ -42,7 +48,7 @@ ul.no-bullet {list-style: none}
 <body lang="en">
 <span id="Preparing-Environment"></span><div class="header">
 <p>
-Next: <a href="Chroot.html" accesskey="n" rel="next">Chroot</a>, Up: <a href="Installation.html" accesskey="u" rel="up">Installation</a> &nbsp; </p>
+Next: <a href="Chroot.html" accesskey="n" rel="next">Chroot</a>, Up: <a href="Installation.html" accesskey="u" rel="up">Installation</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
 </div>
 <hr>
 <span id="Preparing-Environment-1"></span><h3 class="section">1.1 Preparing Environment</h3>
@@ -51,7 +57,8 @@ can obtain a Gentoo or Void Linux live image. You can follow their instructions
 to boot and setup your network.
 </p>
 <p>You will need the following programs in order to install Carbs Linux:
-</p><ul>
+</p>
+<ul>
 <li> tar
 </li><li> wget
 </li><li> xz
@@ -61,12 +68,14 @@ to boot and setup your network.
 <p>Rest of these instructions will assume that you have set all of these up, and
 will continue on that point.
 </p>
+
+
 <span id="Download"></span><h4 class="subsection">1.1.1 Download</h4>
 
 <p>First, we need to download the rootfs tarball. You can do the following in order
-to obtain the rootfs. If you are using an i686 machine, replace the <code>x86_64</code>
-with <code>i686</code>. We are setting this in a URL variable so that we don&rsquo;t have to
-write it every time.
+to obtain the rootfs. If you are using an i686 machine, replace the
+<code>x86_64</code> with <code>i686</code>. We are setting this in a URL variable so that we
+don&rsquo;t have to write it every time.
 </p>
 <div class="example">
 <pre class="example">$ URL=https://dl.carbslinux.org/releases/x86_64
@@ -76,16 +85,20 @@ $ wget $URL/carbs-rootfs.tar.xz
 <p>We can then check the integrity of the tarball and do a signature verification.
 Even thought these are optional, they are highly recommended.
 </p>
+
+
 <span id="Check-the-integrity-of-the-tarball-_0028Recommended_0029"></span><h4 class="subsection">1.1.2 Check the integrity of the tarball (Recommended)</h4>
 
-<p>All of the releases are saved in a single file named <samp>sha256sums.txt</samp>, but the
-latest release is saved on <samp>carbs-rootfs.tar.xz.sha256</samp>. You can acquire and
-verify the tarball.
+<p>All of the releases are saved in a single file named <samp>sha256sums.txt</samp>, but
+the latest release is saved on <samp>carbs-rootfs.tar.xz.sha256</samp>. You can
+acquire and verify the tarball.
 </p>
 <div class="example">
 <pre class="example">$ wget $URL/carbs-rootfs.tar.xz.sha256
 $ sha256sum -c carbs-rootfs.tar.xz.sha256
 </pre></div>
+
+
 
 <span id="Verify-the-signature"></span><h4 class="subsection">1.1.3 Verify the signature</h4>
 
@@ -98,6 +111,8 @@ $ gpg --recv-keys FF484BDFEFCEF8FF
 $ gpg --verify carbs-rootfs.tar.xz.sig
 </pre></div>
 
+
+
 <span id="Extracting-the-tarball"></span><h4 class="subsection">1.1.4 Extracting the tarball</h4>
 
 <p>You will need to extract the tarball to your desired location. For partitioning,
@@ -109,6 +124,8 @@ This will assume that you will be mounting your root partition to <samp>/mnt</sa
 $ tar xf carbs-rootfs.tar.xz -C /mnt
 </pre></div>
 
+
+
 <span id="Obtain-the-chroot-helper"></span><h4 class="subsection">1.1.5 Obtain the chroot helper</h4>
 
 <p>You can obtain the <code>cpt-chroot</code> script in order to do a simple chroot into
@@ -119,10 +136,11 @@ your new root filesystem.
 $ chmod a+x cpt-chroot
 </pre></div>
 
+
 <hr>
 <div class="header">
 <p>
-Next: <a href="Chroot.html" accesskey="n" rel="next">Chroot</a>, Up: <a href="Installation.html" accesskey="u" rel="up">Installation</a> &nbsp; </p>
+Next: <a href="Chroot.html" accesskey="n" rel="next">Chroot</a>, Up: <a href="Installation.html" accesskey="u" rel="up">Installation</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
 </div>
 
 
