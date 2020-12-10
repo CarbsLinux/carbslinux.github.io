@@ -6,13 +6,13 @@ Linux. When I forked the KISS Linux repository on the 9th of December, I was
 fairly new to package management. Carbs Linux used to be almost identical to
 KISS Linux. A lot has changed since then:
 
-- Replaced default init system to `sinit`   [2020 Jan 13]
-- Packaged `WebKit2GTK`                     [2020 Jan 15]
-- Added `bearssl` on the testing repository [2020 May 17]
-- Added `rsync` repository support to kiss  [2020 May 28]
-- Replaced `bison` with `byacc`             [2020 Jun 03]
-- Replaced `libressl` with `bearssl`        [2020 Jun 11]
-- Replaced `kiss` with `cpt`                [2020 Jun 24]
+- [2020 Jan 13] Replaced default init system to `sinit`
+- [2020 Jan 15] Packaged `WebKit2GTK`
+- [2020 May 17] Added `bearssl` on the testing repository
+- [2020 May 28] Added `rsync` repository support to kiss
+- [2020 Jun 03] Replaced `bison` with `byacc`
+- [2020 Jun 11] Replaced `libressl` with `bearssl`
+- [2020 Jun 24] Replaced `kiss` with `cpt`
 
 I have really enjoyed maintaining and developing this distribution, and I want
 to thank everyone who was involved in some way or another. While I have slowed

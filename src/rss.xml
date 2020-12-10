@@ -23,13 +23,13 @@ fairly new to package management. Carbs Linux used to be almost identical to
 KISS Linux. A lot has changed since then:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Replaced default init system to &lt;code&gt;sinit&lt;/code&gt;   [2020 Jan 13]&lt;/li&gt;
-&lt;li&gt;Packaged &lt;code&gt;WebKit2GTK&lt;/code&gt;                     [2020 Jan 15]&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;bearssl&lt;/code&gt; on the testing repository [2020 May 17]&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;rsync&lt;/code&gt; repository support to kiss  [2020 May 28]&lt;/li&gt;
-&lt;li&gt;Replaced &lt;code&gt;bison&lt;/code&gt; with &lt;code&gt;byacc&lt;/code&gt;             [2020 Jun 03]&lt;/li&gt;
-&lt;li&gt;Replaced &lt;code&gt;libressl&lt;/code&gt; with &lt;code&gt;bearssl&lt;/code&gt;        [2020 Jun 11]&lt;/li&gt;
-&lt;li&gt;Replaced &lt;code&gt;kiss&lt;/code&gt; with &lt;code&gt;cpt&lt;/code&gt;                [2020 Jun 24]&lt;/li&gt;
+&lt;li&gt;[2020 Jan 13] Replaced default init system to &lt;code&gt;sinit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;[2020 Jan 15] Packaged &lt;code&gt;WebKit2GTK&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;[2020 May 17] Added &lt;code&gt;bearssl&lt;/code&gt; on the testing repository&lt;/li&gt;
+&lt;li&gt;[2020 May 28] Added &lt;code&gt;rsync&lt;/code&gt; repository support to kiss&lt;/li&gt;
+&lt;li&gt;[2020 Jun 03] Replaced &lt;code&gt;bison&lt;/code&gt; with &lt;code&gt;byacc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;[2020 Jun 11] Replaced &lt;code&gt;libressl&lt;/code&gt; with &lt;code&gt;bearssl&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;[2020 Jun 24] Replaced &lt;code&gt;kiss&lt;/code&gt; with &lt;code&gt;cpt&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 
