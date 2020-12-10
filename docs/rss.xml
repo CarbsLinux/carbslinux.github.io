@@ -9,7 +9,36 @@
     <description>a simple linux distribution</description>
     <link>https://carbslinux.org</link>
     <atom:link href="https://carbslinux.org/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon Sep 21 2020 21:00</lastBuildDate>
+    <lastBuildDate>Thu Dec 10 2020 12:00</lastBuildDate>
+<item>
+<title>First Year of Carbs Linux</title>
+<pubDate>Thu, 10 Dec 2020</pubDate>
+<dc:creator>Cem Keylan</dc:creator>
+<link>https://carbslinux.org/blog/20201210.html</link>
+<description>&lt;h1&gt;First Year of Carbs Linux&lt;/h1&gt;
+
+&lt;p&gt;December 10, 2020 marks the first year after the initial release of Carbs
+Linux. When I forked the KISS Linux repository on the 9th of December, I was
+fairly new to package management. Carbs Linux used to be almost identical to
+KISS Linux. A lot has changed since then:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Replaced default init system to &lt;code&gt;sinit&lt;/code&gt;   [2020 Jan 13]&lt;/li&gt;
+&lt;li&gt;Packaged &lt;code&gt;WebKit2GTK&lt;/code&gt;                     [2020 Jan 15]&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;bearssl&lt;/code&gt; on the testing repository [2020 May 17]&lt;/li&gt;
+&lt;li&gt;Added &lt;code&gt;rsync&lt;/code&gt; repository support to kiss  [2020 May 28]&lt;/li&gt;
+&lt;li&gt;Replaced &lt;code&gt;bison&lt;/code&gt; with &lt;code&gt;byacc&lt;/code&gt;             [2020 Jun 03]&lt;/li&gt;
+&lt;li&gt;Replaced &lt;code&gt;libressl&lt;/code&gt; with &lt;code&gt;bearssl&lt;/code&gt;        [2020 Jun 11]&lt;/li&gt;
+&lt;li&gt;Replaced &lt;code&gt;kiss&lt;/code&gt; with &lt;code&gt;cpt&lt;/code&gt;                [2020 Jun 24]&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;I have really enjoyed maintaining and developing this distribution, and I want
+to thank everyone who was involved in some way or another. While I have slowed
+down in development due to college workload, I am still actively maintaining all
+the packages on the repository. I do have some ideas that I am thinking of
+implementing during the semester break. Hope to see you all in January.&lt;/p&gt;</description>
+</item>
 <item>
 <title>August 2020 News Post</title>
 <pubDate>Mon, 03 Aug 2020</pubDate>
