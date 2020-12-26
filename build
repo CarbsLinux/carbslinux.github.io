@@ -125,10 +125,10 @@ main() {
     genrss index news index.html > src/news.xml
     genrss src/blog > src/rss.xml
 
-    # Generate htmldocs
-    command -v makeinfo && {
-        git submodule update --init --remote -f
-        make -s -C texidocs HTMLDIR="$PWD/src/docs" htmldocs
+    # Generate documentation
+    command -v emacs >/dev/null && command -v makeinfo >/dev/null && {
+        git submodule update --init --remote -f --recursive
+        HTMLDIR=$PWD/src/docs redo texidocs/htmldocs
     }
 
     # Generate pages

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2020 Cem Keylan
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, with no Front-Cover Texts and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU Free
+Documentation License."
+ -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bootloader (Carbs Linux User Manual)</title>
+
+<meta name="description" content="Bootloader (Carbs Linux User Manual)">
+<meta name="keywords" content="Bootloader (Carbs Linux User Manual)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Making-your-system-bootable.html" rel="up" title="Making your system bootable">
+<link href="Init-scripts.html" rel="next" title="Init scripts">
+<link href="Making-your-system-bootable.html" rel="prev" title="Making your system bootable">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<span id="Bootloader"></span><div class="header">
+<p>
+Next: <a href="Init-scripts.html" accesskey="n" rel="next">Init scripts</a>, Up: <a href="Making-your-system-bootable.html" accesskey="u" rel="up">Making your system bootable</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<span id="Bootloader-1"></span><h4 class="subsection">1.5.1 Bootloader</h4>
+
+<p>In the main repository, there is efibootmgr and grub to serve as bootloaders.
+efibootmgr can be used as a standalone bootloader, or can be used to install
+grub in a UEFI environment. efibootmgr is needed unless you are using a device
+without UEFI support (or you really want to use BIOS for a reason).
+</p>
+<ol>
+<li> GRUB BIOS installation
+
+
+<div class="example">
+<pre class="example">cpt b grub &amp;&amp; cpt i grub
+grub-install --target=i386-pc /dev/sdX
+grub-mkconfig -o /boot/grub/grub.cfg
+</pre></div>
+
+</li><li> GRUB UEFI installation
+
+
+<div class="example">
+<pre class="example">cpt b efibootmgr &amp;&amp; cpt i efibootmgr
+cpt b grub &amp;&amp; cpt i grub
+
+grub-install --target=x86_64-efi \
+             --efi-directory=esp \
+             --bootloader-id=CarbsLinux
+
+grub-mkconfig -o /boot/grub/grub.cfg
+</pre></div>
+</li></ol>
+
+
+
+
+</body>
+</html>

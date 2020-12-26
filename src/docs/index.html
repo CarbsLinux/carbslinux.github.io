@@ -7,7 +7,8 @@ under the terms of the GNU Free Documentation License, Version 1.3 or
 any later version published by the Free Software Foundation; with no
 Invariant Sections, with no Front-Cover Texts and no Back-Cover Texts.
 A copy of the license is included in the section entitled "GNU Free
-Documentation License." -->
+Documentation License."
+ -->
 <!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -49,19 +50,6 @@ ul.no-bullet {list-style: none}
 
 
 
-<span id="SEC_Overview"></span>
-<h2 class="shortcontents-heading">Short Table of Contents</h2>
-
-<div class="shortcontents">
-<ul class="no-bullet">
-<li><a id="stoc-Installation-1" href="#toc-Installation-1">1 Installation</a></li>
-<li><a id="stoc-Package-Manager-1" href="#toc-Package-Manager-1">2 Package Manager</a></li>
-<li><a id="stoc-Init-System-1" href="#toc-Init-System-1">3 Init System</a></li>
-<li><a id="stoc-Contribution-Guidelines-1" href="#toc-Contribution-Guidelines-1">4 Contribution Guidelines</a></li>
-<li><a id="stoc-GNU-Free-Documentation-License-1" href="#toc-GNU-Free-Documentation-License-1">GNU Free Documentation License</a></li>
-</ul>
-</div>
-
 <span id="SEC_Contents"></span>
 <h2 class="contents-heading">Table of Contents</h2>
 
@@ -72,128 +60,68 @@ ul.no-bullet {list-style: none}
   <ul class="no-bullet">
     <li><a id="toc-Preparing-Environment-1" href="Preparing-Environment.html#Preparing-Environment">1.1 Preparing Environment</a>
     <ul class="no-bullet">
-      <li><a id="toc-Download" href="Preparing-Environment.html#Download">1.1.1 Download</a></li>
-      <li><a id="toc-Check-the-integrity-of-the-tarball-_0028Recommended_0029" href="Preparing-Environment.html#Check-the-integrity-of-the-tarball-_0028Recommended_0029">1.1.2 Check the integrity of the tarball (Recommended)</a></li>
-      <li><a id="toc-Verify-the-signature" href="Preparing-Environment.html#Verify-the-signature">1.1.3 Verify the signature</a></li>
-      <li><a id="toc-Extracting-the-tarball" href="Preparing-Environment.html#Extracting-the-tarball">1.1.4 Extracting the tarball</a></li>
-      <li><a id="toc-Obtain-the-chroot-helper" href="Preparing-Environment.html#Obtain-the-chroot-helper">1.1.5 Obtain the chroot helper</a></li>
+      <li><a id="toc-Download-1" href="Download.html#Download">1.1.1 Download</a></li>
+      <li><a id="toc-Signature-verification-1" href="Signature-verification.html#Signature-verification">1.1.2 Signature verification</a></li>
+      <li><a id="toc-Extracting-the-tarball-1" href="Extracting-the-tarball.html#Extracting-the-tarball">1.1.3 Extracting the tarball</a></li>
+      <li><a id="toc-Obtain-the-chroot-helper-1" href="Obtain-the-chroot-helper.html#Obtain-the-chroot-helper">1.1.4 Obtain the chroot helper</a></li>
     </ul></li>
     <li><a id="toc-Chroot-1" href="Chroot.html#Chroot">1.2 Chroot</a>
     <ul class="no-bullet">
-      <li><a id="toc-Setting-up-repositories" href="Chroot.html#Setting-up-repositories">1.2.1 Setting up repositories</a>
-      <ul class="no-bullet">
-        <li><a id="toc-Obtaining-from-rsync" href="Chroot.html#Obtaining-from-rsync">1.2.1.1 Obtaining from rsync</a></li>
-        <li><a id="toc-Obtaining-from-git" href="Chroot.html#Obtaining-from-git">1.2.1.2 Obtaining from git</a></li>
-        <li><a id="toc-Making-the-package-manager-use-the-repositories" href="Chroot.html#Making-the-package-manager-use-the-repositories">1.2.1.3 Making the package manager use the repositories</a></li>
-      </ul></li>
-      <li><a id="toc-Updating-packages" href="Chroot.html#Updating-packages">1.2.2 Updating packages</a></li>
-      <li><a id="toc-Installing-packages" href="Chroot.html#Installing-packages">1.2.3 Installing packages</a></li>
-      <li><a id="toc-Essential-Software" href="Chroot.html#Essential-Software">1.2.4 Essential Software</a></li>
-      <li><a id="toc-Obtaining-the-documentation-_0028optional_0029" href="Chroot.html#Obtaining-the-documentation-_0028optional_0029">1.2.5 Obtaining the documentation (optional)</a></li>
+      <li><a id="toc-Setting-up-repositories-1" href="Setting-up-repositories.html#Setting-up-repositories">1.2.1 Setting up repositories</a></li>
+      <li><a id="toc-Updating-packages-1" href="Updating-packages.html#Updating-packages">1.2.2 Updating packages</a></li>
+      <li><a id="toc-Installing-packages-1" href="Installing-packages.html#Installing-packages">1.2.3 Installing packages</a></li>
+      <li><a id="toc-Essential-Software-1" href="Essential-Software.html#Essential-Software">1.2.4 Essential Software</a></li>
+      <li><a id="toc-Obtaining-the-documentation-1" href="Obtaining-the-documentation.html#Obtaining-the-documentation">1.2.5 Obtaining the documentation</a></li>
     </ul></li>
     <li><a id="toc-System-Configuration-1" href="System-Configuration.html#System-Configuration">1.3 System Configuration</a>
     <ul class="no-bullet">
-      <li><a id="toc-Configuring-hostname-_0028recommended_0029" href="System-Configuration.html#Configuring-hostname-_0028recommended_0029">1.3.1 Configuring hostname (recommended)</a></li>
-      <li><a id="toc-Setting-up-hosts-file-_0028optional_0029" href="System-Configuration.html#Setting-up-hosts-file-_0028optional_0029">1.3.2 Setting up hosts file (optional)</a></li>
+      <li><a id="toc-Configuring-hostname-1" href="Configuring-hostname.html#Configuring-hostname">1.3.1 Configuring hostname</a></li>
+      <li><a id="toc-Hosts-file-1" href="Hosts-file.html#Hosts-file">1.3.2 Hosts file</a></li>
     </ul></li>
     <li><a id="toc-Kernel-1" href="Kernel.html#Kernel">1.4 Kernel</a>
     <ul class="no-bullet">
-      <li><a id="toc-Obtaining-the-kernel-sources" href="Kernel.html#Obtaining-the-kernel-sources">1.4.1 Obtaining the kernel sources</a></li>
-      <li><a id="toc-Installing-dependencies" href="Kernel.html#Installing-dependencies">1.4.2 Installing dependencies</a></li>
-      <li><a id="toc-Compiling-the-kernel" href="Kernel.html#Compiling-the-kernel">1.4.3 Compiling the kernel</a></li>
+      <li><a id="toc-Obtaining-the-kernel-sources-1" href="Obtaining-the-kernel-sources.html#Obtaining-the-kernel-sources">1.4.1 Obtaining the kernel sources</a></li>
+      <li><a id="toc-Kernel-dependencies-1" href="Kernel-dependencies.html#Kernel-dependencies">1.4.2 Kernel dependencies</a></li>
+      <li><a id="toc-Building-the-kernel-1" href="Building-the-kernel.html#Building-the-kernel">1.4.3 Building the kernel</a></li>
     </ul></li>
     <li><a id="toc-Making-your-system-bootable-1" href="Making-your-system-bootable.html#Making-your-system-bootable">1.5 Making your system bootable</a>
     <ul class="no-bullet">
-      <li><a id="toc-Installing-a-bootloader" href="Making-your-system-bootable.html#Installing-a-bootloader">1.5.1 Installing a bootloader</a></li>
-      <li><a id="toc-Installing-init-scripts" href="Making-your-system-bootable.html#Installing-init-scripts">1.5.2 Installing init scripts</a></li>
-      <li><a id="toc-Generating-fstab" href="Making-your-system-bootable.html#Generating-fstab">1.5.3 Generating fstab</a></li>
+      <li><a id="toc-Bootloader-1" href="Bootloader.html#Bootloader">1.5.1 Bootloader</a></li>
+      <li><a id="toc-Init-scripts-1" href="Init-scripts.html#Init-scripts">1.5.2 Init scripts</a></li>
+      <li><a id="toc-Fstab-1" href="Fstab.html#Fstab">1.5.3 Fstab</a></li>
     </ul></li>
     <li><a id="toc-Post_002dinstallation-1" href="Post_002dinstallation.html#Post_002dinstallation">1.6 Post-installation</a>
     <ul class="no-bullet">
-      <li><a id="toc-Acquiring-kiss-repositories" href="Post_002dinstallation.html#Acquiring-kiss-repositories">1.6.1 Acquiring kiss repositories</a></li>
+      <li><a id="toc-KISS-repositories-1" href="KISS-repositories.html#KISS-repositories">1.6.1 KISS repositories</a></li>
     </ul></li>
   </ul></li>
-  <li><a id="toc-Package-Manager-1" href="Package-Manager.html#Package-Manager">2 Package Manager</a>
+  <li><a id="toc-Init-System-1" href="Init-System.html#Init-System">2 Init System</a>
   <ul class="no-bullet">
-    <li><a id="toc-Usage-1" href="Usage.html#Usage">2.1 Usage</a>
+    <li><a id="toc-Configuring-Init-1" href="Configuring-Init.html#Configuring-Init">2.1 Configuring Init</a>
     <ul class="no-bullet">
-      <li><a id="toc-cpt_002dalternatives-1" href="cpt_002dalternatives.html#cpt_002dalternatives">2.1.1 <code>cpt-alternatives</code></a>
-      <ul class="no-bullet">
-        <li><a id="toc-Examples" href="cpt_002dalternatives.html#Examples">Examples</a></li>
-      </ul></li>
-      <li><a id="toc-cpt_002dbuild-1" href="cpt_002dbuild.html#cpt_002dbuild">2.1.2 <code>cpt-build</code></a>
-      <ul class="no-bullet">
-        <li><a id="toc-Options" href="cpt_002dbuild.html#Options">Options</a></li>
-      </ul></li>
-      <li><a id="toc-cpt_002dchecksum-1" href="cpt_002dchecksum.html#cpt_002dchecksum">2.1.3 <code>cpt-checksum</code></a></li>
-      <li><a id="toc-cpt_002ddownload-1" href="cpt_002ddownload.html#cpt_002ddownload">2.1.4 <code>cpt-download</code></a></li>
-      <li><a id="toc-cpt_002dfetch-1" href="cpt_002dfetch.html#cpt_002dfetch">2.1.5 <code>cpt-fetch</code></a></li>
-      <li><a id="toc-cpt_002dinstall-1" href="cpt_002dinstall.html#cpt_002dinstall">2.1.6 <code>cpt-install</code></a>
-      <ul class="no-bullet">
-        <li><a id="toc-Options-1" href="cpt_002dinstall.html#Options-1">Options</a></li>
-      </ul></li>
-      <li><a id="toc-cpt_002dlist-1" href="cpt_002dlist.html#cpt_002dlist">2.1.7 <code>cpt-list</code></a></li>
-      <li><a id="toc-cpt_002dremove-1" href="cpt_002dremove.html#cpt_002dremove">2.1.8 <code>cpt-remove</code></a>
-      <ul class="no-bullet">
-        <li><a id="toc-Options-2" href="cpt_002dremove.html#Options-2">Options</a></li>
-      </ul></li>
-      <li><a id="toc-cpt_002dsearch-1" href="cpt_002dsearch.html#cpt_002dsearch">2.1.9 <code>cpt-search</code></a>
-      <ul class="no-bullet">
-        <li><a id="toc-Options-3" href="cpt_002dsearch.html#Options-3">Options</a></li>
-      </ul></li>
-      <li><a id="toc-cpt_002dupdate-1" href="cpt_002dupdate.html#cpt_002dupdate">2.1.10 <code>cpt-update</code></a>
-      <ul class="no-bullet">
-        <li><a id="toc-Options-4" href="cpt_002dupdate.html#Options-4">Options</a></li>
-      </ul></li>
+      <li><a id="toc-Kernel-Command-Line-1" href="Kernel-Command-Line.html#Kernel-Command-Line">2.1.1 Kernel Command Line</a></li>
+      <li><a id="toc-_002fetc_002finit_002frc_002econf-file" href="_002fetc_002finit_002frcconf-file.html#g_t_002fetc_002finit_002frcconf-file">2.1.2 &lsquo;<samp>/etc/init/rc.conf</samp>&rsquo; file</a></li>
+      <li><a id="toc-Init-Hooks-1" href="Init-Hooks.html#Init-Hooks">2.1.3 Init Hooks</a></li>
     </ul></li>
-    <li><a id="toc-Environment-Variables-1" href="Environment-Variables.html#Environment-Variables">2.2 Environment Variables</a></li>
-    <li><a id="toc-Hooks-1" href="Hooks.html#Hooks">2.3 Hooks</a>
+    <li><a id="toc-Changing-Init-Program-1" href="Changing-Init-Program.html#Changing-Init-Program">2.2 Changing Init Program</a>
     <ul class="no-bullet">
-      <li><a id="toc-Editing-the-build-file-during-pre_002dbuild-1" href="Editing-the-build-file-during-pre_002dbuild.html#Editing-the-build-file-during-pre_002dbuild">2.3.1 Editing the <samp>build</samp> file during pre-build</a></li>
-    </ul></li>
-    <li><a id="toc-Packaging-System-1" href="Packaging-System.html#Packaging-System">2.4 Packaging System</a>
-    <ul class="no-bullet">
-      <li><a id="toc-build" href="Packaging-System.html#build">2.4.1 <samp>build</samp></a></li>
-      <li><a id="toc-sources" href="Packaging-System.html#sources">2.4.2 <samp>sources</samp></a></li>
-      <li><a id="toc-checksums" href="Packaging-System.html#checksums">2.4.3 <samp>checksums</samp></a></li>
-      <li><a id="toc-version" href="Packaging-System.html#version">2.4.4 <samp>version</samp></a></li>
-      <li><a id="toc-depends" href="Packaging-System.html#depends">2.4.5 <samp>depends</samp></a></li>
-      <li><a id="toc-post_002dinstall" href="Packaging-System.html#post_002dinstall">2.4.6 <samp>post-install</samp></a></li>
-      <li><a id="toc-message" href="Packaging-System.html#message">2.4.7 <samp>message</samp></a></li>
-      <li><a id="toc-test" href="Packaging-System.html#test">2.4.8 <samp>test</samp></a></li>
-    </ul></li>
-    <li><a id="toc-Rsync-Repositories-1" href="Rsync-Repositories.html#Rsync-Repositories">2.5 Rsync Repositories</a>
-    <ul class="no-bullet">
-      <li><a id="toc-Setting-up-an-rsync-repository-for-distribution-1" href="Setting-up-an-rsync-repository-for-distribution.html#Setting-up-an-rsync-repository-for-distribution">2.5.1 Setting up an rsync repository for distribution</a></li>
+      <li><a id="toc-Rebooting-after-changing-init-1" href="Rebooting-after-changing-init.html#Rebooting-after-changing-init">2.2.1 Rebooting after changing init</a></li>
     </ul></li>
   </ul></li>
-  <li><a id="toc-Init-System-1" href="Init-System.html#Init-System">3 Init System</a>
+  <li><a id="toc-Contribution-Guidelines-1" href="Contribution-Guidelines.html#Contribution-Guidelines">3 Contribution Guidelines</a>
   <ul class="no-bullet">
-    <li><a id="toc-Configuring-Init-1" href="Configuring-Init.html#Configuring-Init">3.1 Configuring Init</a>
+    <li><a id="toc-Conventions-1" href="Conventions.html#Conventions">3.1 Conventions</a>
     <ul class="no-bullet">
-      <li><a id="toc-Kernel-Command-Line" href="Configuring-Init.html#Kernel-Command-Line">3.1.1 Kernel Command Line</a></li>
-      <li><a id="toc-_002fetc_002finit_002frc_002econf-file" href="Configuring-Init.html#g_t_002fetc_002finit_002frc_002econf-file">3.1.2 <samp>/etc/init/rc.conf</samp> file</a></li>
-    </ul></li>
-    <li><a id="toc-Init-Hooks-1" href="Init-Hooks.html#Init-Hooks">3.2 Init Hooks</a></li>
-    <li><a id="toc-Changing-Init-Program-1" href="Changing-Init-Program.html#Changing-Init-Program">3.3 Changing Init Program</a>
-    <ul class="no-bullet">
-      <li><a id="toc-Rebooting-after-changing-Init" href="Changing-Init-Program.html#Rebooting-after-changing-Init">3.3.1 Rebooting after changing Init</a></li>
+      <li><a id="toc-Shell-Conventions-1" href="Shell-Conventions.html#Shell-Conventions">3.1.1 Shell Conventions</a></li>
+      <li><a id="toc-Repository-Conventions-1" href="Repository-Conventions.html#Repository-Conventions">3.1.2 Repository Conventions</a></li>
     </ul></li>
   </ul></li>
-  <li><a id="toc-Contribution-Guidelines-1" href="Contribution-Guidelines.html#Contribution-Guidelines">4 Contribution Guidelines</a>
+  <li><a id="toc-GNU-Free-Documentation-License-1" href="GNU-Free-Documentation-License.html#GNU-Free-Documentation-License">Appendix A GNU Free Documentation License</a>
   <ul class="no-bullet">
-    <li><a id="toc-Conventions-1" href="Conventions.html#Conventions">4.1 Conventions</a>
-    <ul class="no-bullet">
-      <li><a id="toc-General-Conventions-_002d_002d-00" href="General-Conventions.html#General-Conventions">4.1.1 General Conventions &ndash; 00</a></li>
-      <li><a id="toc-Shell-Conventions-_002d_002d-10" href="Shell-Conventions.html#Shell-Conventions">4.1.2 Shell Conventions &ndash; 10</a></li>
-      <li><a id="toc-Repository-Conventions-_002d_002d-20" href="Repository-Conventions.html#Repository-Conventions">4.1.3 Repository Conventions &ndash; 20</a></li>
-    </ul></li>
-    <li><a id="toc-Sending-Git-mails-1" href="Sending-Git-mails.html#Sending-Git-mails">4.2 Sending Git mails</a></li>
+    <li><a id="toc-ADDENDUM_003a-How-to-use-this-License-for-your-documents" href="GNU-Free-Documentation-License.html#ADDENDUM_003a-How-to-use-this-License-for-your-documents">A.1 ADDENDUM: How to use this License for your documents</a></li>
   </ul></li>
-  <li><a id="toc-GNU-Free-Documentation-License-1" href="GNU-Free-Documentation-License.html#GNU-Free-Documentation-License">GNU Free Documentation License</a></li>
 </ul>
 </div>
-
 
 
 <span id="Top"></span><div class="header">
@@ -203,9 +131,8 @@ Next: <a href="Installation.html" accesskey="n" rel="next">Installation</a> &nbs
 <hr>
 <span id="Carbs-Linux-User-Manual"></span><h1 class="top">Carbs Linux User Manual</h1>
 
-<p>This is the full documentation of <a href="https://carbslinux.org">Carbs Linux</a>,
-from the details of the distribution, installation, to the package manager. It
-is not yet complete.
+<p>This is the full documentation of <a href="https://carbslinux.org">Carbs Linux</a>, from the details of the
+distribution, installation, to the package manager. It is not yet complete.
 </p>
 
 <p>This documentation is also available in the distribution by the
@@ -214,53 +141,92 @@ is not yet complete.
 favorite pager. You can install either the <code>info</code> or <code>texinfo</code>
 for doing the first.
 </p>
-
-
-
 <table class="menu" border="0" cellspacing="0">
 <tr><td align="left" valign="top">&bull; <a href="Installation.html" accesskey="1">Installation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Installing Carbs Linux
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Package-Manager.html" accesskey="2">Package Manager</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Carbs Linux Packaging Tools
+<tr><td align="left" valign="top">&bull; <a href="Init-System.html" accesskey="2">Init System</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Configure the init system
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Init-System.html" accesskey="3">Init System</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Configuring the init system
+<tr><td align="left" valign="top">&bull; <a href="Contribution-Guidelines.html" accesskey="3">Contribution Guidelines</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Contribute to Carbs Linux
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Contribution-Guidelines.html" accesskey="4">Contribution Guidelines</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Contributing to Carbs Linux
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="GNU-Free-Documentation-License.html" accesskey="5">GNU Free Documentation License</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Copying Conditions
+<tr><td align="left" valign="top">&bull; <a href="GNU-Free-Documentation-License.html" accesskey="4">GNU Free Documentation License</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Your rights
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 
-</pre></th></tr><tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
-
-&mdash; Detailed Menu Listing &mdash;
+</pre></th></tr><tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">&mdash; The Detailed Node Listing &mdash;
 
 Installation
 
-</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Preparing-Environment.html" accesskey="6">Preparing Environment</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Getting ready to chroot
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Preparing-Environment.html" accesskey="5">Preparing Environment</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Getting ready to chroot
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Chroot.html" accesskey="7">Chroot</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Going inside your new system
+<tr><td align="left" valign="top">&bull; <a href="Chroot.html" accesskey="6">Chroot</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Going inside your new system
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="System-Configuration.html" accesskey="8">System Configuration</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Customizing for your personal use
+<tr><td align="left" valign="top">&bull; <a href="System-Configuration.html" accesskey="7">System Configuration</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Customizing your system for personal use
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Kernel.html" accesskey="9">Kernel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Compiling your own kernel
+<tr><td align="left" valign="top">&bull; <a href="Kernel.html" accesskey="8">Kernel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Compiling your own kernel
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Making-your-system-bootable.html">Making your system bootable</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Installing init and bootloader
+<tr><td align="left" valign="top">&bull; <a href="Making-your-system-bootable.html" accesskey="9">Making your system bootable</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Installing bootloader and boot scripts
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Post_002dinstallation.html">Post-installation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Acquiring more packages and repositories
+<tr><td align="left" valign="top">&bull; <a href="Post_002dinstallation.html">Post-installation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Post-installation tasks
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 
-Package Manager
+Preparing Environment
 
-</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Usage.html">Usage</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Using Carbs Packaging Tools
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Download.html">Download</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Download the root filesystem tarball
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Environment-Variables.html">Environment Variables</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Values that affect the operation of CPT
+<tr><td align="left" valign="top">&bull; <a href="Signature-verification.html">Signature verification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Verify the signature of the rootfs tarball
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Hooks.html">Hooks</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Using hooks to customize the package manager operations
+<tr><td align="left" valign="top">&bull; <a href="Extracting-the-tarball.html">Extracting the tarball</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Extracting the root filesystem to the desired location
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Packaging-System.html">Packaging System</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">More detail on creating packages
+<tr><td align="left" valign="top">&bull; <a href="Obtain-the-chroot-helper.html">Obtain the chroot helper</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Download the script to easily chroot into the new filesystem
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Rsync-Repositories.html">Rsync Repositories</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Information on using or creating rsync repositories
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+Chroot
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Setting-up-repositories.html">Setting up repositories</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Basic setup for obtaining repositories
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Updating-packages.html">Updating packages</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Update your system
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Installing-packages.html">Installing packages</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Install new software on your system
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Essential-Software.html">Essential Software</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Software you might want to include on your system
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Obtaining-the-documentation.html">Obtaining the documentation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Install documentation for offline use (optional)
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+System Configuration
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Configuring-hostname.html">Configuring hostname</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Setting up system hostname (recommended)
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Hosts-file.html">Hosts file</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Setting up hosts file for networking (optional)
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+Kernel
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Obtaining-the-kernel-sources.html">Obtaining the kernel sources</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Downloading the Linux source code
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Kernel-dependencies.html">Kernel dependencies</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Requirements for building the kernel
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Building-the-kernel.html">Building the kernel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Configure and compile the kernel
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+Making your system bootable
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Bootloader.html">Bootloader</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Install a bootloader for your system
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Init-scripts.html">Init scripts</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Install init scripts for your system
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Fstab.html">Fstab</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Generating fstab
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+Post-installation
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="KISS-repositories.html">KISS repositories</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Acquire kiss repositories
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 
@@ -268,15 +234,41 @@ Init System
 
 </pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Configuring-Init.html">Configuring Init</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Ways to configure the init system
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Init-Hooks.html">Init Hooks</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Adding your personal commands to the init system
+<tr><td align="left" valign="top">&bull; <a href="Changing-Init-Program.html">Changing Init Program</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Replace the default busybox init with something new
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Changing-Init-Program.html">Changing Init Program</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Replacing the default busybox init with something new
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+Configuring Init
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Kernel-Command-Line.html">Kernel Command Line</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Configure init through the boot parameters
 </td></tr>
-</table>
+<tr><td align="left" valign="top">&bull; <a href="_002fetc_002finit_002frcconf-file.html">&lsquo;<samp>/etc/init/rc.conf</samp>&rsquo; file</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Configure init through the configuration file
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Init-Hooks.html">Init Hooks</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Configure init through hooks
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 
+Changing Init Program
 
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Rebooting-after-changing-init.html">Rebooting after changing init</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Ways to reboot after replacing the init system
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 
+Contribution Guidelines
 
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Conventions.html">Conventions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Conventions of the distribution
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+Conventions
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Shell-Conventions.html">Shell Conventions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Conventions for shell scripts
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Repository-Conventions.html">Repository Conventions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Conventions for repository build scripts
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+</pre></th></tr></table>
 
 <hr>
 <div class="header">
