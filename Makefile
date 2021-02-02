@@ -1,15 +1,15 @@
 EMACS = emacs
 
 all: docs style
-	emacs --batch --script ./org-publish.el
+	${EMACS} --batch --script ./org-publish.el
 
-docs: update-submodules
+docs: texidocs/carbslinux.texi texidocs/carbslinux.txt
 	mkdir -p docs/docs
 	makeinfo --html --css-ref=https://www.gnu.org/software/gnulib/manual.css -o docs/docs/carbslinux texidocs/carbslinux.texi
 	makeinfo --html --css-ref=https://www.gnu.org/software/gnulib/manual.css --no-split -o docs/docs/carbslinux.html texidocs/carbslinux.texi
 	cp texidocs/carbslinux.txt docs/docs/carbslinux.txt
 
-style: update-submodules
+style: style/carbslinux.css
 	mkdir -p docs
 	cp style/carbslinux.css docs/style.css
 
