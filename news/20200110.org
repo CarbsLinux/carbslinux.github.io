@@ -1,0 +1,4 @@
+#+TITLE: {{{date(%b %d\, %Y)}}}
+#+DATE: <2020-01-10 Fri>
+
+carbs-rootfs-20200110.tar.xz was released.

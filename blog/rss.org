@@ -1,0 +1,463 @@
+#+TITLE: Carbs Linux blog
+#+DESCRIPTION: a simple Linux distribution
+
+* First Year of Carbs Linux
+:PROPERTIES:
+:RSS_PERMALINK: 20201210.html
+:PUBDATE:  2020-12-10
+:ID:       91a73ba0-bd3c-437c-94af-fe767c3dcc02
+:END:
+December 10, 2020 marks the first year after the initial release of Carbs Linux.
+When I forked the KISS Linux repository on the 9th of December, I was fairly new
+to package management. Carbs Linux used to be almost identical to KISS Linux. A
+lot has changed since then:
+
+[2020 Jan 13] Replaced default init system to =sinit=
+[2020 Jan 15] Packaged =WebKit2GTK=
+[2020 May 17] Added =bearssl= on the testing repository
+[2020 May 28] Added =rsync= repository support to kiss
+[2020 Jun 03] Replaced =bison= with =byacc=
+[2020 Jun 11] Replaced =libressl= with =bearssl=
+[2020 Jun 24] Replaced =kiss= with =cpt=
+
+I have really enjoyed maintaining and developing this distribution, and I want
+to thank everyone who was involved in some way or another. While I have slowed
+down in development due to college workload, I am still actively maintaining all
+the packages on the repository. I do have some ideas that I am thinking of
+implementing during the semester break. Hope to see you all in January.
+* August 2020 News Post
+:PROPERTIES:
+:RSS_PERMALINK: 20200803.html
+:PUBDATE:  2020-08-03
+:ID:       20184071-45d1-4af3-b679-63610e737f82
+:END:
+We are having some stalls during this summer, as I am currently working on
+university-related stuff. Nonetheless, there are some important changes that I
+want to share in this month's post.
+
+#+toc: headlines 1 local
+
+** Carbs Packaging Tools
+   :PROPERTIES:
+   :ID:       fe405200-c791-40bb-af90-55b14328c901
+   :END:
+
+This month I have reworked =kiss= into a new package manager, now renamed as
+=cpt=. Updating =kiss= will now bootstrap the new package manager, so you don't
+have to manually edit your system. If you don't like the idea of this, you can
+look up the =post-install= script on =core/kiss= and apply the changes manually.
+
+You will also need to rename your =KISS_*= variables to =CPT_*=. So, =KISS_PATH=
+becomes =CPT_PATH=.
+
+The rework changes the previous commands on the package manager into standalone
+tools, and move the package manager functions to a library. This makes it easier
+for a user to import functions and variables from the package manager, and
+extend the package manager with their own intended way. Previously this required
+ugly hacks and workarounds to use the package manager functions. I will be
+making use of these changes to re-implement binary package management functions
+as well.
+
+If you want to use the library on your script you can simply do this:
+
+#+begin_src sh
+  #!/bin/sh
+  . cpt-lib
+  (...)
+#+end_src
+
+There are obviously some clean-up and simplifications needed in this new
+tool-based package management method.
+
+** Docs
+   :PROPERTIES:
+   :ID:       9a665dbf-7a5a-4e66-88a6-b95b27fd0f08
+   :END:
+
+I have added documentation for the distribution, and finally updated the guide
+for installation. It is now /almost/ complete. These docs can be installed to
+your system for online viewing. I will also add a documentation crawler similar
+to how werc works (but as an offline viewer). You can find =carbs-docs= from
+the repository. Currently, the documentation lacks but I will be adding new
+stuff. These will solely be distribution specific documentation and will not be
+a wiki-like source. If anyone would like to contribute to a wiki-like
+documentation source, I would happily re-open the distribution wiki. You can
+find the source on [[https://github.com/CarbsLinux/docs]].
+
+** Re-opening the Carbs Linux server
+   :PROPERTIES:
+   :ID:       d2ede03b-5386-48f9-9349-27ad6972558e
+   :END:
+
+Back in May, I had shutdown the Carbs Linux server due to financial issues, but
+I am slowly reverting to the self-hosted model. Back then, the git repositories
+were mirrored to GitHub, and the management was overall much more flexible. The
+server used to run Carbs Linux as well (that was fun and horrifying at the same
+time). Now, I will be relaunching the git server which will be the upstream
+source before August 5. You can switch your remote, but GitHub will stay as a
+remote nonetheless.
+
+*EDIT:* The git-server is up!
+* June Newspost
+:PROPERTIES:
+:RSS_PERMALINK: 20200617.html
+:PUBDATE:  2020-06-17
+:ID:       e0ddba22-7d55-4830-895a-5d02e1f41f90
+:END:
+This will be an active month for Carbs as major changes to the base and the
+package manager will be coming up.
+
+** Statically linking the base
+   :PROPERTIES:
+   :ID:       ca2f0783-0484-42d6-8f19-1b16330f474e
+   :END:
+
+For the past couple of weeks I have been trying to simplify the base and
+statically link the core (mostly binaries rather than libraries). I usually see
+some people extremely opposed to static linking as I also see the opposite on
+people.
+
+I believe that binaries on the core should always be linked statically. This
+ensures that an SONAME bump to =libObscure.so= will not break the core
+functionality of your system, forcing you to use external resources to recover
+from such an issue. As long as you can compile, use core utilities, edit text,
+and access the web, you can solve any given issue on your system.
+
+However, I don't think that removing shared libraries is sensible either. Not
+every piece of software out there is good quality enough to be statically
+linked.
+
+** Major changes on the core repository
+   :PROPERTIES:
+   :ID:       7bcf3f1b-1341-485d-a28a-3dedc24d1eee
+   :END:
+
+There have been drastic changes to the core repository and the base rootfs this
+month (with more on the way). Right now changes are as follows.
+
+*** Removed from Core
+    :PROPERTIES:
+    :ID:       29d41729-1428-44dc-b315-cd9c3070e7c5
+    :END:
+=git=
+=libressl=
+=grub=
+=bison=
+=dhcpcd=
+=ubase=
+
+*** Added to Core
+    :PROPERTIES:
+    :ID:       9935f194-03c4-4e83-b6f1-fd8e35adb51e
+    :END:
+=bearssl=, as a =libressl= replacement
+=byacc=, as a =bison= replacement
+
+*** Statically linked
+    :PROPERTIES:
+    :ID:       445af4be-741c-41a4-b983-a1ffb71c3476
+    :END:
+=kiss=
+=neatvi=
+=mandoc=
+=byacc=
+=m4=
+=e2fsprogs=
+=make=
+=pkgconf=
+=sbase=
+=libnl=
+=wpa_supplicant=
+=bearssl=
+
+** Making the wiki available offline
+   :PROPERTIES:
+   :ID:       02f68296-e84b-4a60-9af6-efc5b72a262e
+   :END:
+
+Soon, all documentation regarding Carbs Linux will be avaialable to be installed
+from the core repository in a =carbs-docs= package along with its own document
+crawler. Currently, the documentation regarding the installation process is a
+little outdated which will also receive some important updates.
+
+** ISO image for Carbs
+   :PROPERTIES:
+   :ID:       503ea473-9001-4080-9073-628f4cddaedc
+   :END:
+
+I am thinking of releasing an ISO image in order to provide a standardized
+environment for installation along with installation helper tools in the spirit
+of =arch-install-scripts=. Let's see how that's going to play out.
+* kiss 2.0.0 and Overall Changes
+:PROPERTIES:
+:RSS_PERMALINK: 20200528.html
+:PUBDATE:  2020-05-28
+:ID:       757f34bc-c510-4a93-be60-80ac355ad6d3
+:END:
+Carbs Linux kiss version 2.0.0 has been released which introduces rsync
+repositories.
+
+Git is no longer a mandatory dependency for the package manager, every git
+source on the core repository has been replaced with https sources (sbase,
+sinit), and rootfs tarballs will no longer ship with git. Repositories in the
+upcoming tarball will be rsync repositories.
+
+Git is now on the =extra= repository and is still (optionally) used in the
+package manager.
+
+The idea behind this change is size reductions and increased speed with rsync.
+As I said on the previous post, git repositories get larger and larger over the
+time span. Currently my personal copy of the git repository is around 77MB and I
+have forked KISS Linux (as a shallow copy) around December. Obviously, I have
+commits that I ommitted. I tend to create commits I dislike, which I change with
+=git reset --soft HEAD^=, which doesn't actually remove the commits, etc. A user
+will have a repository much smaller than mine.
+
+This is a precaution with the added bonuses of speed and dropping a mandatory
+dependency.
+
+You can see the rest of the changelog [[https://github.com/CarbsLinux/kiss/blob/master/CHANGELOG.md][here]].
+
+** Binary Repositories
+   :PROPERTIES:
+   :ID:       d34206ef-dac4-4fa7-8a24-6beeb2376615
+   :END:
+
+A few days ago, I have also published [[https://github.com/CarbsLinux/kiss-bin][kiss-bin]], a first version for managing
+binary repositories. Currently, there are some caveats that I'll be fixing along
+the way. I decided not to include this in the package manager natively as
+managing the source based and binary based packages together adds levels of
+complexity that we do not want. Instead, this is an extension for kiss which
+sources the package manager as a library. I hope to see it being adopted by
+others interested on the matter as well.
+* The Relation of Carbs and KISS
+:PROPERTIES:
+:RSS_PERMALINK: 20200508.html
+:PUBDATE:  2020-05-08
+:ID:       258ca25e-b053-4c53-a86d-c067346461e3
+:END:
+Since I have forked KISS, I have received many questions that can be summarized
+as "Why?". I have realized that I never truly answered this question. That's the
+reason I am writing this post, to give some background on Carbs, and some
+differences between KISS Linux and Carbs Linux for anyone who may be wondering.
+Perhaps I could make this a "FAQ" page later on.
+
+** History
+   :PROPERTIES:
+   :ID:       12457ae2-b958-479d-906c-4ec5c333b7a3
+   :END:
+
+I had the idea of creating my own Linux distribution since the May of 2019. Back
+then, I had my own [[https://linuxfromscratch.org][Linux from Scratch]] build, and I wanted to slim it down my
+own way and replace the software (with musl,sbase,etc.). The name Carbs Linux
+was in my mind since then. I wanted to write my own package manager, but I
+wasn't satisfied with anything I had built.
+
+I had written some incomplete package managers (all named =fat=) and I quickly
+threw them into the trash can, where they honestly belonged. I would want to
+share them with you for laughs, but my hard-drive got wiped and I have a problem
+of not doing an "initial commit" until a program I write is in a usable state.
+
+I have obtained the 'carbslinux.org' domain name in September 2019, but then
+life got on the way, and I stopped for a long time.
+
+One day on Reddit, I saw Dylan's post on [[https://reddit.com/r/unixporn][r/unixporn]] about KISS, and I really
+thought that it was interesting. Here is my [[https://www.reddit.com/r/unixporn/comments/ducd34/sowm_kiss_d/f7lua7x][comment]] to Dylan on that post. I
+checked out the package manager and the repository. The packaging system was
+extremely clean and well-thought. I decided to give it a go and fork KISS.
+
+** Differences between KISS and Carbs
+   :PROPERTIES:
+   :ID:       aa9e4559-0afd-4bdb-8993-006a9f16927c
+   :END:
+
+Now, I still baffle when people ask me this question. My intention was never to
+create a distribution with specific differences between KISS. My intention was
+being my own BDFL of a distribution I maintain. There are lots of differences
+between the main repositories, but they are subtle and not worth talking about.
+I personally never even installed KISS Linux on my system. So Carbs, isn't
+something like a downstream fork of KISS, it is just a distribution that was
+initially based on KISS.
+
+I try to contribute as much as I can to KISS Linux. I think that it is a
+brilliant distribution, and it was a great starting point for Carbs. I am really
+grateful to Dylan and all the other contributors.
+
+** What I'm working on now
+   :PROPERTIES:
+   :ID:       293684f2-3b65-42a0-8011-8441a963194c
+   :END:
+
+Currently I have a few projects that I'm working on for Carbs. These are,
+
+A BSD port for Carbs. For a while, I have been working on BSD compatibility on
+my fork of the [package manager]. I have tested, without any more issues, on
+OpenBSD and FreeBSD. The biggest issues remaining are choosing a vendor for BSD,
+packaging the BSD source, and providing a minimal base (like busybox for BSD).
+If you aren't familiar with BSD, it has a single source code for all of the
+utilities (kernel, command line programs, etc.). Contributions (even chipping in
+ideas) are very welcome.
+
+Adding binary package distribution support natively to the package manager.
+Biggest issue in small/old computers are compile times. This feature is for the
+bigger packages such as webkit, clang, llvm that take a considerable amount of
+time. Some computers with low memories cannot even compile firefox/webkit.
+
+Adding rsync repository support to the package manager. This is not a current
+issue, but rather a futureproofing. As time passes, distribution repositories
+grow larger. KISS and Carbs are young distributions without this problem right
+now. But in something like 5 years, this size will presumably increase to
+hundreds of megabytes. At that point it will be pointless to have the repository
+sources unless you specifically need them.
+
+** What's up with all the init/service daemons?
+   :PROPERTIES:
+   :ID:       8de3a6dd-b66f-4da3-baae-efb264461a67
+   :END:
+
+If you have ever checked the [[https://github.com/carbslinux/repository][repository]], you may have noticed that there are
+lots of init/service related packages. I have had my fair share of time with all
+of them, and it is an area that I am really interested in. I have even written
+my own [[https://github.com/cemkeylan/shinit][init daemon]] and [[https://github.com/cemkeylan/sysmgr][service supervisor]]. I maintain all those packages on KISS
+Community Repository as well with the exception of busybox. Those are, =busybox
+  init/runit=, =runit=, =sinit=, and =sysmgr=. I would definitely recommend
+checking out =shinit= and =sysmgr=.
+
+** Why I don't publicize Carbs
+   :PROPERTIES:
+   :ID:       15a9f5cc-3e2f-495d-8075-3213bcebe237
+   :END:
+
+There are a couple of reasons I don't publicize Carbs a lot.
+
+KISS is the better alternative in terms of support and community. I work on
+maintaining this distribution just as hard as Dylan, but in the end, Carbs is
+based on his original hard work, and I believe that he deserves the recognition
+more than I do.
+
+Since I cannot answer questions like "What is the difference?", I prefer staying
+as the silent sibling project of KISS Linux. Plus, there is no point in dividing
+the newly-emerging community in half.
+
+That's not because I don't have ideas for the future of Carbs, I do. I just
+think that I will deserve the recognition once those above lists are checked.
+
+I think that's about it, if you have questions you can send me a mail, ping me
+on IRC (my handle is =merakor=), and I will be happy to answer. Maybe your
+question fits this post, and I can update it to thoroughly give an explanation.
+* Outsource Repository Concept
+:PROPERTIES:
+:RSS_PERMALINK: 20200410.html
+:PUBDATE:  2020-04-10
+:ID:       b70d712e-dfd8-46ba-8519-2102b0506551
+:END:
+In April 3rd, I have added submodule support for Carbs Linux's fork of =kiss=.
+Now, from that sentence, it really doesn't sound exciting at all. But in
+reality, it opens a path to lots of creative output, and a better way to manage
+multi-user repositories (such as KISS Community).
+
+When managing a repository of submodules, the repository maintainer's only job
+is to deal with adding packages. A package maintainer doesn't have to wait for
+the repository maintainer to update their packages, as they are only making the
+changes to their own repositories.
+
+This way, an end-user can also track from their preferred maintainers, and do
+that with the tidyness of a single repository in their =KISS_PATH=.
+
+Carbs Linux now has an outsource repository for some packages. Firefox and its
+dependencies have been purged from the main repository, but can be found on it.
+
+[[https://github.com/CarbsLinux/outsource]]
+* Roadmap for Carbs
+:PROPERTIES:
+:RSS_PERMALINK: 20200406.html
+:PUBDATE:  2020-04-06
+:ID:       ab41c584-5be1-46b0-99e2-4d9eef2091aa
+:END:
+It has been a busy week. There are lots of changes in direction, and more to
+come. I want to talk a little about all of them.
+
+** Carbs Linux Server Going Down
+   :PROPERTIES:
+   :ID:       7b2135a9-122c-495e-9bb0-b79fc39ef098
+   :END:
+
+It became harder to maintain and pay for the server, and I will be shutting it
+down in May. I am currently in the phase of carrying over everything to [[https://github.com/CarbsLinux][Github]].
+The repository and the website is served on Github now. I have also moved the
+[[https://github.com/CarbsLinux/wiki/wiki][Wiki]] to Github and anyone can edit it there. There are some outdated posts that
+I will be fixing around this week.
+
+I am not quite sure where to store the downloads page now. But I will be
+switching that to a new source as well. (Maybe SourceHut?)
+
+I feel a little sad for switching, but serving on Github is faster, cheaper, and
+hassle-free.
+
+** Forking KISS
+   :PROPERTIES:
+   :ID:       037cba41-3be3-4714-9512-ff896d600dae
+   :END:
+
+I had a personal fork of KISS, which I enjoyed thoroughly. I didn't intend to
+make it the default when I started it, but it has matured enough to be so. The
+package manager can now be found on [[https://github.com/CarbsLinux/kiss][this repository]]. See it for the added
+changes.
+
+This will be a change for the better, as I can develop the package manager as it
+fits my views.
+
+** Small Changes on the Website
+   :PROPERTIES:
+   :ID:       b33e18eb-6f15-49e2-9c2b-473af26030f4
+   :END:
+
+I have made some small changes on the website. The build is not dependent on
+Plan9 utilities anymore. It was fun messing around with =rc= and =mk=, but they
+are quite limited compared to POSIX shell.
+
+RSS feeds are finally working as intended, both for the [[https://carbslinux.org/news.xml][news]] section, and the
+[[https://carbslinux.org/rss.xml][blog]] section.
+
+You can see every page's =.txt= output at the end of the page by clicking 'View
+Page Source'. Meanwhile, I will be updating some pages to be a little more
+'human-readable'.
+
+** Outsources Repository
+   :PROPERTIES:
+   :ID:       1856485d-22c8-4c58-b710-ee4fa4374f9d
+   :END:
+
+I have opened an =outsource= repository, which I will be pushing this week. I
+will add a new post when I am ready to push it. I think it will be interesting,
+it will also make more sense about the changes I have added to the package
+manager. The now empty repository, can be found [[https://github.com/CarbsLinux/outsource][here]]!
+
+** New Tarball
+   :PROPERTIES:
+   :ID:       63a8a514-af1b-46d1-a4fe-c4e84d47d256
+   :END:
+
+Finally, I have released a new tarball today, which can be obtained from the
+[[https://dl.carbslinux.org/releases][downloads page]].
+
+I am planning to add more of these update posts as I'm feeling better about the
+website structure overall.
+* Switching to New Website
+:PROPERTIES:
+:RSS_PERMALINK: 20200128.html
+:PUBDATE:  2020-01-28
+:ID:       b8735f8c-441c-45f2-ba47-73daf7ed511a
+:END:
+In case you haven't seen it before, this website was powered by [[http://werc.cat-v.org][werc]]. And even
+though I liked it really much, it was too powerful for a small website like
+this.
+
+So I have decided to reimplement this website with my own static generation
+scripts. The source will probably be on [[https://git.carbslinux.org/website/log.html][its git repository]] when I decide to
+publish the website.
+
+The generation requires Plan9 programs, although I have used them just for my
+enthusiasm. I have built the site with a combination of mk (instead of make),
+rc, and POSIX sh. I am not yet exactly familiar with rc, but I will replace the
+shell scripts when I feel like I can.

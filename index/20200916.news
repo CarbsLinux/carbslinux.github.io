@@ -1,6 +1,0 @@
-Sep 16 2020
---------------------------------------------------------------------------------
-
-The libressl "revert" was reverted. System update will replace libressl
-dependencies with bearssl. You may choose to keep or remove bearssl after the
-update.

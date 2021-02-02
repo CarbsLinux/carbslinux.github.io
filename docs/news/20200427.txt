@@ -1,0 +1,13 @@
+			     ______________
+
+			      APR 27, 2020
+			     ______________
+
+
+			    <2020-04-27 Mon>
+
+
+A new rootfs tarball has been released! You can see it on
+<https://dl.carbslinux.org/releases>!
+
+**EDIT:** A new bug fix release has been made.

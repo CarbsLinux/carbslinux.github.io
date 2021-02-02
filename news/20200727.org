@@ -1,0 +1,7 @@
+#+TITLE: {{{date(%b %d\, %Y)}}}
+#+DATE: <2020-07-27 Mon>
+
+Carbs Linux's fork of the =kiss= package manager has been renamed to =Carbs
+Packaging Tools= due to huge amount of changes. Your latest =kiss= update will
+handle the bootstrapping. You will need to rename your =KISS-*= variables to
+=CPT-*=.

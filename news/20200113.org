@@ -1,0 +1,23 @@
+#+TITLE: {{{date(%b %d\, %Y)}}}
+#+DATE: <2020-01-13 Mon>
+
+**Busybox update reqires manual intervention**
+
+The new busybox package conflicts with the pre-update busybox-init. That's why
+you should rebuild and install `busybox-init` before doing the update.
+
+#+BEGIN_SRC sh
+# Do a kiss update first (but don't actually update it yet), or manually pull
+# the git repository
+kiss u  # Cancel this operation after it asks for you to confirm the update
+
+# Install the busybox-init package
+kiss b busybox-init && kiss i busybox-init
+
+# Continue your update as you normally would.
+kiss u
+
+#+END_SRC
+
+I have moved runit and logging utilities from the busybox-init package to the busybox
+package, which is the cause of these conflicts.

@@ -1,0 +1,14 @@
+#+TITLE: Download Carbs Linux
+
+Below are the latest tarballs for the =x86_64= and =i686= architectures. You can
+visit [[https://dl.carbslinux.org/releases]] for all downloads. Follow the
+[[file:install.org][Installation guide]] to learn more about verifying the releases, and the required
+steps for installing the system.
+
+* x86-64
+
+[[https://dl.carbslinux.org/releases/x86_64/carbs-rootfs.tar.xz][carbs-rootfs.tar.xz]] | [[https://dl.carbslinux.org/releases/x86_64/carbs-rootfs.tar.xz.sha256][SHA256SUM]] | [[https://dl.carbslinux.org/releases/x86_64/carbs-rootfs.tar.xz.sig][Signature]]
+
+* i686
+
+[[https://dl.carbslinux.org/releases/i686/carbs-rootfs.tar.xz][carbs-rootfs.tar.xz]] | [[https://dl.carbslinux.org/releases/i686/carbs-rootfs.tar.xz.sha256][SHA256SUM]] | [[https://dl.carbslinux.org/releases/i686/carbs-rootfs.tar.xz.sig][Signature]]

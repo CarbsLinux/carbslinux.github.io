@@ -1,105 +1,133 @@
-<!DOCTYPE HTML>
-<html lan=en>
-  <head>
-    <title>August 2020 News Post | Carbs Linux</title>
-    <link rel="stylesheet" href="/style.css">
-    <meta charset="utf-8">
-    <meta name="Description" content="Carbs Linux - a simple linux distribution">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  </head>
-  <body>
-    <p class=header><strong>Carbs Linux - a simple linux distribution</strong></p>
-    <div class="header">
-      <nav>
-        <a href='/'>index</a>
-        <a href="//git.carbslinux.org">git</a>
-        <a href='//dl.carbslinux.org'>downloads</a>
-        <a href='/blog'>blog</a>
-        <a href='/docs/install.html'>installation</a>
-	<a href='/docs'>user manual</a>
-      </nav>
-    </div><div class="border"></div>
-<h1>August 2020 News Post</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2021-02-02 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>August 2020 News Post</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Cem Keylan">
+<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<div id="preamble" class="status">
+<nav id="navbar">
+    <a href="/" class=navbartitle>Carbs Linux</a>
 
-<p>We are having some stalls during this summer, as I am currently working on
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger" />
+    <ul id=navbarlist>
+        <li><a href="/" title="Home Page">Home</a></li>
+        <li><a href="//git.carbslinux.org" title="Git Repository">Git</a></li>
+        <li><a href="/download.html" title="Download Carbs Linux">Download</a></li>
+        <li><a href="/blog" title="Blog Posts">Blog</a></li>
+        <li><a href="/install.html" title="Installation Instructions">Installation</a></li>
+        <li><a href="/docs.html" title="Documentation">Docs</a></li>
+    </ul>
+</nav>
+</div>
+<div id="content">
+<header>
+<h1 class="title">August 2020 News Post</h1>
+<p class="subtitle">posted on 2020-08-03</p>
+</header><p>
+We are having some stalls during this summer, as I am currently working on
 university-related stuff. Nonetheless, there are some important changes that I
-want to share in this month&rsquo;s post.</p>
+want to share in this month's post.
+</p>
 
-<h2>INDEX</h2>
-
+<div id="text-table-of-contents">
 <ul>
-<li><a href="#carbs-packaging-tools">Carbs Packaging Tools</a></li>
-<li><a href="#docs">Docs</a></li>
-<li><a href="#re-opening-the-carbs-linux-server">Re-opening the Carbs Linux server</a></li>
+<li><a href="#org01ef6cc">Carbs Packaging Tools</a></li>
+<li><a href="#org53c8951">Docs</a></li>
+<li><a href="#org0391ea3">Re-opening the Carbs Linux server</a></li>
 </ul>
+</div>
 
+<div id="outline-container-org01ef6cc" class="outline-2">
+<h2 id="org01ef6cc">Carbs Packaging Tools</h2>
+<div class="outline-text-2" id="text-org01ef6cc">
+<p>
+This month I have reworked <code>kiss</code> into a new package manager, now renamed as
+<code>cpt</code>. Updating <code>kiss</code> will now bootstrap the new package manager, so you don't
+have to manually edit your system. If you don't like the idea of this, you can
+look up the <code>post-install</code> script on <code>core/kiss</code> and apply the changes manually.
+</p>
 
-<h2>Carbs Packaging Tools</h2>
+<p>
+You will also need to rename your <code>KISS_*</code> variables to <code>CPT_*</code>. So, <code>KISS_PATH</code>
+becomes <code>CPT_PATH</code>.
+</p>
 
-<p>This month I have reworked <code>kiss</code> into a new package manager, now renamed as
-<code>cpt</code>. Updating <code>kiss</code> will now bootstrap the new package manager, so you don&rsquo;t
-have to manually edit your system. If you don&rsquo;t like the idea of this, you can
-look up the <code>post-install</code> script on <code>core/kiss</code> and apply the changes manually.</p>
-
-<p>You will also need to rename your KISS<em>* variables to CPT</em>*. So, KISS_PATH
-becomes CPT_PATH.</p>
-
-<p>The rework changes the previous commands on the package manager into standalone
+<p>
+The rework changes the previous commands on the package manager into standalone
 tools, and move the package manager functions to a library. This makes it easier
 for a user to import functions and variables from the package manager, and
 extend the package manager with their own intended way. Previously this required
 ugly hacks and workarounds to use the package manager functions. I will be
 making use of these changes to re-implement binary package management functions
-as well.</p>
+as well.
+</p>
 
-<p>If you want to use the library on your script you can simply do this:</p>
+<p>
+If you want to use the library on your script you can simply do this:
+</p>
 
-<pre><code>+--------------------------------------------------------------------------+
-|                                                                          |
-| #!/bin/sh                                                                |
-| . cpt-lib                                                                |
-| (...)                                                                    |
-|                                                                          |
-+--------------------------------------------------------------------------+
-</code></pre>
+<div class="org-src-container">
+<pre class="src src-sh"><span class="org-comment-delimiter">#</span><span class="org-comment">!/bin/</span><span class="org-keyword">sh</span>
+. cpt-lib
+(...)
+</pre>
+</div>
 
-<p>There are obviously some clean-up and simplifications needed in this new
-tool-based package management method.</p>
+<p>
+There are obviously some clean-up and simplifications needed in this new
+tool-based package management method.
+</p>
+</div>
+</div>
 
-<h2>Docs</h2>
-
-<p>I have added documentation for the distribution, and finally updated the guide
-for installation. It is now <em>almost</em> complete. These docs can be installed to
+<div id="outline-container-org53c8951" class="outline-2">
+<h2 id="org53c8951">Docs</h2>
+<div class="outline-text-2" id="text-org53c8951">
+<p>
+I have added documentation for the distribution, and finally updated the guide
+for installation. It is now <i>almost</i> complete. These docs can be installed to
 your system for online viewing. I will also add a documentation crawler similar
-to how werc<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> works (but as an offline viewer). You can find <code>carbs-docs</code> from
+to how werc works (but as an offline viewer). You can find <code>carbs-docs</code> from
 the repository. Currently, the documentation lacks but I will be adding new
 stuff. These will solely be distribution specific documentation and will not be
 a wiki-like source. If anyone would like to contribute to a wiki-like
 documentation source, I would happily re-open the distribution wiki. You can
-find the source on https://github.com/CarbsLinux/docs</p>
+find the source on <a href="https://github.com/CarbsLinux/docs">https://github.com/CarbsLinux/docs</a>.
+</p>
+</div>
+</div>
 
-<h2>Re-opening the Carbs Linux server</h2>
-
-<p>Back in May, I had shutdown the Carbs Linux server due to financial issues, but
+<div id="outline-container-org0391ea3" class="outline-2">
+<h2 id="org0391ea3">Re-opening the Carbs Linux server</h2>
+<div class="outline-text-2" id="text-org0391ea3">
+<p>
+Back in May, I had shutdown the Carbs Linux server due to financial issues, but
 I am slowly reverting to the self-hosted model. Back then, the git repositories
 were mirrored to GitHub, and the management was overall much more flexible. The
 server used to run Carbs Linux as well (that was fun and horrifying at the same
 time). Now, I will be relaunching the git server which will be the upstream
 source before August 5. You can switch your remote, but GitHub will stay as a
-remote nonetheless.</p>
+remote nonetheless.
+</p>
 
-<p>EDIT: The git-server is up!</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-http://werc.cat-v.org<a href="#fnref:1" rev="footnote">&#8617;</a></li>
-</ol>
+<p>
+<b>EDIT:</b> The git-server is up!
+</p>
 </div>
-
-    <a href="/blog/20200803.txt">View Page Source</a>
-    <div class="border"></div>
-    <p class=footer>Linux® is a registered trademark of Linus Torvalds</p>
-    <p class=footer>Copyright © 2019-2021 Cem Keylan</p>
-  </body>
+</div>
+</div>
+<div id="postamble" class="status">
+<footer>
+    <p>Linux&reg; is a registered trademark of Linus Torvalds</p>
+    <p>Copyright &copy; 2019-2021 Cem Keylan</p>
+</footer>
+</div>
+</body>
 </html>

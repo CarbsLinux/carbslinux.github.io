@@ -1,0 +1,11 @@
+			     ______________
+
+			      MAY 19, 2020
+			     ______________
+
+
+			    <2020-05-19 Tue>
+
+
+A rootfs tarball targeting the i686 architecture has been released. It
+can be found on the downloads page.

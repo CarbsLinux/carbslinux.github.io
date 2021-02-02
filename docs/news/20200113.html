@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2021-02-02 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jan 13, 2020</title>
+<meta name="generator" content="Org mode">
+<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<div id="preamble" class="status">
+<nav id="navbar">
+    <a href="/" class=navbartitle>Carbs Linux</a>
+
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger" />
+    <ul id=navbarlist>
+        <li><a href="/" title="Home Page">Home</a></li>
+        <li><a href="//git.carbslinux.org" title="Git Repository">Git</a></li>
+        <li><a href="/download.html" title="Download Carbs Linux">Download</a></li>
+        <li><a href="/blog" title="Blog Posts">Blog</a></li>
+        <li><a href="/install.html" title="Installation Instructions">Installation</a></li>
+        <li><a href="/docs.html" title="Documentation">Docs</a></li>
+    </ul>
+</nav>
+</div>
+<div id="content">
+<header>
+<h1 class="title">Jan 13, 2020</h1>
+</header><p>
+<b><b>Busybox update reqires manual intervention</b></b>
+</p>
+
+<p>
+The new busybox package conflicts with the pre-update busybox-init. That's why
+you should rebuild and install `busybox-init` before doing the update.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh"><span class="org-comment-delimiter"># </span><span class="org-comment">Do a kiss update first (but don't actually update it yet), or manually pull</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">the git repository</span>
+kiss u  <span class="org-comment-delimiter"># </span><span class="org-comment">Cancel this operation after it asks for you to confirm the update</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Install the busybox-init package</span>
+kiss b busybox-init &amp;&amp; kiss i busybox-init
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Continue your update as you normally would.</span>
+kiss u
+
+</pre>
+</div>
+
+<p>
+I have moved runit and logging utilities from the busybox-init package to the busybox
+package, which is the cause of these conflicts.
+</p>
+</div>
+<div id="postamble" class="status">
+<footer>
+    <p>Linux&reg; is a registered trademark of Linus Torvalds</p>
+    <p>Copyright &copy; 2019-2021 Cem Keylan</p>
+</footer>
+</div>
+</body>
+</html>

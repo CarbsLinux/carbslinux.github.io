@@ -1,0 +1,26 @@
+			     ______________
+
+			      JAN 09, 2020
+			     ______________
+
+
+			    <2020-01-09 Thu>
+
+
+Happy new year, everyone! I am back after some long silence. I was
+unable to commit for a while, but I have pulled some new updates from
+the KISS repository, added some of my own.  This week I will be
+changing/adding some things.
+
+Important things are,
+
+- Carbs-init was updated to 0.3.
+- I will be adding an implementation of suckless.org's [sinit] as
+  `carbs-sinit'
+- Carbs Repository was added to [repology.org]
+- A new rootfs tarball will be coming up tomorrow.
+
+
+[sinit] <https://core.suckless.org/sinit>
+
+[repology.org] <https://repology.org/repository/carbs>

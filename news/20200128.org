@@ -1,0 +1,10 @@
+#+TITLE: {{{date(%b %d\, %Y)}}}
+#+DATE: <2020-01-28 Tue>
+
+Web Server is now on a Carbs Linux server. It is not complete yet, but I will be
+adding a little more for the intended functionality. Downtimes can be expected.
+
+UPDATE: ssl is now working.
+
+UPDATE2: downloads are back again.
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright (C) 2020 Cem Keylan
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, with no Front-Cover Texts and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU Free
+Documentation License."
+ -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Changing Init Program (Carbs Linux User Manual)</title>
+
+<meta name="description" content="Changing Init Program (Carbs Linux User Manual)">
+<meta name="keywords" content="Changing Init Program (Carbs Linux User Manual)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="index.html" rel="start" title="Top">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Init-System.html" rel="up" title="Init System">
+<link href="Rebooting-after-changing-init.html" rel="next" title="Rebooting after changing init">
+<link href="Init-Hooks.html" rel="prev" title="Init Hooks">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://www.gnu.org/software/gnulib/manual.css">
+
+
+</head>
+
+<body lang="en">
+<span id="Changing-Init-Program"></span><div class="header">
+<p>
+Previous: <a href="Configuring-Init.html" accesskey="p" rel="prev">Configuring Init</a>, Up: <a href="Init-System.html" accesskey="u" rel="up">Init System</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<span id="Changing-Init-Program-1"></span><h3 class="section">2.2 Changing Init Program</h3>
+
+<p>By default, Carbs Linux comes preinstalled with &lsquo;<samp>busybox-init</samp>&rsquo;, but this can
+easily be replaced without any issues. Currently, available init systems are:
+</p>
+<ul>
+<li> &lsquo;<samp>sinit</samp>&rsquo;
+</li><li> &lsquo;<samp>busybox</samp>&rsquo;
+</li><li> &lsquo;<samp>runit</samp>&rsquo;
+</li><li> &lsquo;<samp>shinit</samp>&rsquo;
+</li></ul>
+
+<p>This example is for runit, but it will work with all init systems packaged in the
+distribution repositories. See the &lsquo;<samp>cpt-alternatives(1)</samp>&rsquo; manual page for more
+details.
+</p>
+<div class="example">
+<pre class="example">cpt a runit /usr/bin/init
+cpt a runit /usr/bin/poweroff
+cpt a runit /usr/bin/reboot
+</pre></div>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="Rebooting-after-changing-init.html" accesskey="1">Rebooting after changing init</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Ways to reboot after replacing the init system
+</td></tr>
+</table>
+
+
+
+
+</body>
+</html>

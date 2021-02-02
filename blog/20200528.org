@@ -1,0 +1,37 @@
+#+TITLE: kiss 2.0.0 and Overall Changes
+#+AUTHOR: Cem Keylan
+#+DATE: <2020-05-28 Thu>
+
+Carbs Linux kiss version 2.0.0 has been released which introduces rsync
+repositories.
+
+Git is no longer a mandatory dependency for the package manager, every git
+source on the core repository has been replaced with https sources (sbase,
+sinit), and rootfs tarballs will no longer ship with git. Repositories in the
+upcoming tarball will be rsync repositories.
+
+Git is now on the =extra= repository and is still (optionally) used in the
+package manager.
+
+The idea behind this change is size reductions and increased speed with rsync.
+As I said on the previous post, git repositories get larger and larger over the
+time span. Currently my personal copy of the git repository is around 77MB and I
+have forked KISS Linux (as a shallow copy) around December. Obviously, I have
+commits that I ommitted. I tend to create commits I dislike, which I change with
+=git reset --soft HEAD^=, which doesn't actually remove the commits, etc. A user
+will have a repository much smaller than mine.
+
+This is a precaution with the added bonuses of speed and dropping a mandatory
+dependency.
+
+You can see the rest of the changelog [[https://github.com/CarbsLinux/kiss/blob/master/CHANGELOG.md][here]].
+
+** Binary Repositories
+
+A few days ago, I have also published [[https://github.com/CarbsLinux/kiss-bin][kiss-bin]], a first version for managing
+binary repositories. Currently, there are some caveats that I'll be fixing along
+the way. I decided not to include this in the package manager natively as
+managing the source based and binary based packages together adds levels of
+complexity that we do not want. Instead, this is an extension for kiss which
+sources the package manager as a library. I hope to see it being adopted by
+others interested on the matter as well.

@@ -1,497 +1,655 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"
-    xmlns:atom="http://www.w3.org/2005/Atom"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
->
-  <channel>
-    <title>Carbs Linux</title>
-    <description>a simple linux distribution</description>
-    <link>https://carbslinux.org</link>
-    <atom:link href="https://carbslinux.org/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu Jan 07 2021 11:00</lastBuildDate>
-<item>
-<title>First Year of Carbs Linux</title>
-<pubDate>Thu, 10 Dec 2020</pubDate>
-<dc:creator>Cem Keylan</dc:creator>
-<link>https://carbslinux.org/blog/20201210.html</link>
-<description>&lt;h1&gt;First Year of Carbs Linux&lt;/h1&gt;
-
-&lt;p&gt;December 10, 2020 marks the first year after the initial release of Carbs
-Linux. When I forked the KISS Linux repository on the 9th of December, I was
-fairly new to package management. Carbs Linux used to be almost identical to
-KISS Linux. A lot has changed since then:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;[2020 Jan 13] Replaced default init system to &lt;code&gt;sinit&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;[2020 Jan 15] Packaged &lt;code&gt;WebKit2GTK&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;[2020 May 17] Added &lt;code&gt;bearssl&lt;/code&gt; on the testing repository&lt;/li&gt;
-&lt;li&gt;[2020 May 28] Added &lt;code&gt;rsync&lt;/code&gt; repository support to kiss&lt;/li&gt;
-&lt;li&gt;[2020 Jun 03] Replaced &lt;code&gt;bison&lt;/code&gt; with &lt;code&gt;byacc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;[2020 Jun 11] Replaced &lt;code&gt;libressl&lt;/code&gt; with &lt;code&gt;bearssl&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;[2020 Jun 24] Replaced &lt;code&gt;kiss&lt;/code&gt; with &lt;code&gt;cpt&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+     xmlns:georss="http://www.georss.org/georss"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:media="http://search.yahoo.com/mrss/"><channel>
+  <title>Carbs Linux blog</title>
+  <atom:link href="https://carbslinux.org/blog/rss.xml" rel="self" type="application/rss+xml" />
+  <link>https://carbslinux.org/blog</link>
+  <description><![CDATA[a simple Linux distribution]]></description>
+  <language>en</language>
+  <pubDate>Tue, 02 Feb 2021 03:33:03 +0300</pubDate>
+  <lastBuildDate>Tue, 02 Feb 2021 03:33:03 +0300</lastBuildDate>
+  <generator>Emacs 27.1 Org-mode 9.4.4</generator>
+  <webMaster>root@carbslinux.org (Cem Keylan)</webMaster>
+  <image>
+    <url>https://orgmode.org/img/org-mode-unicorn-logo.png</url>
+    <title>Carbs Linux blog</title>
+    <link>https://carbslinux.org/blog</link>
+  </image>
 
 
-&lt;p&gt;I have really enjoyed maintaining and developing this distribution, and I want
-to thank everyone who was involved in some way or another. While I have slowed
-down in development due to college workload, I am still actively maintaining all
-the packages on the repository. I do have some ideas that I am thinking of
-implementing during the semester break. Hope to see you all in January.&lt;/p&gt;</description>
+  <item>
+    <title>First Year of Carbs Linux</title>
+    <link>https://carbslinux.org/blog/20201210.html</link>
+    <author>root@carbslinux.org (Cem Keylan)</author>
+    <guid isPermaLink="false">https://carbslinux.org/blog/20201210.html</guid>
+    <pubDate>Thu, 10 Dec 2020 00:00:00 +0300</pubDate>
+
+    <description><![CDATA[<p>
+    December 10, 2020 marks the first year after the initial release of Carbs Linux.
+    When I forked the KISS Linux repository on the 9th of December, I was fairly new
+    to package management. Carbs Linux used to be almost identical to KISS Linux. A
+    lot has changed since then:
+    </p>
+
+    <p>
+    [2020 Jan 13] Replaced default init system to <code>sinit</code>
+    [2020 Jan 15] Packaged <code>WebKit2GTK</code>
+    [2020 May 17] Added <code>bearssl</code> on the testing repository
+    [2020 May 28] Added <code>rsync</code> repository support to kiss
+    [2020 Jun 03] Replaced <code>bison</code> with <code>byacc</code>
+    [2020 Jun 11] Replaced <code>libressl</code> with <code>bearssl</code>
+    [2020 Jun 24] Replaced <code>kiss</code> with <code>cpt</code>
+    </p>
+
+    <p>
+    I have really enjoyed maintaining and developing this distribution, and I want
+    to thank everyone who was involved in some way or another. While I have slowed
+    down in development due to college workload, I am still actively maintaining all
+    the packages on the repository. I do have some ideas that I am thinking of
+    implementing during the semester break. Hope to see you all in January.
+    </p>
+    ]]></description>
+  </item>
+  <item>
+    <title>August 2020 News Post</title>
+    <link>https://carbslinux.org/blog/20200803.html</link>
+    <author>root@carbslinux.org (Cem Keylan)</author>
+    <guid isPermaLink="false">https://carbslinux.org/blog/20200803.html</guid>
+    <pubDate>Mon, 03 Aug 2020 00:00:00 +0300</pubDate>
+
+    <description><![CDATA[<p>
+    We are having some stalls during this summer, as I am currently working on
+    university-related stuff. Nonetheless, there are some important changes that I
+    want to share in this month's post.
+    </p>
+
+    <div id="text-table-of-contents">
+    <ul>
+    <li><a href="#org299451d">Carbs Packaging Tools</a></li>
+    <li><a href="#org40c97d9">Docs</a></li>
+    <li><a href="#orgab113c8">Re-opening the Carbs Linux server</a></li>
+    </ul>
+    </div>
+
+    <div id="outline-container-org299451d" class="outline-3">
+    <h3 id="org299451d">Carbs Packaging Tools</h3>
+    <div class="outline-text-3" id="text-org299451d">
+    <p>
+    This month I have reworked <code>kiss</code> into a new package manager, now renamed as
+    <code>cpt</code>. Updating <code>kiss</code> will now bootstrap the new package manager, so you don't
+    have to manually edit your system. If you don't like the idea of this, you can
+    look up the <code>post-install</code> script on <code>core/kiss</code> and apply the changes manually.
+    </p>
+
+    <p>
+    You will also need to rename your <code>KISS_*</code> variables to <code>CPT_*</code>. So, <code>KISS_PATH</code>
+    becomes <code>CPT_PATH</code>.
+    </p>
+
+    <p>
+    The rework changes the previous commands on the package manager into standalone
+    tools, and move the package manager functions to a library. This makes it easier
+    for a user to import functions and variables from the package manager, and
+    extend the package manager with their own intended way. Previously this required
+    ugly hacks and workarounds to use the package manager functions. I will be
+    making use of these changes to re-implement binary package management functions
+    as well.
+    </p>
+
+    <p>
+    If you want to use the library on your script you can simply do this:
+    </p>
+
+    <div class="org-src-container">
+    <pre class="src src-sh"><span class="org-comment-delimiter">#</span><span class="org-comment">!/bin/</span><span class="org-keyword">sh</span>
+    . cpt-lib
+    (...)
+    </pre>
+    </div>
+
+    <p>
+    There are obviously some clean-up and simplifications needed in this new
+    tool-based package management method.
+    </p>
+    </div>
+    </div>
+
+    <div id="outline-container-org40c97d9" class="outline-3">
+    <h3 id="org40c97d9">Docs</h3>
+    <div class="outline-text-3" id="text-org40c97d9">
+    <p>
+    I have added documentation for the distribution, and finally updated the guide
+    for installation. It is now <i>almost</i> complete. These docs can be installed to
+    your system for online viewing. I will also add a documentation crawler similar
+    to how werc works (but as an offline viewer). You can find <code>carbs-docs</code> from
+    the repository. Currently, the documentation lacks but I will be adding new
+    stuff. These will solely be distribution specific documentation and will not be
+    a wiki-like source. If anyone would like to contribute to a wiki-like
+    documentation source, I would happily re-open the distribution wiki. You can
+    find the source on <a href="https://github.com/CarbsLinux/docs">https://github.com/CarbsLinux/docs</a>.
+    </p>
+    </div>
+    </div>
+
+    <div id="outline-container-orgab113c8" class="outline-3">
+    <h3 id="orgab113c8">Re-opening the Carbs Linux server</h3>
+    <div class="outline-text-3" id="text-orgab113c8">
+    <p>
+    Back in May, I had shutdown the Carbs Linux server due to financial issues, but
+    I am slowly reverting to the self-hosted model. Back then, the git repositories
+    were mirrored to GitHub, and the management was overall much more flexible. The
+    server used to run Carbs Linux as well (that was fun and horrifying at the same
+    time). Now, I will be relaunching the git server which will be the upstream
+    source before August 5. You can switch your remote, but GitHub will stay as a
+    remote nonetheless.
+    </p>
+
+    <p>
+    <b>EDIT:</b> The git-server is up!
+    </p>
+    </div>
+    </div>
+    ]]></description>
 </item>
 <item>
-<title>August 2020 News Post</title>
-<pubDate>Mon, 03 Aug 2020</pubDate>
-<dc:creator>Cem Keylan</dc:creator>
-<link>https://carbslinux.org/blog/20200803.html</link>
-<description>&lt;h1&gt;August 2020 News Post&lt;/h1&gt;
+  <title>June Newspost</title>
+  <link>https://carbslinux.org/blog/20200617.html</link>
+  <author>root@carbslinux.org (Cem Keylan)</author>
+  <guid isPermaLink="false">https://carbslinux.org/blog/20200617.html</guid>
+  <pubDate>Wed, 17 Jun 2020 00:00:00 +0300</pubDate>
 
-&lt;p&gt;We are having some stalls during this summer, as I am currently working on
-university-related stuff. Nonetheless, there are some important changes that I
-want to share in this month&amp;rsquo;s post.&lt;/p&gt;
+  <description><![CDATA[<p>
+  This will be an active month for Carbs as major changes to the base and the
+  package manager will be coming up.
+  </p>
 
-&lt;h2&gt;INDEX&lt;/h2&gt;
+  <div id="outline-container-orga59e7f7" class="outline-3">
+  <h3 id="orga59e7f7">Statically linking the base</h3>
+  <div class="outline-text-3" id="text-orga59e7f7">
+  <p>
+  For the past couple of weeks I have been trying to simplify the base and
+  statically link the core (mostly binaries rather than libraries). I usually see
+  some people extremely opposed to static linking as I also see the opposite on
+  people.
+  </p>
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#carbs-packaging-tools&quot;&gt;Carbs Packaging Tools&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#docs&quot;&gt;Docs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#re-opening-the-carbs-linux-server&quot;&gt;Re-opening the Carbs Linux server&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+  <p>
+  I believe that binaries on the core should always be linked statically. This
+  ensures that an SONAME bump to <code>libObscure.so</code> will not break the core
+  functionality of your system, forcing you to use external resources to recover
+  from such an issue. As long as you can compile, use core utilities, edit text,
+  and access the web, you can solve any given issue on your system.
+  </p>
 
+  <p>
+  However, I don't think that removing shared libraries is sensible either. Not
+  every piece of software out there is good quality enough to be statically
+  linked.
+  </p>
+  </div>
+  </div>
 
-&lt;h2&gt;Carbs Packaging Tools&lt;/h2&gt;
+  <div id="outline-container-orgc95a1ff" class="outline-3">
+  <h3 id="orgc95a1ff">Major changes on the core repository</h3>
+  <div class="outline-text-3" id="text-orgc95a1ff">
+  <p>
+  There have been drastic changes to the core repository and the base rootfs this
+  month (with more on the way). Right now changes are as follows.
+  </p>
+  </div>
 
-&lt;p&gt;This month I have reworked &lt;code&gt;kiss&lt;/code&gt; into a new package manager, now renamed as
-&lt;code&gt;cpt&lt;/code&gt;. Updating &lt;code&gt;kiss&lt;/code&gt; will now bootstrap the new package manager, so you don&amp;rsquo;t
-have to manually edit your system. If you don&amp;rsquo;t like the idea of this, you can
-look up the &lt;code&gt;post-install&lt;/code&gt; script on &lt;code&gt;core/kiss&lt;/code&gt; and apply the changes manually.&lt;/p&gt;
+  <div id="outline-container-orge61ce8f" class="outline-4">
+  <h4 id="orge61ce8f">Removed from Core</h4>
+  <div class="outline-text-4" id="text-orge61ce8f">
+  <p>
+  <code>git</code>
+  <code>libressl</code>
+  <code>grub</code>
+  <code>bison</code>
+  <code>dhcpcd</code>
+  <code>ubase</code>
+  </p>
+  </div>
+  </div>
 
-&lt;p&gt;You will also need to rename your KISS&lt;em&gt;* variables to CPT&lt;/em&gt;*. So, KISS_PATH
-becomes CPT_PATH.&lt;/p&gt;
+  <div id="outline-container-orge4e0922" class="outline-4">
+  <h4 id="orge4e0922">Added to Core</h4>
+  <div class="outline-text-4" id="text-orge4e0922">
+  <p>
+  <code>bearssl</code>, as a <code>libressl</code> replacement
+  <code>byacc</code>, as a <code>bison</code> replacement
+  </p>
+  </div>
+  </div>
 
-&lt;p&gt;The rework changes the previous commands on the package manager into standalone
-tools, and move the package manager functions to a library. This makes it easier
-for a user to import functions and variables from the package manager, and
-extend the package manager with their own intended way. Previously this required
-ugly hacks and workarounds to use the package manager functions. I will be
-making use of these changes to re-implement binary package management functions
-as well.&lt;/p&gt;
+  <div id="outline-container-org59875c0" class="outline-4">
+  <h4 id="org59875c0">Statically linked</h4>
+  <div class="outline-text-4" id="text-org59875c0">
+  <p>
+  <code>kiss</code>
+  <code>neatvi</code>
+  <code>mandoc</code>
+  <code>byacc</code>
+  <code>m4</code>
+  <code>e2fsprogs</code>
+  <code>make</code>
+  <code>pkgconf</code>
+  <code>sbase</code>
+  <code>libnl</code>
+  <code>wpa_supplicant</code>
+  <code>bearssl</code>
+  </p>
+  </div>
+  </div>
+  </div>
 
-&lt;p&gt;If you want to use the library on your script you can simply do this:&lt;/p&gt;
+  <div id="outline-container-org0e61066" class="outline-3">
+  <h3 id="org0e61066">Making the wiki available offline</h3>
+  <div class="outline-text-3" id="text-org0e61066">
+  <p>
+  Soon, all documentation regarding Carbs Linux will be avaialable to be installed
+  from the core repository in a <code>carbs-docs</code> package along with its own document
+  crawler. Currently, the documentation regarding the installation process is a
+  little outdated which will also receive some important updates.
+  </p>
+  </div>
+  </div>
 
-&lt;pre&gt;&lt;code&gt;+--------------------------------------------------------------------------+
-|                                                                          |
-| #!/bin/sh                                                                |
-| . cpt-lib                                                                |
-| (...)                                                                    |
-|                                                                          |
-+--------------------------------------------------------------------------+
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There are obviously some clean-up and simplifications needed in this new
-tool-based package management method.&lt;/p&gt;
-
-&lt;h2&gt;Docs&lt;/h2&gt;
-
-&lt;p&gt;I have added documentation for the distribution, and finally updated the guide
-for installation. It is now &lt;em&gt;almost&lt;/em&gt; complete. These docs can be installed to
-your system for online viewing. I will also add a documentation crawler similar
-to how werc&lt;a href=&quot;http://werc.cat-v.org&quot;&gt;^1&lt;/a&gt; works (but as an offline viewer). You can find &lt;code&gt;carbs-docs&lt;/code&gt; from
-the repository. Currently, the documentation lacks but I will be adding new
-stuff. These will solely be distribution specific documentation and will not be
-a wiki-like source. If anyone would like to contribute to a wiki-like
-documentation source, I would happily re-open the distribution wiki. You can
-find the source on https://github.com/CarbsLinux/docs&lt;/p&gt;
-
-&lt;h2&gt;Re-opening the Carbs Linux server&lt;/h2&gt;
-
-&lt;p&gt;Back in May, I had shutdown the Carbs Linux server due to financial issues, but
-I am slowly reverting to the self-hosted model. Back then, the git repositories
-were mirrored to GitHub, and the management was overall much more flexible. The
-server used to run Carbs Linux as well (that was fun and horrifying at the same
-time). Now, I will be relaunching the git server which will be the upstream
-source before August 5. You can switch your remote, but GitHub will stay as a
-remote nonetheless.&lt;/p&gt;
-
-&lt;p&gt;EDIT: The git-server is up!&lt;/p&gt;</description>
+  <div id="outline-container-org591578d" class="outline-3">
+  <h3 id="org591578d">ISO image for Carbs</h3>
+  <div class="outline-text-3" id="text-org591578d">
+  <p>
+  I am thinking of releasing an ISO image in order to provide a standardized
+  environment for installation along with installation helper tools in the spirit
+  of <code>arch-install-scripts</code>. Let's see how that's going to play out.
+  </p>
+  </div>
+  </div>
+  ]]></description>
 </item>
 <item>
-<title>June Newspost</title>
-<pubDate>Wed, 17 Jun 2020</pubDate>
-<dc:creator>Cem Keylan</dc:creator>
-<link>https://carbslinux.org/blog/20200617.html</link>
-<description>&lt;h1&gt;June Newspost&lt;/h1&gt;
+  <title>kiss 2.0.0 and Overall Changes</title>
+  <link>https://carbslinux.org/blog/20200528.html</link>
+  <author>root@carbslinux.org (Cem Keylan)</author>
+  <guid isPermaLink="false">https://carbslinux.org/blog/20200528.html</guid>
+  <pubDate>Thu, 28 May 2020 00:00:00 +0300</pubDate>
 
-&lt;p&gt;This will be an active month for Carbs as major changes to the base and the
-package manager will be coming up.&lt;/p&gt;
+  <description><![CDATA[<p>
+  Carbs Linux kiss version 2.0.0 has been released which introduces rsync
+  repositories.
+  </p>
 
-&lt;h2&gt;Statically linking the base&lt;/h2&gt;
+  <p>
+  Git is no longer a mandatory dependency for the package manager, every git
+  source on the core repository has been replaced with https sources (sbase,
+  sinit), and rootfs tarballs will no longer ship with git. Repositories in the
+  upcoming tarball will be rsync repositories.
+  </p>
 
-&lt;p&gt;For the past couple of weeks I have been trying to simplify the base and
-statically link the core (mostly binaries rather than libraries). I usually see
-some people extremely opposed to static linking as I also see the opposite on
-people.&lt;/p&gt;
+  <p>
+  Git is now on the <code>extra</code> repository and is still (optionally) used in the
+  package manager.
+  </p>
 
-&lt;p&gt;I believe that binaries on the core should always be linked statically. This
-ensures that an SONAME bump to &lt;code&gt;libObscure.so&lt;/code&gt; will not break the core
-functionality of your system, forcing you to use external resources to recover
-from such an issue. As long as you can compile, use core utilities, edit text,
-and access the web, you can solve any given issue on your system.&lt;/p&gt;
+  <p>
+  The idea behind this change is size reductions and increased speed with rsync.
+  As I said on the previous post, git repositories get larger and larger over the
+  time span. Currently my personal copy of the git repository is around 77MB and I
+  have forked KISS Linux (as a shallow copy) around December. Obviously, I have
+  commits that I ommitted. I tend to create commits I dislike, which I change with
+  <code>git reset --soft HEAD^</code>, which doesn't actually remove the commits, etc. A user
+  will have a repository much smaller than mine.
+  </p>
 
-&lt;p&gt;However, I don&amp;rsquo;t think that removing shared libraries is sensible either. Not
-every piece of software out there is good quality enough to be statically
-linked.&lt;/p&gt;
+  <p>
+  This is a precaution with the added bonuses of speed and dropping a mandatory
+  dependency.
+  </p>
 
-&lt;h2&gt;Major changes on the core repository&lt;/h2&gt;
+  <p>
+  You can see the rest of the changelog <a href="https://github.com/CarbsLinux/kiss/blob/master/CHANGELOG.md">here</a>.
+  </p>
 
-&lt;p&gt;There have been drastic changes to the core repository and the base rootfs this
-month (with more on the way). Right now changes are as follows.&lt;/p&gt;
-
-&lt;h3&gt;Removed from Core&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;git&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;libressl&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;grub&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;bison&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;dhcpcd&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ubase&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;h3&gt;Added to Core&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;bearssl&lt;/code&gt;, as a &lt;code&gt;libressl&lt;/code&gt; replacement&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;byacc&lt;/code&gt;, as a &lt;code&gt;bison&lt;/code&gt; replacement&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;h3&gt;Statically linked&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;kiss&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;neatvi&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mandoc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;byacc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;m4&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;e2fsprogs&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;make&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pkgconf&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sbase&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;libnl&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;wpa_supplicant&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;bearssl&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;h2&gt;Making the wiki available offline&lt;/h2&gt;
-
-&lt;p&gt;Soon, all documentation regarding Carbs Linux will be avaialable to be installed
-from the core repository in a &lt;code&gt;carbs-docs&lt;/code&gt; package along with its own document
-crawler. Currently, the documentation regarding the installation process is a
-little outdated which will also receive some important updates.&lt;/p&gt;
-
-&lt;h2&gt;ISO image for Carbs&lt;/h2&gt;
-
-&lt;p&gt;I am thinking of releasing an ISO image in order to provide a standardized
-environment for installation along with installation helper tools in the spirit
-of &lt;code&gt;arch-install-scripts&lt;/code&gt;. Let&amp;rsquo;s see how that&amp;rsquo;s going to play out.&lt;/p&gt;</description>
+  <div id="outline-container-org70a8589" class="outline-3">
+  <h3 id="org70a8589">Binary Repositories</h3>
+  <div class="outline-text-3" id="text-org70a8589">
+  <p>
+  A few days ago, I have also published <a href="https://github.com/CarbsLinux/kiss-bin">kiss-bin</a>, a first version for managing
+  binary repositories. Currently, there are some caveats that I'll be fixing along
+  the way. I decided not to include this in the package manager natively as
+  managing the source based and binary based packages together adds levels of
+  complexity that we do not want. Instead, this is an extension for kiss which
+  sources the package manager as a library. I hope to see it being adopted by
+  others interested on the matter as well.
+  </p>
+  </div>
+  </div>
+  ]]></description>
 </item>
 <item>
-<title>kiss 2.0.0 and overall changes</title>
-<pubDate>Thu, 28 May 2020</pubDate>
-<dc:creator>Cem Keylan</dc:creator>
-<link>https://carbslinux.org/blog/20200528.html</link>
-<description>&lt;h1&gt;kiss 2.0.0 and overall changes&lt;/h1&gt;
+  <title>The Relation of Carbs and KISS</title>
+  <link>https://carbslinux.org/blog/20200508.html</link>
+  <author>root@carbslinux.org (Cem Keylan)</author>
+  <guid isPermaLink="false">https://carbslinux.org/blog/20200508.html</guid>
+  <pubDate>Fri, 08 May 2020 00:00:00 +0300</pubDate>
 
-&lt;p&gt;Carbs Linux kiss version 2.0.0 has been released which introduces
-rsync repositories.&lt;/p&gt;
+  <description><![CDATA[<p>
+  Since I have forked KISS, I have received many questions that can be summarized
+  as "Why?". I have realized that I never truly answered this question. That's the
+  reason I am writing this post, to give some background on Carbs, and some
+  differences between KISS Linux and Carbs Linux for anyone who may be wondering.
+  Perhaps I could make this a "FAQ" page later on.
+  </p>
 
-&lt;p&gt;Git is no longer a mandatory dependency for the package manager,
-every git source on the core repository has been replaced with
-https sources (sbase, sinit), and rootfs tarballs will no longer
-ship with git. Repositories in the upcoming tarball will be rsync
-repositories.&lt;/p&gt;
+  <div id="outline-container-org6c3d819" class="outline-3">
+  <h3 id="org6c3d819">History</h3>
+  <div class="outline-text-3" id="text-org6c3d819">
+  <p>
+  I had the idea of creating my own Linux distribution since the May of 2019. Back
+  then, I had my own <a href="https://linuxfromscratch.org">Linux from Scratch</a> build, and I wanted to slim it down my
+  own way and replace the software (with musl,sbase,etc.). The name Carbs Linux
+  was in my mind since then. I wanted to write my own package manager, but I
+  wasn't satisfied with anything I had built.
+  </p>
 
-&lt;p&gt;Git is now on the &lt;code&gt;extra&lt;/code&gt; repository and is still (optionally)
-used in the package manager.&lt;/p&gt;
+  <p>
+  I had written some incomplete package managers (all named <code>fat</code>) and I quickly
+  threw them into the trash can, where they honestly belonged. I would want to
+  share them with you for laughs, but my hard-drive got wiped and I have a problem
+  of not doing an "initial commit" until a program I write is in a usable state.
+  </p>
 
-&lt;p&gt;The idea behind this change is size reductions and increased
-speed with rsync. As I said on the previous post, git repositories
-get larger and larger over the time span. Currently my personal
-copy of the git repository is around 77MB and I have forked KISS
-Linux (as a shallow copy) around December. Obviously, I have commits
-that I ommitted. I tend to create commits I dislike, which I change
-with &amp;lsquo;git reset &amp;ndash;soft HEAD^&amp;rsquo;, which doesn&amp;rsquo;t actually remove the
-commits, etc. A user will have a repository much smaller than mine.&lt;/p&gt;
+  <p>
+  I have obtained the 'carbslinux.org' domain name in September 2019, but then
+  life got on the way, and I stopped for a long time.
+  </p>
 
-&lt;p&gt;This is a precaution with the added bonuses of speed and dropping a
-mandatory dependency.&lt;/p&gt;
+  <p>
+  One day on Reddit, I saw Dylan's post on <a href="https://reddit.com/r/unixporn">r/unixporn</a> about KISS, and I really
+  thought that it was interesting. Here is my <a href="https://www.reddit.com/r/unixporn/comments/ducd34/sowm_kiss_d/f7lua7x">comment</a> to Dylan on that post. I
+  checked out the package manager and the repository. The packaging system was
+  extremely clean and well-thought. I decided to give it a go and fork KISS.
+  </p>
+  </div>
+  </div>
 
-&lt;p&gt;You can see the rest of the changelog &lt;a href=&quot;https://github.com/CarbsLinux/kiss/blob/master/CHANGELOG.md&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+  <div id="outline-container-orgc4ee986" class="outline-3">
+  <h3 id="orgc4ee986">Differences between KISS and Carbs</h3>
+  <div class="outline-text-3" id="text-orgc4ee986">
+  <p>
+  Now, I still baffle when people ask me this question. My intention was never to
+  create a distribution with specific differences between KISS. My intention was
+  being my own BDFL of a distribution I maintain. There are lots of differences
+  between the main repositories, but they are subtle and not worth talking about.
+  I personally never even installed KISS Linux on my system. So Carbs, isn't
+  something like a downstream fork of KISS, it is just a distribution that was
+  initially based on KISS.
+  </p>
 
-&lt;h2&gt;Binary Repositories&lt;/h2&gt;
+  <p>
+  I try to contribute as much as I can to KISS Linux. I think that it is a
+  brilliant distribution, and it was a great starting point for Carbs. I am really
+  grateful to Dylan and all the other contributors.
+  </p>
+  </div>
+  </div>
 
-&lt;p&gt;A few days ago, I have also published &lt;a href=&quot;https://github.com/CarbsLinux/kiss-bin&quot;&gt;kiss-bin&lt;/a&gt;, a first version
-for managing binary repositories. Currently, there are some caveats
-that I&amp;rsquo;ll be fixing along the way. I decided not to include this
-in the package manager natively as managing the source based and
-binary based packages together adds levels of complexity that we
-do not want. Instead, this is an extension for kiss which sources
-the package manager as a library. I hope to see it being adopted
-by others interested on the matter as well.&lt;/p&gt;
+  <div id="outline-container-org5736e5e" class="outline-3">
+  <h3 id="org5736e5e">What I'm working on now</h3>
+  <div class="outline-text-3" id="text-org5736e5e">
+  <p>
+  Currently I have a few projects that I'm working on for Carbs. These are,
+  </p>
 
-&lt;p&gt;That&amp;rsquo;s about it.&lt;/p&gt;
+  <p>
+  A BSD port for Carbs. For a while, I have been working on BSD compatibility on
+  my fork of the [package manager]. I have tested, without any more issues, on
+  OpenBSD and FreeBSD. The biggest issues remaining are choosing a vendor for BSD,
+  packaging the BSD source, and providing a minimal base (like busybox for BSD).
+  If you aren't familiar with BSD, it has a single source code for all of the
+  utilities (kernel, command line programs, etc.). Contributions (even chipping in
+  ideas) are very welcome.
+  </p>
 
-&lt;p&gt;Cheers,
-Cem&lt;/p&gt;</description>
+  <p>
+  Adding binary package distribution support natively to the package manager.
+  Biggest issue in small/old computers are compile times. This feature is for the
+  bigger packages such as webkit, clang, llvm that take a considerable amount of
+  time. Some computers with low memories cannot even compile firefox/webkit.
+  </p>
+
+  <p>
+  Adding rsync repository support to the package manager. This is not a current
+  issue, but rather a futureproofing. As time passes, distribution repositories
+  grow larger. KISS and Carbs are young distributions without this problem right
+  now. But in something like 5 years, this size will presumably increase to
+  hundreds of megabytes. At that point it will be pointless to have the repository
+  sources unless you specifically need them.
+  </p>
+  </div>
+  </div>
+
+  <div id="outline-container-orga98fc37" class="outline-3">
+  <h3 id="orga98fc37">What's up with all the init/service daemons?</h3>
+  <div class="outline-text-3" id="text-orga98fc37">
+  <p>
+  If you have ever checked the <a href="https://github.com/carbslinux/repository">repository</a>, you may have noticed that there are
+  lots of init/service related packages. I have had my fair share of time with all
+  of them, and it is an area that I am really interested in. I have even written
+  my own <a href="https://github.com/cemkeylan/shinit">init daemon</a> and <a href="https://github.com/cemkeylan/sysmgr">service supervisor</a>. I maintain all those packages on KISS
+  Community Repository as well with the exception of busybox. Those are, <code>busybox
+  init/runit</code>, <code>runit</code>, <code>sinit</code>, and <code>sysmgr</code>. I would definitely recommend
+  checking out <code>shinit</code> and <code>sysmgr</code>.
+  </p>
+  </div>
+  </div>
+
+  <div id="outline-container-orgeb4597c" class="outline-3">
+  <h3 id="orgeb4597c">Why I don't publicize Carbs</h3>
+  <div class="outline-text-3" id="text-orgeb4597c">
+  <p>
+  There are a couple of reasons I don't publicize Carbs a lot.
+  </p>
+
+  <p>
+  KISS is the better alternative in terms of support and community. I work on
+  maintaining this distribution just as hard as Dylan, but in the end, Carbs is
+  based on his original hard work, and I believe that he deserves the recognition
+  more than I do.
+  </p>
+
+  <p>
+  Since I cannot answer questions like "What is the difference?", I prefer staying
+  as the silent sibling project of KISS Linux. Plus, there is no point in dividing
+  the newly-emerging community in half.
+  </p>
+
+  <p>
+  That's not because I don't have ideas for the future of Carbs, I do. I just
+  think that I will deserve the recognition once those above lists are checked.
+  </p>
+
+  <p>
+  I think that's about it, if you have questions you can send me a mail, ping me
+  on IRC (my handle is <code>merakor</code>), and I will be happy to answer. Maybe your
+  question fits this post, and I can update it to thoroughly give an explanation.
+  </p>
+  </div>
+  </div>
+  ]]></description>
 </item>
 <item>
-<title>The Relation of Carbs and KISS</title>
-<pubDate>Fri, 08 May 2020</pubDate>
-<dc:creator>Cem Keylan</dc:creator>
-<link>https://carbslinux.org/blog/20200508.html</link>
-<description>&lt;h1&gt;The Relation of Carbs and KISS&lt;/h1&gt;
+  <title>Outsource Repository Concept</title>
+  <link>https://carbslinux.org/blog/20200410.html</link>
+  <author>root@carbslinux.org (Cem Keylan)</author>
+  <guid isPermaLink="false">https://carbslinux.org/blog/20200410.html</guid>
+  <pubDate>Fri, 10 Apr 2020 00:00:00 +0300</pubDate>
 
-&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; May 08 2020&lt;/p&gt;
+  <description><![CDATA[<p>
+  In April 3rd, I have added submodule support for Carbs Linux's fork of <code>kiss</code>.
+  Now, from that sentence, it really doesn't sound exciting at all. But in
+  reality, it opens a path to lots of creative output, and a better way to manage
+  multi-user repositories (such as KISS Community).
+  </p>
 
-&lt;p&gt;Since I have forked KISS, I have received many questions
-that can be summarized as &amp;ldquo;Why?&amp;rdquo;. I have realized that I
-never truly answered this question. That&amp;rsquo;s the reason I am
-writing this post, to give some background on Carbs, and
-some differences between KISS Linux and Carbs Linux for
-anyone who may be wondering. Perhaps I could make this a
-&amp;ldquo;FAQ&amp;rdquo; page later on.&lt;/p&gt;
+  <p>
+  When managing a repository of submodules, the repository maintainer's only job
+  is to deal with adding packages. A package maintainer doesn't have to wait for
+  the repository maintainer to update their packages, as they are only making the
+  changes to their own repositories.
+  </p>
 
-&lt;h2&gt;History&lt;/h2&gt;
+  <p>
+  This way, an end-user can also track from their preferred maintainers, and do
+  that with the tidyness of a single repository in their <code>KISS_PATH</code>.
+  </p>
 
-&lt;p&gt;I had the idea of creating my own Linux distribution since
-the May of 2019. Back then, I had my own &lt;a href=&quot;https://linuxfromscratch.org&quot;&gt;Linux from Scratch&lt;/a&gt;
-build, and I wanted to slim it down my own way and replace
-the software (with musl,sbase,etc.). The name Carbs Linux
-was in my mind since then. I wanted to write my own package
-manager, but I wasn&amp;rsquo;t satisfied with anything I had built.&lt;/p&gt;
+  <p>
+  Carbs Linux now has an outsource repository for some packages. Firefox and its
+  dependencies have been purged from the main repository, but can be found on it.
+  </p>
 
-&lt;p&gt;I had written some incomplete package managers (all named &lt;code&gt;fat&lt;/code&gt;)
-and I quickly threw them into the trash can, where they
-honestly belonged. I would want to share them with you for
-laughs, but my hard-drive got wiped and I have a problem
-of not doing an &amp;ldquo;initial commit&amp;rdquo; until a program I write
-is in a usable state.&lt;/p&gt;
-
-&lt;p&gt;I have obtained the &amp;lsquo;carbslinux.org&amp;rsquo; domain name in September
-2019, but then life got on the way, and I stopped for a long
-time.&lt;/p&gt;
-
-&lt;p&gt;One day on Reddit, I saw Dylan&amp;rsquo;s post on &lt;a href=&quot;https://reddit.com/r/unixporn&quot;&gt;r/unixporn&lt;/a&gt; about
-KISS, and I really thought that it was interesting. Here is
-my &lt;a href=&quot;https://www.reddit.com/r/unixporn/comments/ducd34/sowm_kiss_d/f7lua7x&quot;&gt;comment&lt;/a&gt; to Dylan on that post. I checked out the package
-manager and the repository. The packaging system was extremely
-clean and well-thought. I decided to give it a go and fork
-KISS.&lt;/p&gt;
-
-&lt;h2&gt;Differences between KISS and Carbs&lt;/h2&gt;
-
-&lt;p&gt;Now, I still baffle when people ask me this question. My
-intention was never to create a distribution with specific
-differences between KISS. My intention was being my own
-BDFL of a distribution I maintain. There are lots of
-differences between the main repositories, but they are subtle
-and not worth talking about. I personally never even installed
-KISS Linux on my system. So Carbs, isn&amp;rsquo;t something like a
-downstream fork of KISS, it is just a distribution that was
-initially based on KISS.&lt;/p&gt;
-
-&lt;p&gt;I try to contribute as much as I can to KISS Linux. I think
-that it is a brilliant distribution, and it was a great starting
-point for Carbs. I am really grateful to Dylan and all the
-other contributors.&lt;/p&gt;
-
-&lt;h2&gt;What I&amp;rsquo;m working on now&lt;/h2&gt;
-
-&lt;p&gt;Currently I have a few projects that I&amp;rsquo;m working on for Carbs.
-These are,&lt;/p&gt;
-
-&lt;p&gt;A BSD port for Carbs. For a while, I have been working on BSD
-compatibility on my fork of the &lt;a href=&quot;https://github.com/carbslinux/kiss&quot;&gt;package manager&lt;/a&gt;. I have tested,
-without any more issues, on OpenBSD and FreeBSD. The biggest
-issues remaining are choosing a vendor for BSD, packaging the
-BSD source, and providing a minimal base (like busybox for BSD).
-If you aren&amp;rsquo;t familiar with BSD, it has a single source code
-for all of the utilities (kernel, command line programs, etc.).
-Contributions (even chipping in ideas) are very welcome.&lt;/p&gt;
-
-&lt;p&gt;Adding binary package distribution support natively to the package
-manager. Biggest issue in small/old computers are compile times.
-This feature is for the bigger packages such as webkit, clang,
-llvm that take a considerable amount of time. Some computers
-with low memories cannot even compile firefox/webkit.&lt;/p&gt;
-
-&lt;p&gt;Adding rsync repository support to the package manager. This
-is not a current issue, but rather a futureproofing. As time
-passes, distribution repositories grow larger. KISS and Carbs
-are young distributions without this problem right now. But
-in something like 5 years, this size will presumably increase
-to hundreds of megabytes. At that point it will be pointless
-to have the repository sources unless you specifically need them.&lt;/p&gt;
-
-&lt;h2&gt;What&amp;rsquo;s up with all the init/service daemons?&lt;/h2&gt;
-
-&lt;p&gt;If you have ever checked the &lt;a href=&quot;https://github.com/carbslinux/repository&quot;&gt;repository&lt;/a&gt;, you may have noticed
-that there are lots of init/service related packages. I have had
-my fair share of time with all of them, and it is an area that I
-am really interested in. I have even written my own &lt;a href=&quot;https://github.com/cemkeylan/shinit&quot;&gt;init daemon&lt;/a&gt;
-and &lt;a href=&quot;https://github.com/cemkeylan/sysmgr&quot;&gt;service supervisor&lt;/a&gt;. I maintain all those packages on KISS
-Community Repository as well with the exception of busybox. Those
-are, &lt;code&gt;busybox init/runit&lt;/code&gt;, &lt;code&gt;runit&lt;/code&gt;, &lt;code&gt;sinit&lt;/code&gt;, and &lt;code&gt;sysmgr&lt;/code&gt;. I would
-definitely recommend checking out &lt;code&gt;shinit&lt;/code&gt; and &lt;code&gt;sysmgr&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2&gt;Why I don&amp;rsquo;t publicize Carbs&lt;/h2&gt;
-
-&lt;p&gt;There are a couple of reasons I don&amp;rsquo;t publicize Carbs a lot.&lt;/p&gt;
-
-&lt;p&gt;KISS is the better alternative in terms of support and community.
-I work on maintaining this distribution just as hard as Dylan,
-but in the end, Carbs is based on his original hard work, and I
-believe that he deserves the recognition more than I do.&lt;/p&gt;
-
-&lt;p&gt;Since I cannot answer questions like &amp;ldquo;What is the difference?&amp;rdquo;, I
-prefer staying as the silent sibling project of KISS Linux. Plus,
-there is no point in dividing the newly-emerging community in half.&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s not because I don&amp;rsquo;t have ideas for the future of Carbs, I
-do. I just think that I will deserve the recognition once those
-above lists are checked.&lt;/p&gt;
-
-&lt;p&gt;I think that&amp;rsquo;s about it, if you have questions you can send me a
-mail, ping me on IRC (my handle is &lt;code&gt;merakor&lt;/code&gt;), and I will be happy
-to answer. Maybe your question fits this post, and I can update it
-to thoroughly give an explanation.&lt;/p&gt;
-
-&lt;p&gt;Cheers,
-Cem&lt;/p&gt;</description>
+  <p>
+  <a href="https://github.com/CarbsLinux/outsource">https://github.com/CarbsLinux/outsource</a>
+  </p>
+  ]]></description>
 </item>
 <item>
-<title>Outsource Repository Concept</title>
-<pubDate>Fri, 10 Apr 2020</pubDate>
-<dc:creator>Cem Keylan</dc:creator>
-<link>https://carbslinux.org/blog/20200410.html</link>
-<description>&lt;h1&gt;Outsource Repository Concept&lt;/h1&gt;
+  <title>Roadmap for Carbs</title>
+  <link>https://carbslinux.org/blog/20200406.html</link>
+  <author>root@carbslinux.org (Cem Keylan)</author>
+  <guid isPermaLink="false">https://carbslinux.org/blog/20200406.html</guid>
+  <pubDate>Mon, 06 Apr 2020 00:00:00 +0300</pubDate>
 
-&lt;p&gt;In April 3rd, I have added submodule support for Carbs
-Linux&amp;rsquo;s fork of &lt;code&gt;kiss&lt;/code&gt;. Now, from that sentence, it really
-doesn&amp;rsquo;t sound exciting at all. But in reality, it opens a
-path to lots of creative output, and a better way to manage
-multi-user repositories (such as KISS Community).&lt;/p&gt;
+  <description><![CDATA[<p>
+  It has been a busy week. There are lots of changes in direction, and more to
+  come. I want to talk a little about all of them.
+  </p>
 
-&lt;p&gt;When managing a repository of submodules, the repository
-maintainer&amp;rsquo;s only job is to deal with adding packages.
-A package maintainer doesn&amp;rsquo;t have to wait for the repository
-maintainer to update their packages, as they are only making
-the changes to their own repositories.&lt;/p&gt;
+  <div id="outline-container-org87c73aa" class="outline-3">
+  <h3 id="org87c73aa">Carbs Linux Server Going Down</h3>
+  <div class="outline-text-3" id="text-org87c73aa">
+  <p>
+  It became harder to maintain and pay for the server, and I will be shutting it
+  down in May. I am currently in the phase of carrying over everything to <a href="https://github.com/CarbsLinux">Github</a>.
+  The repository and the website is served on Github now. I have also moved the
+  <a href="https://github.com/CarbsLinux/wiki/wiki">Wiki</a> to Github and anyone can edit it there. There are some outdated posts that
+  I will be fixing around this week.
+  </p>
 
-&lt;p&gt;This way, an end-user can also track from their preferred
-maintainers, and do that with the tidyness of a single repository
-in their &lt;code&gt;KISS_PATH&lt;/code&gt;.&lt;/p&gt;
+  <p>
+  I am not quite sure where to store the downloads page now. But I will be
+  switching that to a new source as well. (Maybe SourceHut?)
+  </p>
 
-&lt;p&gt;Carbs Linux now has an outsource repository for some packages.
-Firefox and its dependencies have been purged from the main repository,
-but can be found on it.&lt;/p&gt;
+  <p>
+  I feel a little sad for switching, but serving on Github is faster, cheaper, and
+  hassle-free.
+  </p>
+  </div>
+  </div>
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/CarbsLinux/outsource&quot;&gt;https://github.com/CarbsLinux/outsource&lt;/a&gt;&lt;/p&gt;</description>
+  <div id="outline-container-orgb8b557f" class="outline-3">
+  <h3 id="orgb8b557f">Forking KISS</h3>
+  <div class="outline-text-3" id="text-orgb8b557f">
+  <p>
+  I had a personal fork of KISS, which I enjoyed thoroughly. I didn't intend to
+  make it the default when I started it, but it has matured enough to be so. The
+  package manager can now be found on <a href="https://github.com/CarbsLinux/kiss">this repository</a>. See it for the added
+  changes.
+  </p>
+
+  <p>
+  This will be a change for the better, as I can develop the package manager as it
+  fits my views.
+  </p>
+  </div>
+  </div>
+
+  <div id="outline-container-orgf2589d6" class="outline-3">
+  <h3 id="orgf2589d6">Small Changes on the Website</h3>
+  <div class="outline-text-3" id="text-orgf2589d6">
+  <p>
+  I have made some small changes on the website. The build is not dependent on
+  Plan9 utilities anymore. It was fun messing around with <code>rc</code> and <code>mk</code>, but they
+  are quite limited compared to POSIX shell.
+  </p>
+
+  <p>
+  RSS feeds are finally working as intended, both for the <a href="https://carbslinux.org/news.xml">news</a> section, and the
+  <a href="https://carbslinux.org/rss.xml">blog</a> section.
+  </p>
+
+  <p>
+  You can see every page's <code>.txt</code> output at the end of the page by clicking 'View
+  Page Source'. Meanwhile, I will be updating some pages to be a little more
+  'human-readable'.
+  </p>
+  </div>
+  </div>
+
+  <div id="outline-container-orge93d687" class="outline-3">
+  <h3 id="orge93d687">Outsources Repository</h3>
+  <div class="outline-text-3" id="text-orge93d687">
+  <p>
+  I have opened an <code>outsource</code> repository, which I will be pushing this week. I
+  will add a new post when I am ready to push it. I think it will be interesting,
+  it will also make more sense about the changes I have added to the package
+  manager. The now empty repository, can be found <a href="https://github.com/CarbsLinux/outsource">here</a>!
+  </p>
+  </div>
+  </div>
+
+  <div id="outline-container-orgd091825" class="outline-3">
+  <h3 id="orgd091825">New Tarball</h3>
+  <div class="outline-text-3" id="text-orgd091825">
+  <p>
+  Finally, I have released a new tarball today, which can be obtained from the
+  <a href="https://dl.carbslinux.org/releases">downloads page</a>.
+  </p>
+
+  <p>
+  I am planning to add more of these update posts as I'm feeling better about the
+  website structure overall.
+  </p>
+  </div>
+  </div>
+  ]]></description>
 </item>
 <item>
-<title>Roadmap for Carbs</title>
-<pubDate>Mon, 06 Apr 2020</pubDate>
-<dc:creator>Cem Keylan</dc:creator>
-<link>https://carbslinux.org/blog/20200406.html</link>
-<description>&lt;h1&gt;Roadmap for Carbs&lt;/h1&gt;
+  <title>Switching to New Website</title>
+  <link>https://carbslinux.org/blog/20200128.html</link>
+  <author>root@carbslinux.org (Cem Keylan)</author>
+  <guid isPermaLink="false">https://carbslinux.org/blog/20200128.html</guid>
+  <pubDate>Tue, 28 Jan 2020 00:00:00 +0300</pubDate>
 
-&lt;p&gt;It has been a busy week. There are lots of changes in
-direction, and more to come. I want to talk a little
-about all of them.&lt;/p&gt;
+  <description><![CDATA[<p>
+  In case you haven't seen it before, this website was powered by <a href="http://werc.cat-v.org">werc</a>. And even
+  though I liked it really much, it was too powerful for a small website like
+  this.
+  </p>
 
-&lt;h2&gt;Carbs Linux Server Going Down&lt;/h2&gt;
+  <p>
+  So I have decided to reimplement this website with my own static generation
+  scripts. The source will probably be on <a href="https://git.carbslinux.org/website/log.html">its git repository</a> when I decide to
+  publish the website.
+  </p>
 
-&lt;p&gt;It became harder to maintain and pay for the server, and I will be
-shutting it down in May. I am currently in the phase of
-carrying over everything to &lt;a href=&quot;https://github.com/CarbsLinux&quot;&gt;Github&lt;/a&gt;. The repository and the
-website is served on Github now. I have also moved the &lt;a href=&quot;https://github.com/CarbsLinux/wiki/wiki&quot;&gt;Wiki&lt;/a&gt;
-to Github and anyone can edit it there. There are some outdated
-posts that I will be fixing around this week.&lt;/p&gt;
-
-&lt;p&gt;I am not quite sure where to store the downloads page now. But I
-will be switching that to a new source as well. (Maybe Source Forge?)&lt;/p&gt;
-
-&lt;p&gt;I feel a little sad for switching, but serving on Github is faster,
-cheaper, and hassle-free.&lt;/p&gt;
-
-&lt;h2&gt;Forking KISS&lt;/h2&gt;
-
-&lt;p&gt;I had a personal fork of KISS, which I enjoyed thoroughly. I didn&amp;rsquo;t
-intend to make it the default when I started it, but it has matured
-enough to be so. The package manager can now be found on &lt;a href=&quot;https://github.com/CarbsLinux/kiss&quot;&gt;this repository&lt;/a&gt;.
-See it for the added changes.&lt;/p&gt;
-
-&lt;p&gt;This will be a change for the better, as I can develop the package
-manager as it fits my views.&lt;/p&gt;
-
-&lt;h2&gt;Small Changes on the Website&lt;/h2&gt;
-
-&lt;p&gt;I have made some small changes on the website. The build is not dependent
-on Plan9 utilities anymore. It was fun messing around with &lt;code&gt;rc&lt;/code&gt; and &lt;code&gt;mk&lt;/code&gt;,
-but they are quite limited compared to POSIX shell.&lt;/p&gt;
-
-&lt;p&gt;RSS feeds are finally working as intended, both for the &lt;a href=&quot;https://carbslinux.org/news.xml&quot;&gt;news&lt;/a&gt; section, and
-the &lt;a href=&quot;https://carbslinux.org/rss.xml&quot;&gt;blog&lt;/a&gt; secion.&lt;/p&gt;
-
-&lt;p&gt;You can see every page&amp;rsquo;s &lt;code&gt;.txt&lt;/code&gt; output at the end of the page by clicking
-&amp;lsquo;View Page Source&amp;rsquo;. Meanwhile, I will be updating some pages to be a little
-more &amp;lsquo;human-readable&amp;rsquo;.&lt;/p&gt;
-
-&lt;h2&gt;Outsources Repository&lt;/h2&gt;
-
-&lt;p&gt;I have opened an &lt;code&gt;outsource&lt;/code&gt; repository, which I will be pushing this week.
-I will add a new post when I am ready to push it. I think it will be interesting,
-it will also make more sense about the changes I have added to the package
-manager. The now empty repository, can be found &lt;a href=&quot;https://github.com/CarbsLinux/outsource&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
-
-&lt;h2&gt;New Tarball&lt;/h2&gt;
-
-&lt;p&gt;Finally, I have released a new tarball today, which can be obtained from the
-&lt;a href=&quot;https://dl.carbslinux.org/releases&quot;&gt;downloads page&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I am planning to add more of these update posts as I&amp;rsquo;m feeling better about
-the website structure overall.&lt;/p&gt;
-
-&lt;p&gt;- Cem&lt;/p&gt;</description>
+  <p>
+  The generation requires Plan9 programs, although I have used them just for my
+  enthusiasm. I have built the site with a combination of mk (instead of make),
+  rc, and POSIX sh. I am not yet exactly familiar with rc, but I will replace the
+  shell scripts when I feel like I can.
+  </p>
+  ]]></description>
 </item>
-<item>
-<title>Switching to New Website</title>
-<pubDate>Tue, 28 Jan 2020</pubDate>
-<dc:creator>Cem Keylan</dc:creator>
-<link>https://carbslinux.org/blog/20200128.html</link>
-<description>&lt;h1&gt;Switching to New Website&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; Jan 28 2020&lt;/p&gt;
-
-&lt;p&gt;In case you haven&amp;rsquo;t seen it before, this website
-was powered by &lt;a href=&quot;http://werc.cat-v.org&quot;&gt;werc&lt;/a&gt;. And
-even though I liked it really much, it was too
-powerful for a small website like this.&lt;/p&gt;
-
-&lt;p&gt;So I have decided to reimplement this website with
-my own static generation scripts. The source will
-probably be on &lt;a href=&quot;https://carbslinux.org/git/website/log.html&quot;&gt;https://carbslinux.org/git/website/log.html&lt;/a&gt;
-when I decide to publish the website.&lt;/p&gt;
-
-&lt;p&gt;The generation requires Plan9 programs, although
-I have used them just for my enthusiasm. I have built
-the site with a combination of mk (instead of make), rc,
-and POSIX sh. I am not yet exactly familiar with rc,
-but I will replace the shell scripts when I feel like
-I can.&lt;/p&gt;</description>
-</item>
-  </channel>
+</channel>
 </rss>

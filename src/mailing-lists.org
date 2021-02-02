@@ -1,0 +1,6 @@
+#+TITLE: Mailing Lists
+
+We have mailing lists set up at [[https://sr.ht][SourceHut]]. You can subscribe to the mailing
+list by sending an empty mail to [[mailto:~carbslinux/dev+subscribe@lists.sr.ht][~carbslinux/dev+subscribe@lists.sr.ht]].
+
+You can also see the [[https://lists.sr.ht/~carbslinux/dev][archives]].

@@ -1,0 +1,3 @@
+#+TITLE: Blog Index
+
+This is the Carbs Linux blog index. You can find every post here. [[file:../rss.xml][RSS Feed]]

@@ -1,3 +1,6 @@
 [submodule "texidocs"]
 	path = texidocs
 	url = git://git.carbslinux.org/docs
+[submodule "style"]
+	path = style
+	url = git://git.carbslinux.org/carbslinux-style.git

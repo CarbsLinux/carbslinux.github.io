@@ -1,0 +1,5 @@
+#+TITLE: {{{date(%b %d\, %Y)}}}
+#+DATE: <2020-05-19 Tue>
+
+A rootfs tarball targeting the i686 architecture has been released. It can be
+found on the downloads page.

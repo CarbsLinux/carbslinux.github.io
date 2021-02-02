@@ -1,0 +1,172 @@
+#+TITLE: Carbs Linux news
+#+DESCRIPTION: a simple Linux distribution
+
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200916.html
+:PUBDATE:  2020-09-16
+:ID:       ab636904-61dd-4fba-934c-6d5e2e2c7a9e
+:END:
+The libressl "revert" was reverted. System update will replace libressl
+dependencies with bearssl. You may choose to keep or remove bearssl after the
+update.
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200903.html
+:PUBDATE:  2020-09-03
+:ID:       fb6e737c-93d4-4010-a374-d395744563bf
+:END:
+The default TLS provider has been reverted to =libressl=. System update will
+replace bearssl dependencies with libressl. You may choose to keep or remove
+bearssl after the update.
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200727.html
+:PUBDATE:  2020-07-27
+:ID:       b47e26d5-3210-4125-b41e-8654e1c1e319
+:END:
+Carbs Linux's fork of the =kiss= package manager has been renamed to =Carbs
+  Packaging Tools= due to huge amount of changes. Your latest =kiss= update will
+handle the bootstrapping. You will need to rename your =KISS-*= variables to
+=CPT-*=.
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200617.html
+:PUBDATE:  2020-06-17
+:ID:       0fa2546c-3cec-42c3-a620-c44aeb14bd82
+:END:
+A new rootfs tarball including the changes to the core is released and can be
+found on the downloads page.
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200526.html
+:PUBDATE:  2020-05-26
+:ID:       327084ea-554d-4604-8d1d-27a9017fa4bf
+:END:
+An initial version for binary package management is released. It can be found on
+the [[https://github.com/CarbsLinux/kiss-bin][GitHub page]].
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200519.html
+:PUBDATE:  2020-05-19
+:ID:       e3cc197e-693d-4ed4-a766-19ae94d4e655
+:END:
+A rootfs tarball targeting the i686 architecture has been released. It can be
+found on the downloads page.
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200510.html
+:PUBDATE:  2020-05-10
+:ID:       05213ce1-1eed-4736-8663-32c95e8f58a5
+:END:
+A GCC 10.1.0 change causes a kernel panic for kernels built with GCC 10.1. This
+issue can be resolved by applying this [[https://git.kernel.org/pub/scm/linux/kernel/git/tip/tip.git/patch/?id=f670269a42bfdd2c83a1118cc3d1b475547eac22][patch]] to your kernel sources.
+
+**EDIT:** The patch is no longer necessary.
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200427.html
+:PUBDATE:  2020-04-27
+:ID:       35dd49b7-15ed-4e17-8aaf-6b3331253a1f
+:END:
+A new rootfs tarball has been released! You can see it on
+[[https://dl.carbslinux.org/releases]]!
+
+**EDIT:** A new bug fix release has been made.
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200410.html
+:PUBDATE:  2020-04-10
+:ID:       e08b6a03-9967-4b72-aef3-5cafbe8fc926
+:END:
+IRC channel can now be accessed from =#carbslinux= at freenode!
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200406.html
+:PUBDATE:  2020-04-06
+:ID:       a62bac15-b653-4b2d-b9b0-d59a71718f6b
+:END:
+A new rootfs tarball has been released. See the downloads page.
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200405.html
+:PUBDATE:  2020-04-05
+:ID:       80ab6b81-ed74-4ccd-bae5-01a179864631
+:END:
+Carbs Linux repositories will be hosted only on Github. Commits will be pushed
+there, and not the repository. You have until May 4, 2020 Monday to switch your
+remotes to [[https://github.com/CarbsLinux/repository]]. The git repository will
+continue to be served until then (without additional commits).
+
+You can switch your remote by executing the following command on your repository
+directory.
+
+#+begin_src sh
+  git remote set-url origin https://github.com/CarbsLinux/repository
+#+end_src
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200218.html
+:PUBDATE:  2020-02-18
+:ID:       74395814-c8cc-4616-99ca-ce1f7b5d1f6e
+:END:
+A new tarball is released. It can be found on [[https://dl.carbslinux.org]].
+
+**edit:** I have removed the tarball because of a bootstrapping issue. I will be
+re-adding it later today.
+
+**edit 2:** I have added a tarball (20200219) to reflect my recent changes on
+Busybox.
+* {{{date(%b %d\, %Y)}}}
+:PROPERTIES:
+:RSS_PERMALINK: 20200214.html
+:PUBDATE:  2020-02-14
+:ID:       17da458e-41cc-424d-ae9c-789720db202b
+:END:
+**IMPORTANT!** Carbs-init update to be released on 17th of February
+will require manual intervention. I am holding this update back so
+people can see it before they update their system (even though the
+update will show the same message as this). The rationale for the
+update is explained below the intervention.
+
+#+begin_src sh
+  # There is an explanation for each init You only need to follow the instructions
+  # for your own init-system
+
+  ## busybox-init
+  # If you did not edit your inittab simply move inittab.new to inittab
+  mv /etc/inittab.new /etc/inittab
+
+  # If you did edit your inittab you can use a simple sed command to remove the
+  # necessary lines
+  sed -i '/getty/d;/runsvdir/d' /etc/inittab
+
+
+  ## runit
+  # same as busybox-init, if you did not edit /etc/runit/2 move 2.new to 2
+  mv /etc/runit/2.new /etc/runit/2
+
+  # else
+  vim /etc/runit/2
+  # open your 2 file and remove the for loop containing getty commands. If you are
+  # using runit, it is recommended to comment out /etc/init/runit.boot
+
+  ## sinit/minit
+  # If you did not edit your {sinit-,}launch-services.boot you can simply remove
+  # it.
+  rm -f /etc/init/launch-services.boot /etc/init/sinit-launch-services.boot
+
+  # This should leave you without any issues, and you can safely reboot.
+#+end_src
+
+Carbs-init update is to make sure init systems do not clash, and do
+not have to use different files. This is a sensible update both for
+the user user and for the maintainer side. 
+
+To give an example, before this update busybox-init was managing getty
+through =inittab=, runit was managing through =/etc/runit/2=, and
+minit/sinit were launching from =/etc/init/launch-services.boot=. This
+is a configuration nightmare for everyone, and since I am maintaining
+and constantly testing those init providers, a huge nightmare for me. 
+This is a Quality of Life update.
+

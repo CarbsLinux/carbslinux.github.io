@@ -1,15 +1,98 @@
-Carbs Linux documentation
-================================================================================
+			    _______________
 
-Welcome to the Carbs Linux source of documentation! You can install these to
-your system for viewing offline:
-
-    +--------------------------------------------------------------------------+
-    |                                                                          |
-    | $ cpt-build carbs-docs && cpt-install carbs-docs                         |
-    |                                                                          |
-    +--------------------------------------------------------------------------+
+			     DOCUMENTATION
+			    _______________
 
 
-Documentation Index
---------------------------------------------------------------------------------
+Below are sources of documentation regarding Carbs Linux and tools
+surrounding it.
+
+
+User Manual
+===========
+
+  Carbs Linux User Manual aims to be a general-purpose explanation of
+  the distribution, from the installation steps to the style guide of
+  the project. It can be accessed or otherwise obtained with various
+  methods:
+
+
+HTML
+~~~~
+
+  You can view the Manual from your browser. The Manual can be viewed as
+
+  - [One HTML page per node]
+  - [Single HTML page]
+
+
+[One HTML page per node] <file:docs/carbslinux>
+
+[Single HTML page] <file:docs/carbslinux.html>
+
+
+Plain text
+~~~~~~~~~~
+
+  You can download [carbslinux.txt] in order to view the Manual from
+  your preferred pager.
+
+  ,----
+  | curl -LO https://carbslinux.org/docs/carbslinux.txt
+  | less carbslinux.txt
+  `----
+
+
+[carbslinux.txt] <file:docs/carbslinux.txt>
+
+
+Info
+~~~~
+
+  You can install the `carbs-docs' package and either `texinfo' or
+  `info' packages to view the Manual offline.
+
+  ,----
+  | cpt bi info carbs-docs
+  | info carbslinux
+  `----
+
+
+Source
+~~~~~~
+
+  You can also acquire the source for generating the Manual, which
+  requires `emacs' for exporting the Org-mode documentation and
+  `texinfo' for generating html/info pages.
+
+  ,----
+  | git clone git://git.carbslinux.org/docs
+  `----
+
+
+Installation Instructions
+=========================
+
+  Installation Manual is part of the [User Manual], but it can also be
+  obtained separately:
+
+  - [HTML]
+  - [Plaintext]
+
+
+[User Manual] See section User Manual
+
+[HTML] <file:install.org>
+
+[Plaintext] <file:install.txt>
+
+
+Carbs Packaging Tools
+=====================
+
+  The user manual for CPT is not complete yet, but will be released with
+  the 6.0.0 release. You can see the [repository] in order to check its
+  status.
+
+
+[repository] <https://github.com/CarbsLinux/cpt>

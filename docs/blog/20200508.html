@@ -1,146 +1,184 @@
-<!DOCTYPE HTML>
-<html lan=en>
-  <head>
-    <title>The Relation of Carbs and KISS | Carbs Linux</title>
-    <link rel="stylesheet" href="/style.css">
-    <meta charset="utf-8">
-    <meta name="Description" content="Carbs Linux - a simple linux distribution">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  </head>
-  <body>
-    <p class=header><strong>Carbs Linux - a simple linux distribution</strong></p>
-    <div class="header">
-      <nav>
-        <a href='/'>index</a>
-        <a href="//git.carbslinux.org">git</a>
-        <a href='//dl.carbslinux.org'>downloads</a>
-        <a href='/blog'>blog</a>
-        <a href='/docs/install.html'>installation</a>
-	<a href='/docs'>user manual</a>
-      </nav>
-    </div><div class="border"></div>
-<h1>The Relation of Carbs and KISS</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2021-02-02 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Relation of Carbs and KISS</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Cem Keylan">
+<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<div id="preamble" class="status">
+<nav id="navbar">
+    <a href="/" class=navbartitle>Carbs Linux</a>
 
-<p><strong>Date:</strong> May 08 2020</p>
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger" />
+    <ul id=navbarlist>
+        <li><a href="/" title="Home Page">Home</a></li>
+        <li><a href="//git.carbslinux.org" title="Git Repository">Git</a></li>
+        <li><a href="/download.html" title="Download Carbs Linux">Download</a></li>
+        <li><a href="/blog" title="Blog Posts">Blog</a></li>
+        <li><a href="/install.html" title="Installation Instructions">Installation</a></li>
+        <li><a href="/docs.html" title="Documentation">Docs</a></li>
+    </ul>
+</nav>
+</div>
+<div id="content">
+<header>
+<h1 class="title">The Relation of Carbs and KISS</h1>
+<p class="subtitle">posted on 2020-05-08</p>
+</header><p>
+Since I have forked KISS, I have received many questions that can be summarized
+as "Why?". I have realized that I never truly answered this question. That's the
+reason I am writing this post, to give some background on Carbs, and some
+differences between KISS Linux and Carbs Linux for anyone who may be wondering.
+Perhaps I could make this a "FAQ" page later on.
+</p>
 
-<p>Since I have forked KISS, I have received many questions
-that can be summarized as &ldquo;Why?&rdquo;. I have realized that I
-never truly answered this question. That&rsquo;s the reason I am
-writing this post, to give some background on Carbs, and
-some differences between KISS Linux and Carbs Linux for
-anyone who may be wondering. Perhaps I could make this a
-&ldquo;FAQ&rdquo; page later on.</p>
+<div id="outline-container-org1398b0e" class="outline-2">
+<h2 id="org1398b0e">History</h2>
+<div class="outline-text-2" id="text-org1398b0e">
+<p>
+I had the idea of creating my own Linux distribution since the May of 2019. Back
+then, I had my own <a href="https://linuxfromscratch.org">Linux from Scratch</a> build, and I wanted to slim it down my
+own way and replace the software (with musl,sbase,etc.). The name Carbs Linux
+was in my mind since then. I wanted to write my own package manager, but I
+wasn't satisfied with anything I had built.
+</p>
 
-<h2>History</h2>
+<p>
+I had written some incomplete package managers (all named <code>fat</code>) and I quickly
+threw them into the trash can, where they honestly belonged. I would want to
+share them with you for laughs, but my hard-drive got wiped and I have a problem
+of not doing an "initial commit" until a program I write is in a usable state.
+</p>
 
-<p>I had the idea of creating my own Linux distribution since
-the May of 2019. Back then, I had my own <a href="https://linuxfromscratch.org">Linux from Scratch</a>
-build, and I wanted to slim it down my own way and replace
-the software (with musl,sbase,etc.). The name Carbs Linux
-was in my mind since then. I wanted to write my own package
-manager, but I wasn&rsquo;t satisfied with anything I had built.</p>
+<p>
+I have obtained the 'carbslinux.org' domain name in September 2019, but then
+life got on the way, and I stopped for a long time.
+</p>
 
-<p>I had written some incomplete package managers (all named <code>fat</code>)
-and I quickly threw them into the trash can, where they
-honestly belonged. I would want to share them with you for
-laughs, but my hard-drive got wiped and I have a problem
-of not doing an &ldquo;initial commit&rdquo; until a program I write
-is in a usable state.</p>
+<p>
+One day on Reddit, I saw Dylan's post on <a href="https://reddit.com/r/unixporn">r/unixporn</a> about KISS, and I really
+thought that it was interesting. Here is my <a href="https://www.reddit.com/r/unixporn/comments/ducd34/sowm_kiss_d/f7lua7x">comment</a> to Dylan on that post. I
+checked out the package manager and the repository. The packaging system was
+extremely clean and well-thought. I decided to give it a go and fork KISS.
+</p>
+</div>
+</div>
 
-<p>I have obtained the &lsquo;carbslinux.org&rsquo; domain name in September
-2019, but then life got on the way, and I stopped for a long
-time.</p>
+<div id="outline-container-org5bd8596" class="outline-2">
+<h2 id="org5bd8596">Differences between KISS and Carbs</h2>
+<div class="outline-text-2" id="text-org5bd8596">
+<p>
+Now, I still baffle when people ask me this question. My intention was never to
+create a distribution with specific differences between KISS. My intention was
+being my own BDFL of a distribution I maintain. There are lots of differences
+between the main repositories, but they are subtle and not worth talking about.
+I personally never even installed KISS Linux on my system. So Carbs, isn't
+something like a downstream fork of KISS, it is just a distribution that was
+initially based on KISS.
+</p>
 
-<p>One day on Reddit, I saw Dylan&rsquo;s post on <a href="https://reddit.com/r/unixporn">r/unixporn</a> about
-KISS, and I really thought that it was interesting. Here is
-my <a href="https://www.reddit.com/r/unixporn/comments/ducd34/sowm_kiss_d/f7lua7x">comment</a> to Dylan on that post. I checked out the package
-manager and the repository. The packaging system was extremely
-clean and well-thought. I decided to give it a go and fork
-KISS.</p>
+<p>
+I try to contribute as much as I can to KISS Linux. I think that it is a
+brilliant distribution, and it was a great starting point for Carbs. I am really
+grateful to Dylan and all the other contributors.
+</p>
+</div>
+</div>
 
-<h2>Differences between KISS and Carbs</h2>
+<div id="outline-container-orgbc60244" class="outline-2">
+<h2 id="orgbc60244">What I'm working on now</h2>
+<div class="outline-text-2" id="text-orgbc60244">
+<p>
+Currently I have a few projects that I'm working on for Carbs. These are,
+</p>
 
-<p>Now, I still baffle when people ask me this question. My
-intention was never to create a distribution with specific
-differences between KISS. My intention was being my own
-BDFL of a distribution I maintain. There are lots of
-differences between the main repositories, but they are subtle
-and not worth talking about. I personally never even installed
-KISS Linux on my system. So Carbs, isn&rsquo;t something like a
-downstream fork of KISS, it is just a distribution that was
-initially based on KISS.</p>
+<p>
+A BSD port for Carbs. For a while, I have been working on BSD compatibility on
+my fork of the [package manager]. I have tested, without any more issues, on
+OpenBSD and FreeBSD. The biggest issues remaining are choosing a vendor for BSD,
+packaging the BSD source, and providing a minimal base (like busybox for BSD).
+If you aren't familiar with BSD, it has a single source code for all of the
+utilities (kernel, command line programs, etc.). Contributions (even chipping in
+ideas) are very welcome.
+</p>
 
-<p>I try to contribute as much as I can to KISS Linux. I think
-that it is a brilliant distribution, and it was a great starting
-point for Carbs. I am really grateful to Dylan and all the
-other contributors.</p>
+<p>
+Adding binary package distribution support natively to the package manager.
+Biggest issue in small/old computers are compile times. This feature is for the
+bigger packages such as webkit, clang, llvm that take a considerable amount of
+time. Some computers with low memories cannot even compile firefox/webkit.
+</p>
 
-<h2>What I&rsquo;m working on now</h2>
+<p>
+Adding rsync repository support to the package manager. This is not a current
+issue, but rather a futureproofing. As time passes, distribution repositories
+grow larger. KISS and Carbs are young distributions without this problem right
+now. But in something like 5 years, this size will presumably increase to
+hundreds of megabytes. At that point it will be pointless to have the repository
+sources unless you specifically need them.
+</p>
+</div>
+</div>
 
-<p>Currently I have a few projects that I&rsquo;m working on for Carbs.
-These are,</p>
+<div id="outline-container-org6b82fb9" class="outline-2">
+<h2 id="org6b82fb9">What's up with all the init/service daemons?</h2>
+<div class="outline-text-2" id="text-org6b82fb9">
+<p>
+If you have ever checked the <a href="https://github.com/carbslinux/repository">repository</a>, you may have noticed that there are
+lots of init/service related packages. I have had my fair share of time with all
+of them, and it is an area that I am really interested in. I have even written
+my own <a href="https://github.com/cemkeylan/shinit">init daemon</a> and <a href="https://github.com/cemkeylan/sysmgr">service supervisor</a>. I maintain all those packages on KISS
+Community Repository as well with the exception of busybox. Those are, <code>busybox
+init/runit</code>, <code>runit</code>, <code>sinit</code>, and <code>sysmgr</code>. I would definitely recommend
+checking out <code>shinit</code> and <code>sysmgr</code>.
+</p>
+</div>
+</div>
 
-<p>A BSD port for Carbs. For a while, I have been working on BSD
-compatibility on my fork of the <a href="https://github.com/carbslinux/kiss">package manager</a>. I have tested,
-without any more issues, on OpenBSD and FreeBSD. The biggest
-issues remaining are choosing a vendor for BSD, packaging the
-BSD source, and providing a minimal base (like busybox for BSD).
-If you aren&rsquo;t familiar with BSD, it has a single source code
-for all of the utilities (kernel, command line programs, etc.).
-Contributions (even chipping in ideas) are very welcome.</p>
+<div id="outline-container-orga3d4bff" class="outline-2">
+<h2 id="orga3d4bff">Why I don't publicize Carbs</h2>
+<div class="outline-text-2" id="text-orga3d4bff">
+<p>
+There are a couple of reasons I don't publicize Carbs a lot.
+</p>
 
-<p>Adding binary package distribution support natively to the package
-manager. Biggest issue in small/old computers are compile times.
-This feature is for the bigger packages such as webkit, clang,
-llvm that take a considerable amount of time. Some computers
-with low memories cannot even compile firefox/webkit.</p>
+<p>
+KISS is the better alternative in terms of support and community. I work on
+maintaining this distribution just as hard as Dylan, but in the end, Carbs is
+based on his original hard work, and I believe that he deserves the recognition
+more than I do.
+</p>
 
-<p>Adding rsync repository support to the package manager. This
-is not a current issue, but rather a futureproofing. As time
-passes, distribution repositories grow larger. KISS and Carbs
-are young distributions without this problem right now. But
-in something like 5 years, this size will presumably increase
-to hundreds of megabytes. At that point it will be pointless
-to have the repository sources unless you specifically need them.</p>
+<p>
+Since I cannot answer questions like "What is the difference?", I prefer staying
+as the silent sibling project of KISS Linux. Plus, there is no point in dividing
+the newly-emerging community in half.
+</p>
 
-<h2>What&rsquo;s up with all the init/service daemons?</h2>
+<p>
+That's not because I don't have ideas for the future of Carbs, I do. I just
+think that I will deserve the recognition once those above lists are checked.
+</p>
 
-<p>If you have ever checked the <a href="https://github.com/carbslinux/repository">repository</a>, you may have noticed
-that there are lots of init/service related packages. I have had
-my fair share of time with all of them, and it is an area that I
-am really interested in. I have even written my own <a href="https://github.com/cemkeylan/shinit">init daemon</a>
-and <a href="https://github.com/cemkeylan/sysmgr">service supervisor</a>. I maintain all those packages on KISS
-Community Repository as well with the exception of busybox. Those
-are, <code>busybox init/runit</code>, <code>runit</code>, <code>sinit</code>, and <code>sysmgr</code>. I would
-definitely recommend checking out <code>shinit</code> and <code>sysmgr</code>.</p>
-
-<h2>Why I don&rsquo;t publicize Carbs</h2>
-
-<p>There are a couple of reasons I don&rsquo;t publicize Carbs a lot.</p>
-
-<p>KISS is the better alternative in terms of support and community.
-I work on maintaining this distribution just as hard as Dylan,
-but in the end, Carbs is based on his original hard work, and I
-believe that he deserves the recognition more than I do.</p>
-
-<p>Since I cannot answer questions like &ldquo;What is the difference?&rdquo;, I
-prefer staying as the silent sibling project of KISS Linux. Plus,
-there is no point in dividing the newly-emerging community in half.</p>
-
-<p>That&rsquo;s not because I don&rsquo;t have ideas for the future of Carbs, I
-do. I just think that I will deserve the recognition once those
-above lists are checked.</p>
-
-<p>I think that&rsquo;s about it, if you have questions you can send me a
-mail, ping me on IRC (my handle is <code>merakor</code>), and I will be happy
-to answer. Maybe your question fits this post, and I can update it
-to thoroughly give an explanation.</p>
-
-<p>Cheers,
-Cem</p>
-    <a href="/blog/20200508.txt">View Page Source</a>
-    <div class="border"></div>
-    <p class=footer>Linux® is a registered trademark of Linus Torvalds</p>
-    <p class=footer>Copyright © 2019-2021 Cem Keylan</p>
-  </body>
+<p>
+I think that's about it, if you have questions you can send me a mail, ping me
+on IRC (my handle is <code>merakor</code>), and I will be happy to answer. Maybe your
+question fits this post, and I can update it to thoroughly give an explanation.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<footer>
+    <p>Linux&reg; is a registered trademark of Linus Torvalds</p>
+    <p>Copyright &copy; 2019-2021 Cem Keylan</p>
+</footer>
+</div>
+</body>
 </html>
