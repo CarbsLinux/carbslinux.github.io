@@ -5,7 +5,7 @@
 :PROPERTIES:
 :RSS_PERMALINK: 20200916.html
 :PUBDATE:  2020-09-16
-:ID:       ab636904-61dd-4fba-934c-6d5e2e2c7a9e
+:ID:       1b068ea7-ef38-4eb7-a3cc-36a3585823d1
 :END:
 The libressl "revert" was reverted. System update will replace libressl
 dependencies with bearssl. You may choose to keep or remove bearssl after the
@@ -14,7 +14,7 @@ update.
 :PROPERTIES:
 :RSS_PERMALINK: 20200903.html
 :PUBDATE:  2020-09-03
-:ID:       fb6e737c-93d4-4010-a374-d395744563bf
+:ID:       2000a109-f125-4e8f-9458-a6ac995cb70f
 :END:
 The default TLS provider has been reverted to =libressl=. System update will
 replace bearssl dependencies with libressl. You may choose to keep or remove
@@ -23,7 +23,7 @@ bearssl after the update.
 :PROPERTIES:
 :RSS_PERMALINK: 20200727.html
 :PUBDATE:  2020-07-27
-:ID:       b47e26d5-3210-4125-b41e-8654e1c1e319
+:ID:       b3f1fc2a-09b7-4895-9c81-5c912aba63ea
 :END:
 Carbs Linux's fork of the =kiss= package manager has been renamed to =Carbs
   Packaging Tools= due to huge amount of changes. Your latest =kiss= update will
@@ -33,7 +33,7 @@ handle the bootstrapping. You will need to rename your =KISS-*= variables to
 :PROPERTIES:
 :RSS_PERMALINK: 20200617.html
 :PUBDATE:  2020-06-17
-:ID:       0fa2546c-3cec-42c3-a620-c44aeb14bd82
+:ID:       347ee0df-a4b7-42bc-8a6d-a26a39336954
 :END:
 A new rootfs tarball including the changes to the core is released and can be
 found on the downloads page.
@@ -41,7 +41,7 @@ found on the downloads page.
 :PROPERTIES:
 :RSS_PERMALINK: 20200526.html
 :PUBDATE:  2020-05-26
-:ID:       327084ea-554d-4604-8d1d-27a9017fa4bf
+:ID:       557f67e8-9d80-483b-859e-89f82d19fdd8
 :END:
 An initial version for binary package management is released. It can be found on
 the [[https://github.com/CarbsLinux/kiss-bin][GitHub page]].
@@ -49,7 +49,7 @@ the [[https://github.com/CarbsLinux/kiss-bin][GitHub page]].
 :PROPERTIES:
 :RSS_PERMALINK: 20200519.html
 :PUBDATE:  2020-05-19
-:ID:       e3cc197e-693d-4ed4-a766-19ae94d4e655
+:ID:       6a8f3d80-6d73-4e97-b7c0-d1b6fccbf27d
 :END:
 A rootfs tarball targeting the i686 architecture has been released. It can be
 found on the downloads page.
@@ -57,7 +57,7 @@ found on the downloads page.
 :PROPERTIES:
 :RSS_PERMALINK: 20200510.html
 :PUBDATE:  2020-05-10
-:ID:       05213ce1-1eed-4736-8663-32c95e8f58a5
+:ID:       c574a132-47b7-4e14-a740-10fd9ec5a279
 :END:
 A GCC 10.1.0 change causes a kernel panic for kernels built with GCC 10.1. This
 issue can be resolved by applying this [[https://git.kernel.org/pub/scm/linux/kernel/git/tip/tip.git/patch/?id=f670269a42bfdd2c83a1118cc3d1b475547eac22][patch]] to your kernel sources.
@@ -67,7 +67,7 @@ issue can be resolved by applying this [[https://git.kernel.org/pub/scm/linux/ke
 :PROPERTIES:
 :RSS_PERMALINK: 20200427.html
 :PUBDATE:  2020-04-27
-:ID:       35dd49b7-15ed-4e17-8aaf-6b3331253a1f
+:ID:       8d85adcc-3c03-406f-8901-4da9b3b8596c
 :END:
 A new rootfs tarball has been released! You can see it on
 [[https://dl.carbslinux.org/releases]]!
@@ -77,21 +77,21 @@ A new rootfs tarball has been released! You can see it on
 :PROPERTIES:
 :RSS_PERMALINK: 20200410.html
 :PUBDATE:  2020-04-10
-:ID:       e08b6a03-9967-4b72-aef3-5cafbe8fc926
+:ID:       f90898fb-362d-42cb-82d7-f40f9e73e7b3
 :END:
 IRC channel can now be accessed from =#carbslinux= at freenode!
 * {{{date(%b %d\, %Y)}}}
 :PROPERTIES:
 :RSS_PERMALINK: 20200406.html
 :PUBDATE:  2020-04-06
-:ID:       a62bac15-b653-4b2d-b9b0-d59a71718f6b
+:ID:       b50fa538-5896-4483-a12b-ca8c4c6c2a53
 :END:
 A new rootfs tarball has been released. See the downloads page.
 * {{{date(%b %d\, %Y)}}}
 :PROPERTIES:
 :RSS_PERMALINK: 20200405.html
 :PUBDATE:  2020-04-05
-:ID:       80ab6b81-ed74-4ccd-bae5-01a179864631
+:ID:       3ce41a15-5ca6-4ea1-b7b9-01e1b2a5c60f
 :END:
 Carbs Linux repositories will be hosted only on Github. Commits will be pushed
 there, and not the repository. You have until May 4, 2020 Monday to switch your
@@ -108,7 +108,7 @@ directory.
 :PROPERTIES:
 :RSS_PERMALINK: 20200218.html
 :PUBDATE:  2020-02-18
-:ID:       74395814-c8cc-4616-99ca-ce1f7b5d1f6e
+:ID:       c05366a9-7175-48a6-b37c-366e61b62e1a
 :END:
 A new tarball is released. It can be found on [[https://dl.carbslinux.org]].
 
@@ -121,7 +121,7 @@ Busybox.
 :PROPERTIES:
 :RSS_PERMALINK: 20200214.html
 :PUBDATE:  2020-02-14
-:ID:       17da458e-41cc-424d-ae9c-789720db202b
+:ID:       f9a58bcf-b300-4502-9981-c030710cb5e8
 :END:
 **IMPORTANT!** Carbs-init update to be released on 17th of February
 will require manual intervention. I am holding this update back so

@@ -14,8 +14,8 @@
   <link>https://carbslinux.org/blog</link>
   <description><![CDATA[a simple Linux distribution]]></description>
   <language>en</language>
-  <pubDate>Tue, 02 Feb 2021 03:33:03 +0300</pubDate>
-  <lastBuildDate>Tue, 02 Feb 2021 03:33:03 +0300</lastBuildDate>
+  <pubDate>Tue, 02 Feb 2021 03:52:24 +0300</pubDate>
+  <lastBuildDate>Tue, 02 Feb 2021 03:52:24 +0300</lastBuildDate>
   <generator>Emacs 27.1 Org-mode 9.4.4</generator>
   <webMaster>root@carbslinux.org (Cem Keylan)</webMaster>
   <image>
@@ -73,15 +73,15 @@
 
     <div id="text-table-of-contents">
     <ul>
-    <li><a href="#org299451d">Carbs Packaging Tools</a></li>
-    <li><a href="#org40c97d9">Docs</a></li>
-    <li><a href="#orgab113c8">Re-opening the Carbs Linux server</a></li>
+    <li><a href="#org8530da8">Carbs Packaging Tools</a></li>
+    <li><a href="#orgb8bb33f">Docs</a></li>
+    <li><a href="#org8820f6c">Re-opening the Carbs Linux server</a></li>
     </ul>
     </div>
 
-    <div id="outline-container-org299451d" class="outline-3">
-    <h3 id="org299451d">Carbs Packaging Tools</h3>
-    <div class="outline-text-3" id="text-org299451d">
+    <div id="outline-container-org8530da8" class="outline-3">
+    <h3 id="org8530da8">Carbs Packaging Tools</h3>
+    <div class="outline-text-3" id="text-org8530da8">
     <p>
     This month I have reworked <code>kiss</code> into a new package manager, now renamed as
     <code>cpt</code>. Updating <code>kiss</code> will now bootstrap the new package manager, so you don't
@@ -122,9 +122,9 @@
     </div>
     </div>
 
-    <div id="outline-container-org40c97d9" class="outline-3">
-    <h3 id="org40c97d9">Docs</h3>
-    <div class="outline-text-3" id="text-org40c97d9">
+    <div id="outline-container-orgb8bb33f" class="outline-3">
+    <h3 id="orgb8bb33f">Docs</h3>
+    <div class="outline-text-3" id="text-orgb8bb33f">
     <p>
     I have added documentation for the distribution, and finally updated the guide
     for installation. It is now <i>almost</i> complete. These docs can be installed to
@@ -139,9 +139,9 @@
     </div>
     </div>
 
-    <div id="outline-container-orgab113c8" class="outline-3">
-    <h3 id="orgab113c8">Re-opening the Carbs Linux server</h3>
-    <div class="outline-text-3" id="text-orgab113c8">
+    <div id="outline-container-org8820f6c" class="outline-3">
+    <h3 id="org8820f6c">Re-opening the Carbs Linux server</h3>
+    <div class="outline-text-3" id="text-org8820f6c">
     <p>
     Back in May, I had shutdown the Carbs Linux server due to financial issues, but
     I am slowly reverting to the self-hosted model. Back then, the git repositories
@@ -171,9 +171,9 @@
   package manager will be coming up.
   </p>
 
-  <div id="outline-container-orga59e7f7" class="outline-3">
-  <h3 id="orga59e7f7">Statically linking the base</h3>
-  <div class="outline-text-3" id="text-orga59e7f7">
+  <div id="outline-container-org4a8619e" class="outline-3">
+  <h3 id="org4a8619e">Statically linking the base</h3>
+  <div class="outline-text-3" id="text-org4a8619e">
   <p>
   For the past couple of weeks I have been trying to simplify the base and
   statically link the core (mostly binaries rather than libraries). I usually see
@@ -197,18 +197,18 @@
   </div>
   </div>
 
-  <div id="outline-container-orgc95a1ff" class="outline-3">
-  <h3 id="orgc95a1ff">Major changes on the core repository</h3>
-  <div class="outline-text-3" id="text-orgc95a1ff">
+  <div id="outline-container-org7926118" class="outline-3">
+  <h3 id="org7926118">Major changes on the core repository</h3>
+  <div class="outline-text-3" id="text-org7926118">
   <p>
   There have been drastic changes to the core repository and the base rootfs this
   month (with more on the way). Right now changes are as follows.
   </p>
   </div>
 
-  <div id="outline-container-orge61ce8f" class="outline-4">
-  <h4 id="orge61ce8f">Removed from Core</h4>
-  <div class="outline-text-4" id="text-orge61ce8f">
+  <div id="outline-container-org744535d" class="outline-4">
+  <h4 id="org744535d">Removed from Core</h4>
+  <div class="outline-text-4" id="text-org744535d">
   <p>
   <code>git</code>
   <code>libressl</code>
@@ -220,9 +220,9 @@
   </div>
   </div>
 
-  <div id="outline-container-orge4e0922" class="outline-4">
-  <h4 id="orge4e0922">Added to Core</h4>
-  <div class="outline-text-4" id="text-orge4e0922">
+  <div id="outline-container-org80414db" class="outline-4">
+  <h4 id="org80414db">Added to Core</h4>
+  <div class="outline-text-4" id="text-org80414db">
   <p>
   <code>bearssl</code>, as a <code>libressl</code> replacement
   <code>byacc</code>, as a <code>bison</code> replacement
@@ -230,9 +230,9 @@
   </div>
   </div>
 
-  <div id="outline-container-org59875c0" class="outline-4">
-  <h4 id="org59875c0">Statically linked</h4>
-  <div class="outline-text-4" id="text-org59875c0">
+  <div id="outline-container-org842e8b9" class="outline-4">
+  <h4 id="org842e8b9">Statically linked</h4>
+  <div class="outline-text-4" id="text-org842e8b9">
   <p>
   <code>kiss</code>
   <code>neatvi</code>
@@ -251,9 +251,9 @@
   </div>
   </div>
 
-  <div id="outline-container-org0e61066" class="outline-3">
-  <h3 id="org0e61066">Making the wiki available offline</h3>
-  <div class="outline-text-3" id="text-org0e61066">
+  <div id="outline-container-org57ddfc9" class="outline-3">
+  <h3 id="org57ddfc9">Making the wiki available offline</h3>
+  <div class="outline-text-3" id="text-org57ddfc9">
   <p>
   Soon, all documentation regarding Carbs Linux will be avaialable to be installed
   from the core repository in a <code>carbs-docs</code> package along with its own document
@@ -263,9 +263,9 @@
   </div>
   </div>
 
-  <div id="outline-container-org591578d" class="outline-3">
-  <h3 id="org591578d">ISO image for Carbs</h3>
-  <div class="outline-text-3" id="text-org591578d">
+  <div id="outline-container-org1db7301" class="outline-3">
+  <h3 id="org1db7301">ISO image for Carbs</h3>
+  <div class="outline-text-3" id="text-org1db7301">
   <p>
   I am thinking of releasing an ISO image in order to provide a standardized
   environment for installation along with installation helper tools in the spirit
@@ -318,9 +318,9 @@
   You can see the rest of the changelog <a href="https://github.com/CarbsLinux/kiss/blob/master/CHANGELOG.md">here</a>.
   </p>
 
-  <div id="outline-container-org70a8589" class="outline-3">
-  <h3 id="org70a8589">Binary Repositories</h3>
-  <div class="outline-text-3" id="text-org70a8589">
+  <div id="outline-container-org1651984" class="outline-3">
+  <h3 id="org1651984">Binary Repositories</h3>
+  <div class="outline-text-3" id="text-org1651984">
   <p>
   A few days ago, I have also published <a href="https://github.com/CarbsLinux/kiss-bin">kiss-bin</a>, a first version for managing
   binary repositories. Currently, there are some caveats that I'll be fixing along
@@ -349,9 +349,9 @@
   Perhaps I could make this a "FAQ" page later on.
   </p>
 
-  <div id="outline-container-org6c3d819" class="outline-3">
-  <h3 id="org6c3d819">History</h3>
-  <div class="outline-text-3" id="text-org6c3d819">
+  <div id="outline-container-org8d8c6cb" class="outline-3">
+  <h3 id="org8d8c6cb">History</h3>
+  <div class="outline-text-3" id="text-org8d8c6cb">
   <p>
   I had the idea of creating my own Linux distribution since the May of 2019. Back
   then, I had my own <a href="https://linuxfromscratch.org">Linux from Scratch</a> build, and I wanted to slim it down my
@@ -381,9 +381,9 @@
   </div>
   </div>
 
-  <div id="outline-container-orgc4ee986" class="outline-3">
-  <h3 id="orgc4ee986">Differences between KISS and Carbs</h3>
-  <div class="outline-text-3" id="text-orgc4ee986">
+  <div id="outline-container-org5c55935" class="outline-3">
+  <h3 id="org5c55935">Differences between KISS and Carbs</h3>
+  <div class="outline-text-3" id="text-org5c55935">
   <p>
   Now, I still baffle when people ask me this question. My intention was never to
   create a distribution with specific differences between KISS. My intention was
@@ -402,9 +402,9 @@
   </div>
   </div>
 
-  <div id="outline-container-org5736e5e" class="outline-3">
-  <h3 id="org5736e5e">What I'm working on now</h3>
-  <div class="outline-text-3" id="text-org5736e5e">
+  <div id="outline-container-orgc19b4d2" class="outline-3">
+  <h3 id="orgc19b4d2">What I'm working on now</h3>
+  <div class="outline-text-3" id="text-orgc19b4d2">
   <p>
   Currently I have a few projects that I'm working on for Carbs. These are,
   </p>
@@ -437,9 +437,9 @@
   </div>
   </div>
 
-  <div id="outline-container-orga98fc37" class="outline-3">
-  <h3 id="orga98fc37">What's up with all the init/service daemons?</h3>
-  <div class="outline-text-3" id="text-orga98fc37">
+  <div id="outline-container-org6064497" class="outline-3">
+  <h3 id="org6064497">What's up with all the init/service daemons?</h3>
+  <div class="outline-text-3" id="text-org6064497">
   <p>
   If you have ever checked the <a href="https://github.com/carbslinux/repository">repository</a>, you may have noticed that there are
   lots of init/service related packages. I have had my fair share of time with all
@@ -452,9 +452,9 @@
   </div>
   </div>
 
-  <div id="outline-container-orgeb4597c" class="outline-3">
-  <h3 id="orgeb4597c">Why I don't publicize Carbs</h3>
-  <div class="outline-text-3" id="text-orgeb4597c">
+  <div id="outline-container-org1893453" class="outline-3">
+  <h3 id="org1893453">Why I don't publicize Carbs</h3>
+  <div class="outline-text-3" id="text-org1893453">
   <p>
   There are a couple of reasons I don't publicize Carbs a lot.
   </p>
@@ -534,9 +534,9 @@
   come. I want to talk a little about all of them.
   </p>
 
-  <div id="outline-container-org87c73aa" class="outline-3">
-  <h3 id="org87c73aa">Carbs Linux Server Going Down</h3>
-  <div class="outline-text-3" id="text-org87c73aa">
+  <div id="outline-container-org0923037" class="outline-3">
+  <h3 id="org0923037">Carbs Linux Server Going Down</h3>
+  <div class="outline-text-3" id="text-org0923037">
   <p>
   It became harder to maintain and pay for the server, and I will be shutting it
   down in May. I am currently in the phase of carrying over everything to <a href="https://github.com/CarbsLinux">Github</a>.
@@ -557,9 +557,9 @@
   </div>
   </div>
 
-  <div id="outline-container-orgb8b557f" class="outline-3">
-  <h3 id="orgb8b557f">Forking KISS</h3>
-  <div class="outline-text-3" id="text-orgb8b557f">
+  <div id="outline-container-orgcff90a2" class="outline-3">
+  <h3 id="orgcff90a2">Forking KISS</h3>
+  <div class="outline-text-3" id="text-orgcff90a2">
   <p>
   I had a personal fork of KISS, which I enjoyed thoroughly. I didn't intend to
   make it the default when I started it, but it has matured enough to be so. The
@@ -574,9 +574,9 @@
   </div>
   </div>
 
-  <div id="outline-container-orgf2589d6" class="outline-3">
-  <h3 id="orgf2589d6">Small Changes on the Website</h3>
-  <div class="outline-text-3" id="text-orgf2589d6">
+  <div id="outline-container-org061ddef" class="outline-3">
+  <h3 id="org061ddef">Small Changes on the Website</h3>
+  <div class="outline-text-3" id="text-org061ddef">
   <p>
   I have made some small changes on the website. The build is not dependent on
   Plan9 utilities anymore. It was fun messing around with <code>rc</code> and <code>mk</code>, but they
@@ -596,9 +596,9 @@
   </div>
   </div>
 
-  <div id="outline-container-orge93d687" class="outline-3">
-  <h3 id="orge93d687">Outsources Repository</h3>
-  <div class="outline-text-3" id="text-orge93d687">
+  <div id="outline-container-org0f42efe" class="outline-3">
+  <h3 id="org0f42efe">Outsources Repository</h3>
+  <div class="outline-text-3" id="text-org0f42efe">
   <p>
   I have opened an <code>outsource</code> repository, which I will be pushing this week. I
   will add a new post when I am ready to push it. I think it will be interesting,
@@ -608,9 +608,9 @@
   </div>
   </div>
 
-  <div id="outline-container-orgd091825" class="outline-3">
-  <h3 id="orgd091825">New Tarball</h3>
-  <div class="outline-text-3" id="text-orgd091825">
+  <div id="outline-container-org31aca95" class="outline-3">
+  <h3 id="org31aca95">New Tarball</h3>
+  <div class="outline-text-3" id="text-org31aca95">
   <p>
   Finally, I have released a new tarball today, which can be obtained from the
   <a href="https://dl.carbslinux.org/releases">downloads page</a>.

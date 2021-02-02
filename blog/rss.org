@@ -5,7 +5,7 @@
 :PROPERTIES:
 :RSS_PERMALINK: 20201210.html
 :PUBDATE:  2020-12-10
-:ID:       91a73ba0-bd3c-437c-94af-fe767c3dcc02
+:ID:       675c108e-10d5-46b1-9fc5-d3d3b41e7726
 :END:
 December 10, 2020 marks the first year after the initial release of Carbs Linux.
 When I forked the KISS Linux repository on the 9th of December, I was fairly new
@@ -29,7 +29,7 @@ implementing during the semester break. Hope to see you all in January.
 :PROPERTIES:
 :RSS_PERMALINK: 20200803.html
 :PUBDATE:  2020-08-03
-:ID:       20184071-45d1-4af3-b679-63610e737f82
+:ID:       bb30fdcc-88ed-49e7-93ee-f67b870031c6
 :END:
 We are having some stalls during this summer, as I am currently working on
 university-related stuff. Nonetheless, there are some important changes that I
@@ -39,7 +39,7 @@ want to share in this month's post.
 
 ** Carbs Packaging Tools
    :PROPERTIES:
-   :ID:       fe405200-c791-40bb-af90-55b14328c901
+   :ID:       3d410aeb-3a3e-4239-929d-2fb577888b80
    :END:
 
 This month I have reworked =kiss= into a new package manager, now renamed as
@@ -71,7 +71,7 @@ tool-based package management method.
 
 ** Docs
    :PROPERTIES:
-   :ID:       9a665dbf-7a5a-4e66-88a6-b95b27fd0f08
+   :ID:       fa69f4b3-6b22-4ebe-80cc-0e7a9eb94fb3
    :END:
 
 I have added documentation for the distribution, and finally updated the guide
@@ -86,7 +86,7 @@ find the source on [[https://github.com/CarbsLinux/docs]].
 
 ** Re-opening the Carbs Linux server
    :PROPERTIES:
-   :ID:       d2ede03b-5386-48f9-9349-27ad6972558e
+   :ID:       01c7351d-4a89-4039-a5ba-2dde3f8a9dca
    :END:
 
 Back in May, I had shutdown the Carbs Linux server due to financial issues, but
@@ -102,14 +102,14 @@ remote nonetheless.
 :PROPERTIES:
 :RSS_PERMALINK: 20200617.html
 :PUBDATE:  2020-06-17
-:ID:       e0ddba22-7d55-4830-895a-5d02e1f41f90
+:ID:       4168855b-e76e-4f8f-803d-b4034152c734
 :END:
 This will be an active month for Carbs as major changes to the base and the
 package manager will be coming up.
 
 ** Statically linking the base
    :PROPERTIES:
-   :ID:       ca2f0783-0484-42d6-8f19-1b16330f474e
+   :ID:       558e3a55-78ea-45ff-a299-c27e0391744f
    :END:
 
 For the past couple of weeks I have been trying to simplify the base and
@@ -129,7 +129,7 @@ linked.
 
 ** Major changes on the core repository
    :PROPERTIES:
-   :ID:       7bcf3f1b-1341-485d-a28a-3dedc24d1eee
+   :ID:       eb4a6712-9853-4b5f-8978-f85fef463a40
    :END:
 
 There have been drastic changes to the core repository and the base rootfs this
@@ -137,7 +137,7 @@ month (with more on the way). Right now changes are as follows.
 
 *** Removed from Core
     :PROPERTIES:
-    :ID:       29d41729-1428-44dc-b315-cd9c3070e7c5
+    :ID:       271cdfd8-5e0c-43c5-8ddb-1a162bcfb7ed
     :END:
 =git=
 =libressl=
@@ -148,14 +148,14 @@ month (with more on the way). Right now changes are as follows.
 
 *** Added to Core
     :PROPERTIES:
-    :ID:       9935f194-03c4-4e83-b6f1-fd8e35adb51e
+    :ID:       a7f46eb4-e41d-438e-9858-68a5c5b20f4a
     :END:
 =bearssl=, as a =libressl= replacement
 =byacc=, as a =bison= replacement
 
 *** Statically linked
     :PROPERTIES:
-    :ID:       445af4be-741c-41a4-b983-a1ffb71c3476
+    :ID:       f19dd4ac-438b-47c3-bbe7-ba87085027be
     :END:
 =kiss=
 =neatvi=
@@ -172,7 +172,7 @@ month (with more on the way). Right now changes are as follows.
 
 ** Making the wiki available offline
    :PROPERTIES:
-   :ID:       02f68296-e84b-4a60-9af6-efc5b72a262e
+   :ID:       e8613bd1-b09e-4f12-9c3f-129d70fb7f43
    :END:
 
 Soon, all documentation regarding Carbs Linux will be avaialable to be installed
@@ -182,7 +182,7 @@ little outdated which will also receive some important updates.
 
 ** ISO image for Carbs
    :PROPERTIES:
-   :ID:       503ea473-9001-4080-9073-628f4cddaedc
+   :ID:       88169788-702b-46a3-b2ec-909e98caae92
    :END:
 
 I am thinking of releasing an ISO image in order to provide a standardized
@@ -192,7 +192,7 @@ of =arch-install-scripts=. Let's see how that's going to play out.
 :PROPERTIES:
 :RSS_PERMALINK: 20200528.html
 :PUBDATE:  2020-05-28
-:ID:       757f34bc-c510-4a93-be60-80ac355ad6d3
+:ID:       9b4e3b5d-7177-405b-9d1e-bc385a232097
 :END:
 Carbs Linux kiss version 2.0.0 has been released which introduces rsync
 repositories.
@@ -220,7 +220,7 @@ You can see the rest of the changelog [[https://github.com/CarbsLinux/kiss/blob/
 
 ** Binary Repositories
    :PROPERTIES:
-   :ID:       d34206ef-dac4-4fa7-8a24-6beeb2376615
+   :ID:       04f63c53-9a98-4a50-ab6e-bc07f79f1cd7
    :END:
 
 A few days ago, I have also published [[https://github.com/CarbsLinux/kiss-bin][kiss-bin]], a first version for managing
@@ -234,7 +234,7 @@ others interested on the matter as well.
 :PROPERTIES:
 :RSS_PERMALINK: 20200508.html
 :PUBDATE:  2020-05-08
-:ID:       258ca25e-b053-4c53-a86d-c067346461e3
+:ID:       30deff4f-04e4-4065-874e-2425833eb92a
 :END:
 Since I have forked KISS, I have received many questions that can be summarized
 as "Why?". I have realized that I never truly answered this question. That's the
@@ -244,7 +244,7 @@ Perhaps I could make this a "FAQ" page later on.
 
 ** History
    :PROPERTIES:
-   :ID:       12457ae2-b958-479d-906c-4ec5c333b7a3
+   :ID:       2381e690-6420-49b4-a594-8963f3f37d34
    :END:
 
 I had the idea of creating my own Linux distribution since the May of 2019. Back
@@ -268,7 +268,7 @@ extremely clean and well-thought. I decided to give it a go and fork KISS.
 
 ** Differences between KISS and Carbs
    :PROPERTIES:
-   :ID:       aa9e4559-0afd-4bdb-8993-006a9f16927c
+   :ID:       f2663118-0d66-44de-8465-0b13188147fc
    :END:
 
 Now, I still baffle when people ask me this question. My intention was never to
@@ -285,7 +285,7 @@ grateful to Dylan and all the other contributors.
 
 ** What I'm working on now
    :PROPERTIES:
-   :ID:       293684f2-3b65-42a0-8011-8441a963194c
+   :ID:       ae507544-f27e-423c-b760-4904e822bd7e
    :END:
 
 Currently I have a few projects that I'm working on for Carbs. These are,
@@ -312,7 +312,7 @@ sources unless you specifically need them.
 
 ** What's up with all the init/service daemons?
    :PROPERTIES:
-   :ID:       8de3a6dd-b66f-4da3-baae-efb264461a67
+   :ID:       f38b625b-abbb-4eaf-8a88-009e6dda9eb0
    :END:
 
 If you have ever checked the [[https://github.com/carbslinux/repository][repository]], you may have noticed that there are
@@ -325,7 +325,7 @@ checking out =shinit= and =sysmgr=.
 
 ** Why I don't publicize Carbs
    :PROPERTIES:
-   :ID:       15a9f5cc-3e2f-495d-8075-3213bcebe237
+   :ID:       85011e8b-9810-482c-9d32-d34649cb0656
    :END:
 
 There are a couple of reasons I don't publicize Carbs a lot.
@@ -349,7 +349,7 @@ question fits this post, and I can update it to thoroughly give an explanation.
 :PROPERTIES:
 :RSS_PERMALINK: 20200410.html
 :PUBDATE:  2020-04-10
-:ID:       b70d712e-dfd8-46ba-8519-2102b0506551
+:ID:       3f31b269-5607-4cd9-8e52-df3f7bd83d50
 :END:
 In April 3rd, I have added submodule support for Carbs Linux's fork of =kiss=.
 Now, from that sentence, it really doesn't sound exciting at all. But in
@@ -372,14 +372,14 @@ dependencies have been purged from the main repository, but can be found on it.
 :PROPERTIES:
 :RSS_PERMALINK: 20200406.html
 :PUBDATE:  2020-04-06
-:ID:       ab41c584-5be1-46b0-99e2-4d9eef2091aa
+:ID:       9749c9ce-264b-47bf-a740-4e118eb30a4b
 :END:
 It has been a busy week. There are lots of changes in direction, and more to
 come. I want to talk a little about all of them.
 
 ** Carbs Linux Server Going Down
    :PROPERTIES:
-   :ID:       7b2135a9-122c-495e-9bb0-b79fc39ef098
+   :ID:       95817833-8d4f-4560-b04c-9261d7806841
    :END:
 
 It became harder to maintain and pay for the server, and I will be shutting it
@@ -396,7 +396,7 @@ hassle-free.
 
 ** Forking KISS
    :PROPERTIES:
-   :ID:       037cba41-3be3-4714-9512-ff896d600dae
+   :ID:       1a806630-59d8-467e-aa3a-93ff42e0e974
    :END:
 
 I had a personal fork of KISS, which I enjoyed thoroughly. I didn't intend to
@@ -409,7 +409,7 @@ fits my views.
 
 ** Small Changes on the Website
    :PROPERTIES:
-   :ID:       b33e18eb-6f15-49e2-9c2b-473af26030f4
+   :ID:       e836ba6a-b2eb-4ade-b4ad-3b6281797ea5
    :END:
 
 I have made some small changes on the website. The build is not dependent on
@@ -425,7 +425,7 @@ Page Source'. Meanwhile, I will be updating some pages to be a little more
 
 ** Outsources Repository
    :PROPERTIES:
-   :ID:       1856485d-22c8-4c58-b710-ee4fa4374f9d
+   :ID:       1491c3a9-613a-4833-8812-d73017dfbc20
    :END:
 
 I have opened an =outsource= repository, which I will be pushing this week. I
@@ -435,7 +435,7 @@ manager. The now empty repository, can be found [[https://github.com/CarbsLinux/
 
 ** New Tarball
    :PROPERTIES:
-   :ID:       63a8a514-af1b-46d1-a4fe-c4e84d47d256
+   :ID:       4511ac0a-205c-4abd-b10d-08096be6eabe
    :END:
 
 Finally, I have released a new tarball today, which can be obtained from the
@@ -447,7 +447,7 @@ website structure overall.
 :PROPERTIES:
 :RSS_PERMALINK: 20200128.html
 :PUBDATE:  2020-01-28
-:ID:       b8735f8c-441c-45f2-ba47-73daf7ed511a
+:ID:       7062c433-adc4-44e9-b179-51e97941c09c
 :END:
 In case you haven't seen it before, this website was powered by [[http://werc.cat-v.org][werc]]. And even
 though I liked it really much, it was too powerful for a small website like
