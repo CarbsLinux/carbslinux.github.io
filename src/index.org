@@ -8,8 +8,10 @@ The system can consist of as much or as little as its user can intend to.
 
 * Package Manager
 
-Carbs Linux uses its own package manager [[https://github.com/CarbsLinux/cpt][Carbs Packaging Tools]], a POSIX shell
-package manager forked from KISS with the tool-based approach of xbps.
+Carbs Linux uses its own package manager [[https://git.sr.ht/~carbslinux/cpt][Carbs Packaging Tools]], a POSIX shell
+package manager forked from [[https://github.com/kisslinux/kiss][KISS]] with the tool-based approach of [[https://github.com/void-linux/xbps][xbps]]. Its aim
+is to deliver easy-to-use tools while also providing a powerful POSIX shell
+library that can be used to further extend and script the packaging system.
 
 
 * Small base
@@ -24,17 +26,17 @@ building new software. The majority of the base packages are statically linked.
 Carbs Linux has support for multiple init systems and service supervisors. In
 the main repository are
 
-- =sinit=
-- =busybox-init= (SysVinit clone)
-- =runit-init=
+- [[carbs-pkg:core/sinit][sinit]] / [[carbs-pkg:extra/shinit][shinit]]
+- [[carbs-pkg:core/busybox][busybox-init]] (SysVinit clone)
+- [[carbs-pkg:core/runit][runit-init]]
 
 for init systems, and
 
-- =sysmgr=
-- =busybox-runit=
-- =runit=
+- [[carbs-pkg:core/sysmgr][sysmgr]]
+- [[carbs-pkg:core/busybox][busybox-runit]]
+- [[carbs-pkg:core/runit][runit]]
 
-for service supervisors. The [[https://github.com/CarbsLinux/repository/tree/master/core/carbs-init][carbs-init]] package is the collection of init
+for service supervisors. The [[carbs-pkg:core/carbs-init][carbs-init]] package is the collection of init
 scripts that ensure the interoperability of these init and service systems, and
 make it easier for the user to switch to their preferred combinations of system
 supervision.

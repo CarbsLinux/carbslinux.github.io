@@ -4,12 +4,12 @@ Carbs Linux aims to move the development and discussion to mailing lists as much
 as possible, using the mailing lists hosted at [[https://lists.sr.ht/~carbslinux][Sourcehut]]. The following mailing
 lists are available for subscription:
 
-- ~carbslinux/carbslinux-devel
-- ~carbslinux/carbslinux-discuss
-- ~carbslinux/carbslinux-announce
-- ~carbslinux/cpt-devel
-- ~carbslinux/cpt-discuss
-- ~carbslinux/cpt-announce
+- [[https://lists.sr.ht/~carbslinux/carbslinux-devel][~carbslinux/carbslinux-devel]]
+- [[https://lists.sr.ht/~carbslinux/carbslinux-discuss][~carbslinux/carbslinux-discuss]]
+- [[https://lists.sr.ht/~carbslinux/carbslinux-announce][~carbslinux/carbslinux-announce]]
+- [[https://lists.sr.ht/~carbslinux/cpt-devel][~carbslinux/cpt-devel]]
+- [[https://lists.sr.ht/~carbslinux/cpt-discuss][~carbslinux/cpt-discuss]]
+- [[https://lists.sr.ht/~carbslinux/cpt-announce][~carbslinux/cpt-announce]]
 
 If you want to subscribe to any of these mailing lists, send an empty mail to
 one of these mailing lists in the following format:

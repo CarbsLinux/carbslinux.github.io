@@ -20,11 +20,25 @@
   (unless (package-installed-p pkg)
     (package-install pkg)))
 
+;; Taken from doom-emacs
+(defmacro c/pushnew! (place &rest values)
+  "Push VALUES sequentially into PLACE, if they aren't already present.
+This is a variadic `cl-pushnew'."
+  (let ((var (make-symbol "result")))
+    `(dolist (,var (list ,@values) (with-no-warnings ,place))
+       (cl-pushnew ,var ,place :test #'equal))))
+
 (require 'cl-lib)
 (require 'sh-script)
 (require 'ox)
 (require 'ox-publish)
 (require 'ox-rss)
+
+;; Some Quality of Life link abbrevations.
+(c/pushnew! org-link-abbrev-alist
+            '("carbs-pkg" . "https://git.sr.ht/~carbslinux/repository/tree/master/item/%s")
+            '("srht"      . "https://git.sr.ht/%s")
+            '("github"    . "https://github.com/%s"))
 
 (defvar carbs--src-directory (expand-file-name "src/" default-directory)
   "Directory for most of the static webpage content")
