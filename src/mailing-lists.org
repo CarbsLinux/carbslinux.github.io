@@ -1,6 +1,24 @@
 #+TITLE: Mailing Lists
 
-We have mailing lists set up at [[https://sr.ht][SourceHut]]. You can subscribe to the mailing
-list by sending an empty mail to [[mailto:~carbslinux/dev+subscribe@lists.sr.ht][~carbslinux/dev+subscribe@lists.sr.ht]].
+Carbs Linux aims to move the development and discussion to mailing lists as much
+as possible, using the mailing lists hosted at [[https://lists.sr.ht/~carbslinux][Sourcehut]]. The following mailing
+lists are available for subscription:
 
-You can also see the [[https://lists.sr.ht/~carbslinux/dev][archives]].
+- ~carbslinux/carbslinux-devel
+- ~carbslinux/carbslinux-discuss
+- ~carbslinux/carbslinux-announce
+- ~carbslinux/cpt-devel
+- ~carbslinux/cpt-discuss
+- ~carbslinux/cpt-announce
+
+If you want to subscribe to any of these mailing lists, send an empty mail to
+one of these mailing lists in the following format:
+
+#+begin_example
+listname+subscribe@lists.sr.ht
+
+~carbslinux/carbslinux-announce+subscribe@lists.sr.ht
+#+end_example
+
+You are really encouraged to subscribe to the announcement mailing list
+=~carbslinux/carbslinux-announce=.

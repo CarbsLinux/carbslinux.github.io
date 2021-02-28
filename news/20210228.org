@@ -1,0 +1,5 @@
+#+TITLE: {{{date(%b %d\, %Y)}}}
+#+DATE: <2021-02-28 Sun>
+
+Mailing lists for Carbs Linux has changed, see [[file:mailing-lists.html][the mailing lists section]] for
+more information on subscribing and list information.
