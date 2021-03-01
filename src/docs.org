@@ -4,12 +4,18 @@ Below are sources of documentation regarding Carbs Linux and tools surrounding
 it.
 
 * User Manual
+:PROPERTIES:
+:CUSTOM_ID: user-manual
+:END:
 
 Carbs Linux User Manual aims to be a general-purpose explanation of the
 distribution, from the installation steps to the style guide of the project. It
 can be accessed or otherwise obtained with various methods:
 
 ** HTML
+:PROPERTIES:
+:CUSTOM_ID: html
+:END:
 
 You can view the Manual from your browser. The Manual can be viewed as
 
@@ -17,6 +23,9 @@ You can view the Manual from your browser. The Manual can be viewed as
 - [[file:docs/carbslinux.html][Single HTML page]]
 
 ** Plain text
+:PROPERTIES:
+:CUSTOM_ID: plain-text
+:END:
 
 You can download [[file:docs/carbslinux.txt][carbslinux.txt]] in order to view the Manual from your preferred
 pager.
@@ -27,6 +36,10 @@ less carbslinux.txt
 #+end_src
 
 ** Info
+:PROPERTIES:
+:CUSTOM_ID: info
+:ORDERED:  t
+:END:
 
 You can install the =carbs-docs= package and either =texinfo= or =info= packages
 to view the Manual offline.
@@ -37,6 +50,9 @@ info carbslinux
 #+end_src
 
 ** Source
+:PROPERTIES:
+:CUSTOM_ID: source
+:END:
 
 You can also acquire the source for generating the Manual, which requires
 =emacs= for exporting the Org-mode documentation and =texinfo= for generating
@@ -47,6 +63,9 @@ git clone git://git.carbslinux.org/docs
 #+end_src
 
 * Installation Instructions
+:PROPERTIES:
+:CUSTOM_ID: installation-instructions
+:END:
 
 Installation Manual is part of the [[*User Manual][User Manual]], but it can also be obtained
 separately:
@@ -55,6 +74,9 @@ separately:
 - [[file:install.txt][Plaintext]]
 
 * Carbs Packaging Tools
+:PROPERTIES:
+:CUSTOM_ID: carbs-packaging-tools
+:END:
 
 The user manual for CPT is not complete yet, but will be released with the 6.0.0
 release. You can see the [[https://github.com/CarbsLinux/cpt][repository]] in order to check its status.

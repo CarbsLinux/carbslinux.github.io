@@ -27,6 +27,9 @@ dependency.
 You can see the rest of the changelog [[https://github.com/CarbsLinux/kiss/blob/master/CHANGELOG.md][here]].
 
 ** Binary Repositories
+:PROPERTIES:
+:CUSTOM_ID: binary-repository
+:END:
 
 A few days ago, I have also published [[https://github.com/CarbsLinux/kiss-bin][kiss-bin]], a first version for managing
 binary repositories. Currently, there are some caveats that I'll be fixing along

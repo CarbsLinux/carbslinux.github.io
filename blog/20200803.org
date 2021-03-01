@@ -9,6 +9,9 @@ want to share in this month's post.
 #+TOC: headlines 1 local
 
 ** Carbs Packaging Tools
+:PROPERTIES:
+:CUSTOM_ID: carbs-packaging-tools
+:END:
 
 This month I have reworked =kiss= into a new package manager, now renamed as
 =cpt=. Updating =kiss= will now bootstrap the new package manager, so you don't
@@ -38,6 +41,9 @@ There are obviously some clean-up and simplifications needed in this new
 tool-based package management method.
 
 ** Docs
+:PROPERTIES:
+:CUSTOM_ID: docs
+:END:
 
 I have added documentation for the distribution, and finally updated the guide
 for installation. It is now /almost/ complete. These docs can be installed to
@@ -50,6 +56,9 @@ documentation source, I would happily re-open the distribution wiki. You can
 find the source on [[https://github.com/CarbsLinux/docs]].
 
 ** Re-opening the Carbs Linux server
+:PROPERTIES:
+:CUSTOM_ID: re-opening-the-carbs-linux-server
+:END:
 
 Back in May, I had shutdown the Carbs Linux server due to financial issues, but
 I am slowly reverting to the self-hosted model. Back then, the git repositories

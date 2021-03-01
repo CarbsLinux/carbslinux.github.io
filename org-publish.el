@@ -20,6 +20,12 @@
   (unless (package-installed-p pkg)
     (package-install pkg)))
 
+(require 'cl-lib)
+(require 'sh-script)
+(require 'ox)
+(require 'ox-publish)
+(require 'ox-rss)
+
 ;; Taken from doom-emacs
 (defmacro c/pushnew! (place &rest values)
   "Push VALUES sequentially into PLACE, if they aren't already present.
@@ -28,11 +34,6 @@ This is a variadic `cl-pushnew'."
     `(dolist (,var (list ,@values) (with-no-warnings ,place))
        (cl-pushnew ,var ,place :test #'equal))))
 
-(require 'cl-lib)
-(require 'sh-script)
-(require 'ox)
-(require 'ox-publish)
-(require 'ox-rss)
 
 ;; Some Quality of Life link abbrevations.
 (c/pushnew! org-link-abbrev-alist
@@ -41,10 +42,10 @@ This is a variadic `cl-pushnew'."
             '("github"    . "https://github.com/%s"))
 
 (defvar carbs--src-directory (expand-file-name "src/" default-directory)
-  "Directory for most of the static webpage content")
+  "Directory for most of the static webpage content.")
 
 (defvar carbs--publish-directory (expand-file-name "docs/" default-directory)
-  "Root directory of the published website")
+  "Root directory of the published website.")
 
 (defvar carbs--news-directory (expand-file-name "news/" default-directory)
   "Directory for news posts.")
@@ -313,6 +314,12 @@ PROJECT is the current project."
              :publishing-function 'org-ascii-publish-to-ascii
              :base-extension "org"
              :exclude (regexp-opt '("rss.org"))
-             :recursive t)))
+             :recursive t)
+       (list "blog-txt"
+             :base-directory carbs--blog-directory
+             :base-extension "org"
+             :exclude (regexp-opt '("rss.org"))
+             :publishing-directory (expand-file-name "blog/" carbs--publish-directory)
+             :publishing-function 'org-ascii-publish-to-ascii)))
 
 (org-publish-all)

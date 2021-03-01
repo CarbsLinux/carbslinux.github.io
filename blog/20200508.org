@@ -9,6 +9,9 @@ differences between KISS Linux and Carbs Linux for anyone who may be wondering.
 Perhaps I could make this a "FAQ" page later on.
 
 ** History
+:PROPERTIES:
+:CUSTOM_ID: history
+:END:
 
 I had the idea of creating my own Linux distribution since the May of 2019. Back
 then, I had my own [[https://linuxfromscratch.org][Linux from Scratch]] build, and I wanted to slim it down my
@@ -30,6 +33,9 @@ checked out the package manager and the repository. The packaging system was
 extremely clean and well-thought. I decided to give it a go and fork KISS.
 
 ** Differences between KISS and Carbs
+:PROPERTIES:
+:CUSTOM_ID: differences-between-kiss-and-carbs
+:END:
 
 Now, I still baffle when people ask me this question. My intention was never to
 create a distribution with specific differences between KISS. My intention was
@@ -44,6 +50,9 @@ brilliant distribution, and it was a great starting point for Carbs. I am really
 grateful to Dylan and all the other contributors.
 
 ** What I'm working on now
+:PROPERTIES:
+:CUSTOM_ID: what-im-working-on-now
+:END:
 
 Currently I have a few projects that I'm working on for Carbs. These are,
 
@@ -68,6 +77,9 @@ hundreds of megabytes. At that point it will be pointless to have the repository
 sources unless you specifically need them.
 
 ** What's up with all the init/service daemons?
+:PROPERTIES:
+:CUSTOM_ID: whats-up-with-all-the-init-service-daemons
+:END:
 
 If you have ever checked the [[https://github.com/carbslinux/repository][repository]], you may have noticed that there are
 lots of init/service related packages. I have had my fair share of time with all
@@ -78,6 +90,9 @@ init/runit=, =runit=, =sinit=, and =sysmgr=. I would definitely recommend
 checking out =shinit= and =sysmgr=.
 
 ** Why I don't publicize Carbs
+:PROPERTIES:
+:CUSTOM_ID: why-i-dont-publicize-carbs
+:END:
 
 There are a couple of reasons I don't publicize Carbs a lot.
 

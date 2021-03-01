@@ -7,6 +7,9 @@ flexible and extensible while staying as pragmatic and practical as possible.
 The system can consist of as much or as little as its user can intend to.
 
 * Package Manager
+:PROPERTIES:
+:CUSTOM_ID: package-manager
+:END:
 
 Carbs Linux uses its own package manager [[https://git.sr.ht/~carbslinux/cpt][Carbs Packaging Tools]], a POSIX shell
 package manager forked from [[https://github.com/kisslinux/kiss][KISS]] with the tool-based approach of [[https://github.com/void-linux/xbps][xbps]]. Its aim
@@ -15,6 +18,9 @@ library that can be used to further extend and script the packaging system.
 
 
 * Small base
+:PROPERTIES:
+:CUSTOM_ID: small-base
+:END:
 
 By default, Carbs Linux comes with busybox for coreutils, bearssl for its
 crypto library, musl libc, and other basic utilities that are required for
@@ -22,6 +28,9 @@ building new software. The majority of the base packages are statically linked.
 
 
 * Multiple Init Support
+:PROPERTIES:
+:CUSTOM_ID: multiple-init-support
+:END:
 
 Carbs Linux has support for multiple init systems and service supervisors. In
 the main repository are
@@ -46,12 +55,18 @@ other system supervision technique along with your own init scripts.
 
 
 * Links
+:PROPERTIES:
+:CUSTOM_ID: links
+:END:
 
 - IRC - =#carbslinux= on freenode
 - Reddit - [[https://reddit.com/r/carbslinux][r/carbslinux]]
 - [[file:mailing-lists.org][Mailing Lists]]
 
 * News
+:PROPERTIES:
+:CUSTOM_ID: news
+:END:
 
 [[file:./news.xml][RSS Feed]] | [[file:./news][See all news]]
 

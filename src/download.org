@@ -6,9 +6,15 @@ visit [[https://dl.carbslinux.org/releases]] for all downloads. Follow the
 steps for installing the system.
 
 * x86-64
+:PROPERTIES:
+:CUSTOM_ID: x86-64
+:END:
 
 [[https://dl.carbslinux.org/releases/x86_64/carbs-rootfs.tar.xz][carbs-rootfs.tar.xz]] | [[https://dl.carbslinux.org/releases/x86_64/carbs-rootfs.tar.xz.sha256][SHA256SUM]] | [[https://dl.carbslinux.org/releases/x86_64/carbs-rootfs.tar.xz.sig][Signature]]
 
 * i686
+:PROPERTIES:
+:CUSTOM_ID: i686
+:END:
 
 [[https://dl.carbslinux.org/releases/i686/carbs-rootfs.tar.xz][carbs-rootfs.tar.xz]] | [[https://dl.carbslinux.org/releases/i686/carbs-rootfs.tar.xz.sha256][SHA256SUM]] | [[https://dl.carbslinux.org/releases/i686/carbs-rootfs.tar.xz.sig][Signature]]
