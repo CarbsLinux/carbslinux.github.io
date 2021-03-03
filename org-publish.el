@@ -131,6 +131,26 @@ returned by `org-list-to-lisp'."
     (concat (carbs--insert-template "blog.org")
             (org-list-to-org filtered-list) "\n")))
 
+(defun carbs/org-publish-latest-blog (title list)
+  "Generate sitemap as a string, having TITLE.
+LIST is an internal representation for the files to include, as returned by
+`org-list-to-lisp'."
+  (let* ((filtered-list (cl-remove-if (lambda (x)
+                                        (and (sequencep x) (null (car x))))
+                                      list))
+        (latest-posts (seq-subseq filtered-list 0 (min (length filtered-list) 4))))
+    (concat (org-list-to-org latest-posts) "\n")))
+
+(defun carbs/org-publish-latest-blog-entry (entry style project)
+  "Format for sitemap ENTRY, as a string.
+ENTRY is a file name. STYLE is the style of the sitemap.
+PROJECT is the current project."
+  (unless (equal entry "404.org")
+    (format "%s - [[file:%s][%s]]"
+            (format-time-string "%b %d, %Y" (org-publish-find-date entry project))
+            entry
+            (org-publish-find-title entry project))))
+
 (defun carbs/org-publish-sitemap-entry (entry style project)
   "Format for sitemap ENTRY, as a string.
 ENTRY is a file name.  STYLE is the style of the sitemap.
@@ -246,6 +266,17 @@ PROJECT is the current project."
              :html-link-home "https://carbslinux.org/news"
              :publishing-directory carbs--publish-directory
              :publishing-function 'carbs/org-rss-publish-to-rss)
+       (list "blog-latest"
+             :base-directory carbs--blog-directory
+             :publishing-directory carbs--publish-directory
+             :publishing-function 'ignore
+             :exclude (regexp-opt '("index.org" "rss.org" "latest-blog.org"))
+             :auto-sitemap t
+             :sitemap-filename "latest-blog.org"
+             :sitemap-style 'list
+             :sitemap-sort-files 'anti-chronologically
+             :sitemap-function 'carbs/org-publish-latest-blog
+             :sitemap-format-entry 'carbs/org-publish-latest-blog-entry)
        (list "home"
              :base-directory carbs--src-directory
              :html-preamble t

@@ -63,6 +63,10 @@ other system supervision technique along with your own init scripts.
 - Reddit - [[https://reddit.com/r/carbslinux][r/carbslinux]]
 - [[file:mailing-lists.org][Mailing Lists]]
 
+* Latest Blog Posts
+
+#+INCLUDE: ../blog/latest-blog.org :minlevel 1
+
 * News
 :PROPERTIES:
 :CUSTOM_ID: news
