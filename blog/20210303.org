@@ -1,0 +1,83 @@
+#+TITLE: March 2021 News Post
+#+DATE: <2021-03-03 Wed>
+#+AUTHOR: Cem Keylan
+
+Greetings! I am really happy to announce some few changes to the distribution. I
+wanted to write a new blog post to summarise them so you can get up to what is
+happening in Carbs Linux.
+
+#+TOC: headlines 1 local
+
+* Switching to Sourcehut
+:PROPERTIES:
+:CUSTOM_ID: switching-to-sourcehut
+:END:
+
+I have been thinking of moving development to [[srht:~carbslinux][Sourcehut]] for a while now. If your
+repository remotes reside at GitHub you are encouraged to switch them to
+Sourcehut. Mailing lists for discussion, development, and announcements have
+also been created for both the distribution, and the package manager using
+Sourcehut as the host. See the [[file:../mailing-lists.html][page on mailing lists]] for more information on
+subscribing to the mailing lists.
+
+This does mean that issue trackers now reside at Sourcehut, and I will be
+deactivating those in GitHub very soon. I have yet to decide whether on keeping
+the mirrors or deactivating them completely, but I will be giving three months
+of notice if it is decided to move away from GitHub completely. Regardless, the
+main repositories are still hosted at [[https://git.carbslinux.org][our own server]], and I have no intentions
+on changing that for the foreseeable future.
+
+** State of our own Git repository
+
+In the near future, I will be moving our git server, and will be opening spots
+for other users, who want to make use of the git server. People can use it to
+serve their own =cpt= repositories, or personal projects that can be related to
+Carbs. I will post an announcement when this will happen, and a blog post that
+tells more about the new repository. Expect more by the end of March.
+
+* Wayland and Dbus
+:PROPERTIES:
+:CUSTOM_ID: wayland-and-dbus
+:END:
+
+There are new repositories for [[carbs-pkg:dbus/dbus][dbus]], and [[carbs-pkg:wayland/wayland][wayland]], which are still works in
+progress. These are meant to be options for those who /request/ it, and are not
+meant to be enforced package repositories. For example, any package outside of
+the ~dbus~ repository shouldn't require it to work, and shouldn't list it as a
+dependency. Packages can still be written using those as optional dependencies.
+
+This change also raises the question of whether Carbs is ditching Xorg or not.
+No, we are not ditching Xorg, Wayland is added as to serve an extra option for
+those who don't own graphics cards from some specific manufacturer.
+
+* Next release for CPT
+:PROPERTIES:
+:CUSTOM_ID: next-release-for-cpt
+:END:
+
+I had been working on the next major release for the package manager since
+December, and it is coming close to completion. This release focuses more on the
+library itself, and using the library more effectively on the contrib tools.
+Unfortunately, until this time, the library wasn't properly documented, and
+there weren't any unit tests for the library. Even though, the changes to the
+package manager are close to completion, documentation and tests are what is
+holding me from making the next release.
+
+* Website Update
+:PROPERTIES:
+:CUSTOM_ID: website-update
+:END:
+
+I have recently updated the website in its entirety so that it looks more
+appealing. I have updated the stylesheets and created a [[srht:~carbslinux/carbslinux-style][stylesheet repository]]
+and I am planning on extending it to use with other Carbs websites.
+
+The website is now generated using Emacs [[https://orgmode.org][Org Mode]], and its biggest advantage is
+that I can freely write posts without thinking about plaintext output, which
+held me back from writing big posts. I have also created a few org-mode link
+abbreviations such as the one that let me easily link to packages. There are
+also few disadvantages from using this method, which I am hoping to resolve as
+moving forward. One of these disadvantages made me remove the generated website
+from the git repository, now I generate and serve the website through
+~post-receive~ hooks. Once I resolve these, however, I will be adding the =docs=
+directory back to the repository.
