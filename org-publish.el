@@ -294,7 +294,7 @@ PROJECT is the current project."
              :html-preamble-format (carbs--pre/postamble-format 'preamble)
              :html-postamble-format (carbs--pre/postamble-format 'postamble)
              :html-link-org-files-as-html t
-             :exclude (regexp-opt '("rss.org" "index.org"))
+             :exclude (regexp-opt '("rss.org" "index.org" "latest-blog.org"))
              :auto-sitemap t
              :sitemap-filename "index.org"
              :sitemap-style 'list
@@ -310,13 +310,13 @@ PROJECT is the current project."
              :html-postamble t
              :html-preamble-format (carbs--pre/postamble-format 'preamble)
              :html-postamble-format (carbs--pre/postamble-format 'postamble)
-             :exclude (regexp-opt '("rss.org" "index.org"))
+             :exclude (regexp-opt '("rss.org" "index.org" "latest-blog.org"))
              :html-link-org-files-as-html t)
        (list "blog-generate-rss-sitemap"
              :base-extension "org"
              :base-directory carbs--blog-directory
              :html-link-home "https://carbslinux.org/blog"
-             :exclude (regexp-opt '("rss.org" "index.org"))
+             :exclude (regexp-opt '("rss.org" "index.org" "latest-blog.org"))
              :publishing-function 'ignore
              :publishing-directory (expand-file-name "blog/" carbs--publish-directory)
              :rss-extension "xml"
@@ -344,12 +344,12 @@ PROJECT is the current project."
              :publishing-directory carbs--publish-directory
              :publishing-function 'org-ascii-publish-to-ascii
              :base-extension "org"
-             :exclude (regexp-opt '("rss.org"))
+             :exclude (regexp-opt '("rss.org" "latest-blog.org"))
              :recursive t)
        (list "blog-txt"
              :base-directory carbs--blog-directory
              :base-extension "org"
-             :exclude (regexp-opt '("rss.org"))
+             :exclude (regexp-opt '("rss.org" "latest-blog.org"))
              :publishing-directory (expand-file-name "blog/" carbs--publish-directory)
              :publishing-function 'org-ascii-publish-to-ascii)))
 
