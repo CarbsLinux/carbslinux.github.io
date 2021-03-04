@@ -115,7 +115,7 @@ PUB-DIR is when the output will be placed."
 
 (defun carbs/format-date-subtitle (file project)
   "Format the date found in FILE of PROJECT."
-  (format-time-string "posted on %b %d, %y" (org-publish-find-date file project)))
+  (format-time-string "posted on %b %d, %Y" (org-publish-find-date file project)))
 
 (defun carbs--pre/postamble-format (type)
   "Return the content for the pre/postamble of TYPE."
