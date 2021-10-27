@@ -1,4 +1,0 @@
-#+TITLE: {{{date(%b %d\, %Y)}}}
-#+DATE: <2020-04-10 Fri>
-
-IRC channel can now be accessed from =#carbslinux= at freenode!

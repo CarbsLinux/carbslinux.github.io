@@ -1,6 +1,0 @@
-#+TITLE: {{{date(%b %d\, %Y)}}}
-#+DATE: <2020-09-16 Wed>
-
-The libressl "revert" was reverted. System update will replace libressl
-dependencies with bearssl. You may choose to keep or remove bearssl after the
-update.

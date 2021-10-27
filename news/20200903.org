@@ -1,6 +1,0 @@
-#+TITLE: {{{date(%b %d\, %Y)}}}
-#+DATE: <2020-09-03 Thu>
-
-The default TLS provider has been reverted to =libressl=. System update will
-replace bearssl dependencies with libressl. You may choose to keep or remove
-bearssl after the update.

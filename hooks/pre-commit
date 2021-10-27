@@ -1,5 +1,0 @@
-#!/bin/sh
-
-./build
-git add docs
-git add src

@@ -1,4 +1,0 @@
-#+TITLE: {{{date(%b %d\, %Y)}}}
-#+DATE: <2020-04-06 Mon>
-
-A new rootfs tarball has been released. See the downloads page.

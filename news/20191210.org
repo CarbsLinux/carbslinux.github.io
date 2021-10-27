@@ -1,4 +1,0 @@
-#+TITLE: {{{date(%b %d\, %Y)}}}
-#+DATE: <2019-12-10 Tue>
-
-First alpha release was made. See the [[https://dl.carbslinux.org/releases][downloads page]].

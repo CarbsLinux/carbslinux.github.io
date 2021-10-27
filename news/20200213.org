@@ -1,6 +1,0 @@
-#+TITLE: {{{date(%b %d\, %Y)}}}
-#+DATE: <2020-02-13 Thu>
-
-Runit is now released on the core repository! You can now replace busybox-init
-with runit-init. You can also replace the busybox runit utilities with the
-actual runit. This will reduce the dependency on busybox greatly.

@@ -1,4 +1,0 @@
-#+TITLE: Installation Guide
-#+OPTIONS: num:t
-
-#+INCLUDE: "../texidocs/carbslinux.org::*Installation" :only-contents t

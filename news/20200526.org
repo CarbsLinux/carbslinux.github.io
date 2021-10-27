@@ -1,5 +1,0 @@
-#+TITLE: {{{date(%b %d\, %Y)}}}
-#+DATE: <2020-05-26 Tue>
-
-An initial version for binary package management is released. It can be found on
-the [[https://github.com/CarbsLinux/kiss-bin][GitHub page]].

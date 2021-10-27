@@ -1,4 +1,0 @@
-#+TITLE: {{{date(%b %d\, %Y)}}}
-#+DATE: <2020-01-15 Wed>
-
-sinit has been taken to =core=, and is now officially supported

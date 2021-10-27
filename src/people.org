@@ -1,3 +1,0 @@
-#+TITLE: People
-
-- Cem Keylan - Founder [[mailto:cem@carbslinux.org][cem@carbslinux.org]]
